@@ -1,0 +1,1321 @@
+
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: #fff; padding: 20px; border-radius: 15px; border: 1px solid #ddd; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+    <h2 style="color: #2d5a27; text-align: center; margin-bottom: 20px;">🔍 Repositório EPT</h2>
+    
+    <input type="text" id="filtroRapido" placeholder="Pesquise por título, autor, base ou palavra-chave..." 
+           style="width: 100%; padding: 15px; margin-bottom: 20px; border: 2px solid #2d5a27; border-radius: 10px; font-size: 15px; outline: none;">
+    
+    <div style="max-height: 650px; overflow-y: auto; border: 1px solid #eee; border-radius: 8px;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 1100px;">
+            <thead>
+                <tr style="background: #2d5a27; color: white; position: sticky; top: 0; z-index: 10;">
+                    <th style="padding: 15px; text-align: left;">Título / Nível</th>
+                    <th style="padding: 15px; text-align: left;">Autor</th>
+                    <th style="padding: 15px; text-align: left;">Orientador</th>
+                    <th style="padding: 15px; text-align: left;">Base</th>
+                    <th style="padding: 15px; text-align: left;">Palavras-chave</th>
+                    <th style="padding: 15px; text-align: center;">PDF</th>
+                    <th style="padding: 15px; text-align: center;">Produto</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaDados">
+                
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> EDUCAÇÃO FINANCEIRA COMO TEMA TRANSVERSAL NA EPT: UMA ANÁLISE DOS PPC´S DOS CURSOS TÉCNICOS INTEGRADOS AO ENSINO MÉDIO DO IFC</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">SILVANA DE OLIVEIRA RIBEIRO DA SILVA</td>
+                <td style="padding:15px; font-size:13px;">Dr. Jorge da Cunha Dutra</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Financeira; Educação Profissional e Tecnológica; Formação Integral; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2026/03/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_-SILVANA-DE-OLIVEIRA-RIBEIRO-DA-SILVA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1171935" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O USO DE MAQUETES NO PROCESSO DE APRENDIZAGEM CRÍTICA, DESENVOLVIMENTO DA PERCEPÇÃO ESPACIAL E SENSO DE ESCALA GEOMÉTRICA NO CURSO TÉCNICO EM EDIFICAÇÕES SUBSEQUENTE AO ENSINO MÉDIO DO IFC – CAMPUS FRAIBURGO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">VICTOR MEIRELES AIRES</td>
+                <td style="padding:15px; font-size:13px;">Drª. Fátima Peres Zago de Oliveira</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Educação Crítica / Emancipatória</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica (EPT); Inovação Social; Formação Docente; Prática Pedagógica; Tecnologia Social; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2026/03/DISSERTACAO_VICTOR-MEIRELES-AIRES.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1171701" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> CURRICULARIZAÇÃO DA PESQUISA NO ENSINO MÉDIO INTEGRADO: PACTOS E PERSPECTIVAS DOCENTES NO IFC – CAMPUS RIO DO SUL</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">LETÍCIA BACHMANN KURTH</td>
+                <td style="padding:15px; font-size:13px;">Drª. Fátima Peres Zago de Oliveira</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; EPT; Ensino Médio Integrado; EMI; Curricularização da Pesquisa; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/Dissertacao_IFC_-_LETCIA_BACHMANN_KURTH.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1133578" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> VIVÊNCIAS E EXPERIÊNCIAS COM O MOODLE NA EJA-EPT: UMA AUTOETNOGRAFIA NO CURSO DE ELETRICISTA INDUSTRIAL DO IFC BLUMENAU</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">ALEXANDRE VELOSO DOS SANTOS</td>
+                <td style="padding:15px; font-size:13px;">Drª. Fátima Peres Zago de Oliveira</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Materialismo Histórico-Dialético</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Autoetnografia; Educação de Jovens e Adultos; Educação Profissional e Tecnológica; MOODLE; Prática Docente; vídeo</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/Dissertacao_Alexandre_Veloso_dos_Santos.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1133518" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> PRÁTICA PEDAGÓGICA INTEGRADORA EM ENSINO, PESQUISA E EXTENSÃO: UM ESTUDO NA FEIRA DO CONHECIMENTO DO INSTITUTO FEDERAL CATARINENSE.</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">LUZIANA DA SILVA DIAS</td>
+                <td style="padding:15px; font-size:13px;">Drª. Raquel Cardoso de Faria e Custódio</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Currículo Integrado</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ensino</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Pesquisa</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Extensão; Praticas Pedagógicas Integradoras; Feira do Conhecimento; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/DISSERTACAO-LUZIANA-DA-SILVA-DIAS.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1133227" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> ACOLHIMENTO: UMA PRÁTICA PARA A PERMANÊNCIA E ÊXITO DOS ESTUDANTES DO CURSO TÉCNICO SUBSEQUENTE EM ADMINISTRAÇÃO DO IFSC CAMPUS GASPAR.</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">IDCE IHLENFELDT SEJAS</td>
+                <td style="padding:15px; font-size:13px;">Drª. Raquel Cardoso de Faria e Custódio</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Acolhimento; Permanência e Êxito; Curso Técnico Subsequente; vídeo</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_-IDCE-SEJAS.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1133240" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O ESTÁGIO CURRICULAR COMO ESPAÇO PEDAGÓGICO DE REFLEXÃO ACERCA DO MUNDO DO TRABALHO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">RAFAELA KRACIK SIQUEIRA</td>
+                <td style="padding:15px; font-size:13px;">Dr. Eder Aparecido de Carvalho</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Educação Crítica / Emancipatória</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação; Estágio Curricular; Ensino Médio Integrado; Mundo do trabalho; animação</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/DISSERTACAO_E_PRODUTO_EDUCACIONAL___RAFAELA_KRACIK_SIQUEIRA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1132102" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> IMPACTO DO PAE (PROGRAMA DE AUXÍLIOS ESTUDANTIS) NA PERMANÊNCIA E ÊXITO ESCOLAR DE ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO IFC CAMPUS BLUMENAU</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">VALQUÍRIA CORREIA CAMPOS</td>
+                <td style="padding:15px; font-size:13px;">Dr. Eder Aparecido de Carvalho</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Permanência e Êxito; Programa de Auxílios Estudantis; Evasão Escolar; Políticas Públicas; animação</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/DISSERTACAO_VALQUIRIA_CORRETA_pdfa_3.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1132116" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A HISTÓRIA DA IMPLANTAÇÃO (2012-2022) DO IFC CAMPUS SÃO BENTO DO SUL E A SUA RELAÇÃO COM OS ARRANJOS PRODUTIVOS, SOCIAIS E CULTURAIS LOCAIS</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">LARISSA MERLO MORALES DA SILVA</td>
+                <td style="padding:15px; font-size:13px;">Dr.Reginaldo Leandro Plácido</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">História das Instituições Escolares; Organização e Memória da Educação Profissional e Tecnológica; Culturas Escolares; Arranjos produtivos locais; Porosidade e Permeabilidade; outro</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/11/DISSERTACAO_-E_PRODUTO_EDUCACIONAL___LARISSA_MERLO_MORALES_DA_SILVA-1.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1132804" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> IDENTIFICAÇÃO DA REGULAMENTAÇÃO DAS NORMAS DE SEGURANÇA DO TRABALHO EM REGIME ESTATUTÁRIO NO ENSINO PROFISSIONAL E TECNOLÓGICO DO INSTITUTO FEDERAL CATARINENSE.</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">MAYKON DONIZETE DOS SANTOS</td>
+                <td style="padding:15px; font-size:13px;">Drª. Denise Fernandes</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Organização e Memória dos espaços pedagógicos; Educação Profissional e Tecnológica; Saúde e Segurança do Trabalho; Serviço Público Federal; Cultura de Prevenção; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/11/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_MAYKON-DONIZETE-DOS-SANTOS.-1.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1132271" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> INTELIGÊNCIA ARTIFICIAL GENERATIVA NA EPT: EXPLORANDO O USO DO CHATGPT SOB A PERSPECTIVA DA PESQUISA COMO PRINCÍPIO PEDAGÓGICO.</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">KASSANDRA COELHO WALTRICH</td>
+                <td style="padding:15px; font-size:13px;">Dr. Eduardo Augusto Werneck Ribeiro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">ChatGPT; Inteligência Artificial Generativa; Cursos Técnicos; Profissional e Tecnológica; Pesquisa Como Princípio Pedagógico; imagem; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/10/DISSERTACAO-E-PRODUTO-EDUCACIONAL_KASSANDRA-COELHO-WALTRICH.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1131798" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> FAMÍLIA E ESCOLA: INFLUÊNCIAS SOCIAIS NA TRANSIÇÃO ENTRE O ENSINO FUNDAMENTAL AO ENSINO MÉDIO INTEGRADO NO IFSC (2018 A 2025)</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">CRISTIANE VIEIRA DOS SANTOS FÜRST</td>
+                <td style="padding:15px; font-size:13px;">Drª. Denise Fernandes</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Transição escolar; Educação Profissional e Tecnológica; Formação de educadores; Inclusão e permanência escolar; Ensino Médio Integrado; apresentação; curso; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/10/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_-CRISTIANE-FURST.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1131906" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> BIBLIOTECA EDUCATIVA PÚBLICA E A EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA: EXPERIÊNCIAS NA FORMAÇÃO INTEGRAL</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JOSELICE LEMES DE OLIVEIRA RODRIGUES</td>
+                <td style="padding:15px; font-size:13px;">Drª. Sara Nunes</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Biblioteca; Educação integral; Poder; imagem</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/10/DISSERTACAO_JOSELICE_LEMES_DE_OLIVEIRA_RODRIGUES.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1131723" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> ENSINO AGRÍCOLA, AGRICULTURA FAMILIAR E AGROECOLOGIA: UMA APROXIMAÇÃO NECESSÁRIA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JAINARA PACHECO DE BRAGA</td>
+                <td style="padding:15px; font-size:13px;">Dr. Cloves Alexandre de Castro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Currículo; Formação Integral; Agroecologia; Agricultura Familiar; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/09/DISSERTACAO-E-PRODUTO-EDUCACIONAL_JAINARA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1131104" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> CINEMA PARA UMA FORMAÇÃO HUMANA INTEGRAL CONTEMPORÂNEA: CONTRIBUIÇÕES PARA O ENSINO MÉDIO INTEGRADO NOS INSTITUTOS FEDERAIS .</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">LUCAS NETO</td>
+                <td style="padding:15px; font-size:13px;">Dr. Eduardo Augusto Werneck Ribeiro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Cinema; EPT; Letramento Audiovisual; Educação Midiática; portal</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/09/DISSERTAO_E_PRODUTO_EDUCACIONAL___LUCAS_NETO.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1001598" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A PRESENÇA DO PÚBLICO FEMININO NA ÁREA ELÉTRICA: UM ESTUDO DE CASO A PARTIR DA EVASÃO NO CURSO TÉCNICO EM ELETROTÉCNICA DO SENAI BLUMENAU</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">LUCÉLIO BELETTI</td>
+                <td style="padding:15px; font-size:13px;">Drª. Raquel Cardoso de Faria e Custódio</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Educação Crítica / Emancipatória</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Mulheres na Elétrica; Educação Profissional e Tecnológica; Inclusão; imagem; texto; vídeo</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/09/DISSERTACAO_E_PRODUTO_EDUCACIONAL___LUCELIO_BELLETTI.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1131192" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> PREVENÇÃO E ENFRENTAMENTO ÀS VIOLÊNCIAS: UM ESTUDO A PARTIR DE UMA AÇÃO EDUCATIVA COM ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO IFSC – JARAGUÁ DO SUL CENTRO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">LUCIANA DA CRUZ MORAES MAGARÃO ALVES</td>
+                <td style="padding:15px; font-size:13px;">Drª. Viviane Grimm</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ensino Médio Integrado; Violências; Ação educativa; Proteção e enfrentamento às violências; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/09/DISSERTACAO_E_PRODUTO_EDUCACIONAL___LUCIANA_ALVESpdfa-2.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1081115" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A PERSPECTIVA ESTUDANTIL SOBRE A AFILIAÇÃO NO ENSINO MÉDIO INTEGRADO À EDUCAÇÃO PROFISSIONAL: UM ESTUDO COM ESTUDANTES DO INSTITUTO FEDERAL CATARINENSE (IFC) CAMPUS BLUMENAU .</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">GABRIELA BOEMER AMARAL MORETTO</td>
+                <td style="padding:15px; font-size:13px;">Drª. Viviane Grimm</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ensino Médio Integrado; Afiliação estudantil.; Transição escolar; Educação Profissional e Tecnológica.; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/08/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_-GABRIELA-BOEMER-AMARAL-MORETTO-2.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1043482" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> SABERES COMPLEMENTARES PARA A FORMAÇÃO DE DOCENTES  BACHARÉIS NA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA (EPT)</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">RAFAEL VINÍCIUS MARTINS</td>
+                <td style="padding:15px; font-size:13px;">Dr. Eduardo Augusto Werneck Ribeiro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">EPT; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/07/DISSERTACAO-E-PRODUTO-EDUCACIONAL_RAFAEL-VINICIUS-MARTINS-2.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1001164" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> ENSINO MÉDIO INTEGRADO PARA QUÊ E PARA QUEM: MOTIVAÇÕES E EXPECTATIVAS DOS ESTUDANTES INGRESSANTES NA ESCOLHA PELO EMI DO IFC SÃO BENTO DO SUL.</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">ALINE BUSS CARDOSO</td>
+                <td style="padding:15px; font-size:13px;">Drª. Sara Nunes</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ensino médio Integradoado; Educação Profissional; e tecnológica no ensino médio integral; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/06/DISSERTACAO-E-PRODUTO-EDUCACIONAL_ALINE-BUSS-CARDOSO-1.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/1000164" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> DESAFIOS NO INGRESSO AOS CURSOS TÉCNICOS INTEGRADOS AO ENSINO MÉDIO NO INSTITUTO FEDERAL DE SANTA CATARINA – CÂMPUS ITAJAÍ: DA INSCRIÇÃO À EFETIVAÇÃO DA MATRÍCULA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">GLAUCIA RAQUEL SPINDLER</td>
+                <td style="padding:15px; font-size:13px;">Dr. Cloves Alexandre de Castro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">IFSC</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ingresso</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Formação Integral</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ensino Médio Integrado ao Técnico.; apresentação; vídeo</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/06/DISSERTACAO-GLAUCIA-RAQUEL-SPINDLER.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/984515" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> INSTITUTO FEDERAL CATARINENSE CAMPUS ARAQUARI E A EXTENSÃO: UMA ANÁLISE NA PERSPECTIVA DA AÇÃO DIALÓGICA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">SIMONE ELISA MAI</td>
+                <td style="padding:15px; font-size:13px;">Drª. Sara Nunes</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Educação Crítica / Emancipatória</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica. Extensão. Dialogicidade.; apresentação</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/05/DISSERTACAO_SIMONE_ELISA_MAI.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/984023" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O ENSINO DE LITERATURA NUMA PERSPECTIVA DECOLONIAL: UM OLHAR A RESPEITO DO ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE.</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">ANA CLÁUDIA DE OLIVEIRA</td>
+                <td style="padding:15px; font-size:13px;">Drª. Raquel Cardoso de Faria e Custódio</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ensino de Literatura; Literatura Afro-brasileira; Literaturas Indígenas; Ensino Médio Integrado; Decolonial; EPT; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/05/Dissertacao_Ana_Claudia_de_Oliveira.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/973177" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> DESAFIOS PEDAGÓGICOS NO DESENVOLVIMENTO DO CURRÍCULO INTEGRADO NO CURSO TÉCNICO EM ADMINISTRAÇÃO DE NÍVEL MÉDIO NO CEDUP – HERMANN HERING – BLUMENAU</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">ROSANA RICHTER</td>
+                <td style="padding:15px; font-size:13px;">Drª. Viviane Grimm</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ensino Médio Integrado; Técnico em Administração; Educação Profissional e Tecnológia; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao_Final_Rosana_Richter.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/921347" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> IFC E AEE: CONTRIBUIÇÕES PARA A PERCEPÇÃO DE ESTUDANTES COM DEFICIÊNCIA DO ENSINO MÉDIO INTEGRADO DO CAMPUS ARAQUARI SOBRE A INCLUSÃO ENQUANTO DIREITO.</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">CAROLINA BEIRO DA SILVEIRA</td>
+                <td style="padding:15px; font-size:13px;">Drª. Fátima Peres Zago de Oliveira</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Inclusão; Educação Profissional e Tecnológica (EPT); Projeto de vida; Pessoa com deficiência; áudio</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao-Carolina-Beiro-da-Silveira.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/921301" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O CONSELHO DE CLASSE E A ORGANIZAÇÃO DO TRABALHO PEDAGÓGICO EM CURSOS TÉCNICOS INTEGRADOS AO ENSINO MÉDIO DO IFSC, CAMPUS JARAGUÁ DO SUL – CENTRO: UMA CONSTRUÇÃO COLETIVA E DEMOCRÁTICA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">KÉLY CRISTINA ZIMMERMANN</td>
+                <td style="padding:15px; font-size:13px;">Dr. Simão Alberto</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Materialismo Histórico-Dialético</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Ensino Médio Integrado; Avaliação; Conselho de Classe Participativo; Formação Continuada Docente; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao-Kely_Zimmermann.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/921221" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> PRÁTICAS EDUCATIVAS EM LABORATÓRIO DE EFICIÊNCIA ENERGÉTICA NO CENTRO DE EDUCAÇÃO PROFISSIONAL HERMANN HERING: AVALIANDO O IMPACTO NA COMPREENSÃO DOS ESTUDANTES SOBRE EFICIÊNCIA ENERGÉTICA .</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">VERIDIANA MERQUE FERRAZ</td>
+                <td style="padding:15px; font-size:13px;">Drª. Sara Nunes</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Currículo Integrado</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Eficiência energética; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao-Veridiana-Merque-Ferraz.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/921195" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> ATENDIMENTO EDUCACIONAL ESPECIALIZADO: PRÁTICAS PEDAGÓGICAS E ARTICULAÇÕES PARA O ENSINO NO CURSO TÉCNICO DE INFORMÁTICA INTEGRADO AO ENSINO MÉDIO DO INSTITUTO FEDERAL CATARINENSE.</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JUCÉLIA CORREIA DE SANTANA</td>
+                <td style="padding:15px; font-size:13px;">Drª. Raquel Cardoso de Faria e Custódio</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Atendimento Educacional Especializado. Inclusão . Educação Profissional e Tecnológica.; portal</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/DISSERTACAO-JUCELIA_CORREIA_DE_SANTANA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/918462" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> ENSINO DE INOVAÇÃO NA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA: UM ESTADO DO CONHECIMENTO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JÚNIOR CUNHA</td>
+                <td style="padding:15px; font-size:13px;">Drª. Fátima Peres Zago de Oliveira</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Educação Crítica / Emancipatória</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Inovação Social; Inovação; Tecnologia; Educação Profissional e Tecnológica (EPT); Tecnologia Social; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao-Junior_Cunha.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/921171" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> UMA SEQUÊNCIA DIDÁTICA ENVOLVENDO O APLICATIVO TELEGRAM À PRÁTICA PEDAGÓGICA NO CEDUP GUARAMIRIM: OS IMPACTOS SOB A PERSPECTIVA DA APRENDIZAGEM SIGNIFICATIVA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">EDUARDO DA SILVA SILVEIRA</td>
+                <td style="padding:15px; font-size:13px;">Dr. Eder Aparecido de Carvalho</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Educação Crítica / Emancipatória</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação profissional e tecnológica.; Tecnologias digitais da Informação e comunicação.; Telegram.; Prática pedagógica.; Aprendizagem significativa.; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/DISSERTACAO-FINAL-EDUARDO-DA-SILVA-SILVEIRA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/920975" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> PRETOS, PARDOS E INDÍGENAS E A LEI DE COTAS: ACESSO DOS ESTUDANTES PPI NOS CURSOS DO ENSINO MÉDIO INTEGRADO NO INSTITUTO FEDERAL CATARINENSE – IFC CAMPUS CONCÓRDIA (2018-2022)</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">SILVIA DA SILVA</td>
+                <td style="padding:15px; font-size:13px;">Dr. Cloves Alexandre de Castro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Lei de Cotas</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ensino Médio Integrado</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Organização e Memórias dos Espaços Pedagógicos da EPT.; portal</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/12/Dissertacao-Silvia-da-Silva.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/918375" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> TÉCNICAS VOCAIS E A VOZ EM CENA NA FORMAÇÃO INTEGRAL: UM OLHAR A RESPEITO DAS PERCEPÇÕES DOS PROFESSORES DE ARTE DO INSTITUTO FEDERAL CATARINENSE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">FELIPE AUGUSTO BARSCH</td>
+                <td style="padding:15px; font-size:13px;">Dra.: Juliene Marques Bogo</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Música; aprendizagem; técnica; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/12/Dissertacao-Felipe-Barsch.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/918141" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O ENSINO DE EMPREENDEDORISMO EM CURSOS DE ENSINO MÉDIO INTEGRADO NOS CENTROS DE EDUCAÇÃO PROFISSIONAL (CEDUPS) DA REDE ESTADUAL DE EDUCAÇÃO DE SANTA CATARINA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">FABIANO MAURÍCIO PONCIANO</td>
+                <td style="padding:15px; font-size:13px;">Dra.: Viviane Grimm</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Currículo Integrado</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica.; Ensino Médio Integrado.; Currículo Integrado.; Podcast.; áudio; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/12/Dissertacao-Fabiano-Ponciano.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/917905" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A BIBLIOTECA NA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA: PERCEPÇÕES DE ESTUDANTES DE CURSO TÉCNICO SUBSEQUENTE DO IFSC JARAGUÁ DO SUL CÂMPUS RAU</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">IZOLDE REJANE DO CARMO</td>
+                <td style="padding:15px; font-size:13px;">Dra.: Juliene Marques Bogo</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Biblioteca; Jogo; jogo</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/11/Dissertacao-Izolde-Rejane-do-Carmo.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/870167" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A PERCEPÇÃO DOS ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE – CAMPUS RIO DO SUL – SOBRE O TRABALHO PARA O POVO XOKLENG LAKLÃNÕ DO ALTO VALE DO ITAJAÍ</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JONAS FELÁCIO JÚNIOR</td>
+                <td style="padding:15px; font-size:13px;">Dr.: Reginaldo Leandro Plácido</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Trabalho como Princípio Educativo</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Organização da Educação Profissional e Tecnológica; Xokleng Laklãnõ; Produto Educacional; Sequência Didática; Trabalho como princípio educativo; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/11/Dissertacao-Jonas-Felacio-Junior.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/917643" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A CONTRIBUIÇÃO DO RITMO PARA A FORMAÇÃO INTEGRAL NO CURSO TÉCNICO EM TEATRO DO IFSC CAMPUS JOINVILLE: UMA ANÁLISE A PARTIR DA PERCEPÇÃO DOCENTE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">LAUSIVAN GRANGEIRO CORRÊA</td>
+                <td style="padding:15px; font-size:13px;">Dra. Juliene Marques Bogo</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">EPT; Formação Integral; Ritmo; Teatro; vídeo</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Lausivan.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/870151" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> HISTÓRIA DA IMPLANTAÇÃO DO CEDUP TIMBÓ (2000 A 2004): DIÁLOGO ENTRE A HISTÓRIA E A CULTURA ESCOLAR</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">RAFAELA ALESSANDRA SCHNEIDER HINSCHING</td>
+                <td style="padding:15px; font-size:13px;">Dr. Reginaldo Leandro Plácido.</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">História da Educação; História e memória da Educação Profissional e Tecnológica; Instituição escolar; Cultura Escolar; CEDUP Timbó; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Rafaela.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/869426" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> PERCEPÇÃO DOS PROFISSIONAIS ENFERMEIROS SOBRE OS REGISTROS DA ASSISTÊNCIA DE ENFERMAGEM E SUA ATUAÇÃO PROFISSIONAL NO INSTITUTO FEDERAL CATARINENSE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JULIANA AMADEI</td>
+                <td style="padding:15px; font-size:13px;">Dra. Denise Fernandes</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação em Saúde; Enfermeiro escolar; Sistematização da Assistência de Enfermagem Escolar; ferramentas</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Juliana-Amadei.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/778287" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O SERVIÇO REMOTO DE TRADUÇÃO E INTERPRETAÇÃO DE LIBRAS NO IFC: IMPACTOS PÓS-PANDÊMICO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">DOMINIQUE CALIXTO MARTINS</td>
+                <td style="padding:15px; font-size:13px;">Dr. Jorge da Cunha Dutra</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Língua Brasileira de Sinais; Intérprete para Surdos; Guia; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Dominique.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/870062" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A PARTICIPAÇÃO DE ESTUDANTES NOS GRÊMIOS ESTUDANTIS DO INSTITUTO FEDERAL CATARINENSE – CAMPUS ARAQUARI E SEU IMPACTO PARA O DESENVOLVIMENTO DE CONSCIÊNCIA DE CLASSE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">OTÁVIO PATRÍCIO NETTO</td>
+                <td style="padding:15px; font-size:13px;">Dr.Cloves Alexandre de Castro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">IFC/ARAQUARI; Grêmio Estudantil; Organização e Memória; Formação Integral; apresentação; imagem; texto; livro digital; aula digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Otavio-Patricio-Netto.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/778430" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> FORMAÇÃO DE PROFESSORES E EPT NO CURSO DE LICENCIATURA EM QUÍMICA NO IFC – CAMPUS BRUSQUE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">PAULA ANTÔNIA FERREIRA DE SOUZA</td>
+                <td style="padding:15px; font-size:13px;">Dr. Simão Alberto</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Formação de Professores; Licenciatura em Química; Trabalho como Princípio Educativo; Formação Humana Integral; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Paula-Souza.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/869999" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> EDUCAÇÃO NO/DO CAMPO E PEDAGOGIA DA ALTERNÂNCIA NO CAMPUS AVANÇADO ABELARDO LUZ DO IFC SOB A PERSPECTIVA DOCENTE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">LEANDRO SEVERINO NASCIMENTO DE OLIVEIRA</td>
+                <td style="padding:15px; font-size:13px;">Dr. Cloves Alexandre de Castro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Formação Integral; Pedagogia da Alternância; Educação do Campo; Organização e Memória dos Espaços Pedagógicos em EPT; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Leandro-Severino.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/778188" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> EDUCAÇÃO DE SURDOS NO INSTITUTO FEDERAL CATARINENSE: POR UMA EDUCAÇÃO EMANCIPADORA NO ENSINO TÉCNICO INTEGRADO AO ENSINO MÉDIO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">SAMARA DOS SANTOS</td>
+                <td style="padding:15px; font-size:13px;">Dr. Jorge da Cunha Dutra</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Surdos; Educação Emancipadora; Instituto Federal Catarinense; portal</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Samara.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/747436" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O PROGRAMA DE AUXÍLIOS ESTUDANTIS DO INSTITUTO FEDERAL CATARINENSE: O TRABALHO DAS COMISSÕES</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">NELZA DE MOURA</td>
+                <td style="padding:15px; font-size:13px;">Dr. Eder Aparecido de Carvalho</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Assistência Estudantil; Educação; Comissões; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Nelza.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/868191" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> GAMIFICAÇÃO NA APRENDIZAGEM INDUSTRIAL: CONTRIBUIÇÕES PARA OS CURSOS DA ÁREA DA TECNOLOGIA DA INFORMAÇÃO NO SENAI TIMBÓ</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">HERMANO ROEPKE</td>
+                <td style="padding:15px; font-size:13px;">Dr. Eder Aparecido de Carvalho</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">atividades Aamificadas; Jogos; Educação; Produto Educacional; aula digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Hermano.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/778432" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> INCLUSÃO NA AVALIAÇÃO DA APRENDIZAGEM: UMA ANÁLISE A PARTIR DA PRÁTICA DOCENTE NOS CURSOS DE ENSINO MÉDIO INTEGRADO À EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA DO IFSC, CAMPUS GASPAR</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">TAIRA FRANCIELE SKERKE</td>
+                <td style="padding:15px; font-size:13px;">Dra. Juliene Marques Bogo</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Avaliação da Aprendizagem; Desenho Universal para a Aprendizagem; Ensino Médio Integrado à Educação Profissional e Tecnológica; Ética do Cuidado; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Taira-Franciele-Skerke.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/778210" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> ACOLHIMENTO DE ESTUDANTES TRANS NOS CURSOS DE ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">MOACIR DUTRA DE OLIVEIRA</td>
+                <td style="padding:15px; font-size:13px;">Dr. Eder Aparecido de Carvalho</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Acolhimento; Sexualidade; Educação; Estudantes "Trans"; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Moacir.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/778431" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> REFLEXÕES ACERCA DAS PRODUÇÕES CIENTÍFICAS DOS DOCENTES DE HISTÓRIA DO EMI DO IFC, SOBRE EPT: UMA BUSCA PELA INFLUÊNCIA TEÓRICA EM SEUS PLANOS DE ENSINO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">MAÍRA CAMBRAIA ROCHA</td>
+                <td style="padding:15px; font-size:13px;">Dr. Simão Alberto</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Instituto Federal Catarinense; Educação Profissional e Tecnológica; Ensino Médio Integrado; Produção Científica de docentes; Plano de Ensino de História; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Maira-Cambraia.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/778420" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> CONHECER PARA USUFRUIR: A COMPREENSÃO DOS ESTUDANTES SOBRE O SISTEMA DE RESERVA DE VAGAS (COTAS) NO PROCESSO SELETIVO DE INGRESSO NOS CURSOS DO ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">MARIA DO SOCORRO ALMEIDA DE ASSUNÇÃO VASCONCELOS</td>
+                <td style="padding:15px; font-size:13px;">Dra. Denise Fernandes</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Sistema de Reserva de Vagas; Ensino tecnico integrado ao ensino médio; Educação Profissional e Tecnológica; ProfEPT; portal</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Maria-Vasconcelos.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/748846" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA E OS TRADUTORES/INTÉRPRETES EM LIBRAS-PORTUGUÊS: O USO DAS TECNOLOGIAS DE INFORMAÇÃO E COMUNICAÇÃO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">CRISTIANE APARECIDA LISSAK BILIBIO</td>
+                <td style="padding:15px; font-size:13px;">Dr. Jorge da Cunha Dutra</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; TILSP; Ensino; animação</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Cristiane.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/744102" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> EGRESSOS DO ENSINO MÉDIO INTEGRADO DO IFC: ANÁLISE DOS RELATÓRIOS DE ACOMPANHAMENTO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">IGOR DE OLIVEIRA INSAURRIAGA SILVA</td>
+                <td style="padding:15px; font-size:13px;">Dra. Juliene Marques Bogo</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Portal do Egresso; Ensino Médio Integrado; Trajetória Formativa; Construção Profissional; Mundo do Trabalho; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Igor.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/748196" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A MUSICALIDADE NO TEATRO: PERSPECTIVAS SOBRE O APRENDIZADO DA AGÓGICA E DA DINÂMICA MUSICAL NO DESENVOLVIMENTO DA PERFORMANCE DOS ALUNOS DE TEATRO DO INSTITUTO FEDERAL DE SANTA CATARINA – CAMPUS JOINVILLE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Graduação</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">CLAUDENOR FÁVERO</td>
+                <td style="padding:15px; font-size:13px;">Dra. Sara Nunes</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica.; Musicalidade; Teatro; Integração; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Claudenor-Favero.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/748078" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> NUTRINDO IDEIAS: EDUCAÇÃO ALIMENTAR E NUTRICIONAL NO ENSINO MÉDIOINTEGRADO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">LIGIA BATISTON</td>
+                <td style="padding:15px; font-size:13px;">Dra. Sara Nunes</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Currículo Integrado</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Nutrição; História; Integração; Educação Profissional e Tecnológica; outro</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Ligia_Batiston.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/748140" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> IMPACTO DA QUALIFICAÇÃOSTRICTO SENSUNO TRABALHO DE SERVIDORES DO IFC</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">BRUNO DUTRA VIEIRA</td>
+                <td style="padding:15px; font-size:13px;">Dr. Eduardo Augusto Werneck Ribeiro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">afastamento; formação</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Bruno_Dutra.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/748386" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O “NOVO” ENSINO MÉDIO, JUVENTUDE E TRABALHO: UM ESTUDO SOBRE O COMPONENTE CURRICULAR PROJETO DE VIDA EM UMA ESCOLA DA REDEESTADUAL DE SANTA CATARINA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">ARIANA MENDES</td>
+                <td style="padding:15px; font-size:13px;">Dra. Viviane Grimm</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Juventude; Trabalho; Projeto de Vida; Educação Profissional e Tecnológia; Ensino Médio; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Ariana-Mendes.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/744439" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A PERCEPÇÃO DOCENTE SOBRE O PROCESSO DE INCLUSÃO EDUCACIONAL NOS CURSOS TÉCNICOS INTEGRADO DO INSTITUTO FEDERAL CATARINENSE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;"> ELIANA GASPODINI COLDEBELLA</td>
+                <td style="padding:15px; font-size:13px;">Dr. Jorge da Cunha Dutra</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Educação Inclusiva; Educação Especial; Educação para a diversidade; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/04/Dissertacao-Eliana-Coldebella.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/744558" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A TEMÁTICA SEGURANÇA DO TRABALHO NO CURRÍCULO DO CURSO EJA-EPT QUALIFICAÇÃO PROFISSIONAL EM ELETRICISTA INDUSTRIAL DO IFC CAMPUSBLUMENAU: UM ESTUDO DE CASO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JOANA FONTANELA FORTUNATO</td>
+                <td style="padding:15px; font-size:13px;">Dr. Jorge da Cunha Dutra</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Segurança do Trabalho; Normas Técnicas; E-Book; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Joana-Fontanela.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/744130" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A FEIRA DE MATEMÁTICA E SUA INTERLOCUÇÃO COM A PRÁXIS DOS DOCENTES QUE ENSINAM MATEMÁTICA NA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA DOS INSTITUTOS FEDERAIS</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JUNIEL RODRIGUES LEITE Orientatador: Dra. Fátima Peres Zago de Oliveira</td>
+                <td style="padding:15px; font-size:13px;">---</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Feira de Matemática; Educação Matemática; Educação Profissional e Tecnológica; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Juniel.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/748660" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> CURRICULARIZAÇÃO DA PESQUISA E EXTENSÃO NOS CURSOS TÉCNICOS DE INFORMÁTICA DO INSTITUTO FEDERAL CATARINENSE NOSCAMPIBLUMENAU ECAMBORIÚ</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">ANDRÉ EDUARDO KONELL</td>
+                <td style="padding:15px; font-size:13px;">Dra. Fátima Peres Zago de Oliveira</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Curricularização da pesquisa e da extensão; Documento orientativo; EPT; Ensino Médio Integrado; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Andre-Eduardo-Konell.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/748699" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> CONSELHO DE CLASSE NO ENSINO MÉDIO INTEGRADO À EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA:  A COMPREENSÃO DOS DOCENTES E DA EQUIPE PEDAGÓGICA, NUMA PERSPECTIVA DE FORMAÇÃO INTEGRAL</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">ANDRÉIA MATILDE BOTTAMEDI BAMBINETTI</td>
+                <td style="padding:15px; font-size:13px;">Dr. Simão Alberto</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Conselho de Classe; Ensino Médio Integrado; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/04/DISSERTACAO-ANDREIA-BAMBINETTI.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/742895" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> 20 ANOS DA LEI 10/639/03 E FORMAÇÃO INTEGRAL. O ESTADO DA IMPLANTAÇÃO E IMPLEMENTAÇÃO DA LEI NO IFSC – CAMPUS GASPAR</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Graduação</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">NILSON DE SOUZA LEAL</td>
+                <td style="padding:15px; font-size:13px;">Dr. Cloves Alexandre de Castro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Lei 10.639-03</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional Tecnológica</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Formação Integral</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">LEME.; portal</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/04/DISSERTTACAO-NILSON-DE-SOUZA-LEAL-1.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/742618" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> EDUCAÇÃO PROFISSIONAL NA REDE ESTADUAL DE ENSINO DE SANTA CATARINA: UM ESTUDO SOBRE AS IMPLICAÇÕES DA LEI 13.415/2017 NOS CURSOS DE ENSINO MÉDIO INTEGRADO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">FERNANDA BIZARRI DE OLIVEIRA</td>
+                <td style="padding:15px; font-size:13px;">Drª Viviane Grimm</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Currículo Integrado</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica.; Currículo Integrado.; Ensino Médio Integrado.; Novo Ensino Médio.; Rede Estadual de Ensino de Santa Catarina.; imagem; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/04/DISSERTACAO-FERNANDA_BIZARRI_DE_OLIVEIRA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/742317" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O TRABALHO COMO PRINCÍPIO EDUCATIVO NO PROGRAMA JOVEM APRENDIZ DESENVOLVIDO NAS ORGANIZAÇÕES DA SOCIEDADE CIVIL SEM FINS LUCRATIVOS</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JOEL EYROFF</td>
+                <td style="padding:15px; font-size:13px;">Dr. Eduardo Augusto Werneck Ribeiro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">PROFEPT; apresentação</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/01/O-TRABALHO-COMO-PRINCIPIO-EDUCATIVO-NO-PROGRAMA-JOVEM-APRENDIZ-DESENVOLVIDO-NAS-ORGANIZACOES-DA-SOCIEDADE-CIVIL-SEM-FINS-LUCRATIVOS.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/740828#:~:text=http%3A//educapes.capes.gov.br/handle/capes/740828" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> QUEM SOMOS PERCEPÇÕES DOS COMUNICADORES DO INSTITUTO FEDERAL CATARINENSE SOBRE A IDENTIDADE ORGANIZACIONAL DA INSTITUIÇÃO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">RAFAELA ZORZETTO DE CAMARGO</td>
+                <td style="padding:15px; font-size:13px;">Dra. Denise Fernandes</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Institutos Federais; animação</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/01/QUEM-SOMOS-PERCEPCOES-DOS-COMUNICADORES-DO-INSTITUTO-FEDERAL-CATARINENSE-SOBRE-A-IDENTIDADE-ORGANIZACIONAL-DA-INSTITUICAO.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/742091#:~:text=http%3A//educapes.capes.gov.br/handle/capes/742091" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A UTILIZAÇÃO DE COMPOSIÇÕES MUSICAIS NOS MEIOS DIGITAIS UMA ANÁLISE DA COMPREENSÃO DOS ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO IFC CAMPUS BLUMENAU SOBRE DIREITOS AUTORAIS</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">MARCELO DARLAN HERPIC</td>
+                <td style="padding:15px; font-size:13px;">Dra. Juliene Marques Bogo</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Direitos autorais; Ensino médio integrado; Educação Profissional e Tecnológica; Infográfico.; ferramentas</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/01/A-UTILIZACAO-DE-COMPOSICOES-MUSICAIS-NOS-MEIOS-DIGITAIS-UMA-ANALISE-DA-COMPREENSAO-DOS-ESTUDANTES-DO-ENSINO-MEDIO-INTEGRADO-DO-IFC-CAMPUS-BLUMENAU-SOBRE-DIREITOS-AUTORAIS.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/740516#:~:text=http%3A//educapes.capes.gov.br/handle/capes/740516" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> DADOS, LINHAS E NÓS: UMA HISTÓRIA DA IMPLANTAÇÃO DO IFC CAMPUS IBIRAMA Produtos Educacional: Texto – TOUR PELA HISTÓRIA DO IFC IBIRAMA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">FLÁVIA REGINA BACK</td>
+                <td style="padding:15px; font-size:13px;">Reginaldo Leandro Plácido</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">História das Instituições Escolares; Cultura Escolar; Memória; Educação Profissional e Tecnológica; Instituto Federal Catarinense; Ibirama; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Flavia-Regina-Back.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/738915#:~:text=http%3A//educapes.capes.gov.br/handle/capes/738915" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> CULTURA ESCOLAR NO MEIO DIGITAL EM TEMPOS DE PANDEMIA: DISCUSSÃO E PERCEPÇÃO PELOS ALUNOS A PARTIR DO AUDIOVISUAL</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">FELIPE IOP CAPELETO</td>
+                <td style="padding:15px; font-size:13px;">Eduardo Augusto Werneck Ribeiro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">audiovisuala; ensino médio integrado; Filme-carta; curso</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Felipe-Iop-Capeletto.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/737726#:~:text=http%3A//educapes.capes.gov.br/handle/capes/737726" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> CONCEPÇÕES DOS EDUCADORES DO IFC-BRUSQUE SOBRE A AVALIAÇÃO DA APRENDIZAGEM DOS ESTUDANTES NO ENSINO MÉDIO INTEGRADO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JOSÉ LUIS MACHADO</td>
+                <td style="padding:15px; font-size:13px;">Reginaldo Leandro Plácido</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Currículo Integrado</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Currículo Integrado; Educação Integral; Avaliação da Aprendizagem; Educação Profissional e Tecnológica; Organização da EPT; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Jose-Luis-Machado.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/738581#:~:text=http%3A//educapes.capes.gov.br/handle/capes/738581" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> ANÁLISE DO PERFIL DE ESTILO DE VIDA DOS ESTUDANTES DO ENSINO MÉDIO INTEGRADO: UM ESTUDO NO CAMPUS SÃO FRANCISCO DO SUL</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">DENISE DE CASTRO INSAURRIAGA SILVA</td>
+                <td style="padding:15px; font-size:13px;">Eduardo Augusto Werneck Ribeiro</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">estilo de vida; pentáculo; ensino médio integrado; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Denise-de-Castro-Insaurriaga-Silva.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/737714#:~:text=http%3A//educapes.capes.gov.br/handle/capes/737714" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> REFLEXOS: CULTURAS ESCOLARES DO IFC BLUMENAU A PARTIR DA ANÁLISE FOTOGRÁFICA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">ROSIANE MAGALHÃES DE LIMA</td>
+                <td style="padding:15px; font-size:13px;">REGINALDO LEANDRO PLÁCIDO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Cultura escolar; História das instituições escolares; Fotografia; Educação profissional e tecnológica; Institutos Federais; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Rosiane-Magalhaes-de-Lima.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/731618#:~:text=http%3A//educapes.capes.gov.br/handle/capes/731618" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O PAPEL DO GRÊMIO ESTUDANTIL NA ESCOLA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">VANDERLEI WOSNIACK</td>
+                <td style="padding:15px; font-size:13px;">Dr. CLOVES ALEXANDRE DE CASTRO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">História em Quadrinhos</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Protagonismo Estudantil</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Formação Integral</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Grêmio Estudantil; outro</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Vanderlei-Wosniak.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/731222#:~:text=http%3A//educapes.capes.gov.br/handle/capes/731222" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> GESTÃO E CONFLITOS ESCOLARES NO ÂMBITO DO INSTITUTO FEDERAL CATARINENSE: DOCUMENTOS, PRÁTICAS E PERCEPÇÕES</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Graduação</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">ALYSSON CHRISTIANO PRIMOR</td>
+                <td style="padding:15px; font-size:13px;">DR. LEANDRO MARCOS SALGADO ALVES</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Cultura de Paz; Educação Profissional e Tecnológica; Regulamento de Conduta Discente; Gestão de Conflitos; Instituto Federal Catarinense; ferramentas</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Dissertacao_Alysson_23-04.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/701833" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A PERCEPÇÃO DOS TÉCNICO-ADMINISTRATIVOS EM EDUCAÇÃO DO IFC SOBRE A CONCEPÇÃO PEDAGÓGICA DOS IFS</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">MAYSA EICHNER DA SILVA BAZANA</td>
+                <td style="padding:15px; font-size:13px;">DR. ClOVES ALEXANDRE DE CASTRO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">TAE</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Institutos Federais</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Formação Integral</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Projeto Político Pedagógico.; apresentação; animação; imagem; texto; ferramentas</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-A-PERCEPCAO-DOS-TAEs-DO-IFC-SOBRE-A-CONCEPCAO-PEDAGOGICA-DOS-IFs.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/714810" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> ABORDAGEM SOBRE OS ELEMENTOS DE PERMANÊNCIA DOS ESTUDANTES DOS CURSOS DO IFC – CAMPUS BLUMENAU</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">IGOR LUIZ DE PAULA</td>
+                <td style="padding:15px; font-size:13px;">DR. EDUARDO AUGUSTO WERNECK RIBEIRO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Permanência na Escola; Evasão Escolar; Ensino Médio Integrado; apresentação</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-IGOR-LUIZ-DE-PAULA-PDFA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/717938" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> EDUCAÇÃO AMBIENTAL CRÍTICA DE CUNHO NACIONAL E EMANCIPATÓRIA NA EDUCAÇÃO PROFISSIONAL TECNOLÓGICA: UMA PROPOSTA DE ENSINO PARA ESTUDANTES DO ENSINO MÉDIO INTEGRADO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">BRUNO WILWERT TOMIO</td>
+                <td style="padding:15px; font-size:13px;">DR. CLOVES ALEXANDRE DE CASTRO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Materialismo Histórico-Dialético</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação ambiental crítica emancipatória</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">educação profissional tecnológica</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">ciência e tecnologia; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-BRUNO_WILWERT_TOMIO_PDFA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/716892" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O CONSELHO DE CLASSE NA PERCEPÇÃO DE CONSELHEIROS DE UM CURSO DE ENSINO MÉDIO INTEGRADO: NA TRILHA DA FORMAÇÃO HUMANA INTEGRAL</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">DÉBORA MAGNA SANTOS COSTA DE SOUZA,</td>
+                <td style="padding:15px; font-size:13px;">DRA. VIVIANE GRIMM</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Currículo Integrado</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Conselho de classe</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Gestão democrática</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ensino Médio Integrado</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">E-book.; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Artigo-Debora-PDFA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/717900" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O PAPEL DA MEDIAÇÃO PEDAGÓGICA NO CURSO DE EJA INTEGRADA À EPT – FORMAÇÃO BÁSICA EM ELETRICISTA – DO CAMPUS BLUMENAU</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">MARA CRISTINA CHAVES BARBOSA</td>
+                <td style="padding:15px; font-size:13px;">DRA. FÁTIMA PEREZ ZAGO DE OLIVEIRA</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Educação Crítica / Emancipatória</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação de Jovens  e Adultos</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ensino Médio Integrado</span><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Sequência Didática.; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-MARA-CRISTINA-CHAVES-BARBOSA-PDFA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/717857" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> EGRESSOS E NDB EM DIÁLOGO: O ACOMPANHAMENTO DE EGRESSOS COMO SUBSÍDIO EM PROCESSOS DE REFORMULAÇÃO DE CURSOS DE ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE – CAMPUS CONCÓRDIA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">ALESSANDRA NITSCHKE</td>
+                <td style="padding:15px; font-size:13px;">DR. REGINALDO LEANDRO PLÁCIDO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Ensino Médio Integrado; Egressos; Núcleo Docente Básico; Currículo; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-ALESSANDRA-NITSCHKE.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/600482" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> ARQUITETURA ESCOLAR E CONCEPÇÕES PEDAGÓGICAS DA REDE FEDERAL DE EDUCAÇÃO PROFISSIONAL, CIENTÍFICA E TECNOLÓGICA: UM ESTUDO A PARTIR DO DESENVOLVIMENTO DE UM MANUAL</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">PIERRI EDUARDO BATISTA RODRIGUES</td>
+                <td style="padding:15px; font-size:13px;">DRA. VIVIANE GRIMM.</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Arquitetura escolar; Educação profissional e tecnológica; Concepções pedagógicas; Institutos Federais.; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Artigo-Consolidado-Trabalho-de-Conclusao-Mestrado-Pierri-Rodrigues-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/646593" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> CENÁRIOS E BASTIDORES DA IMPLANTAÇÃO DO PROEJA NO INSTITUTO FEDERAL CATARINENSE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">KARIN TYEKO ANAMI</td>
+                <td style="padding:15px; font-size:13px;">FÁTIMA PERES ZAGO DE OLIVEIRA.</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">PROEJA; EJA; EPT; texto; outro</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Versao-Final-Dissertacao-PDF-A-Karin.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/644220" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> AS ORIGENS DO CEDUP HERMANN HERING: UMA LEITURA ATRAVÉS DE JORNAIS DOS ANOS DE 1973 A 1983</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">DENISE MATIOLA TODOROV</td>
+                <td style="padding:15px; font-size:13px;">REGINALDO LEANDRO PLÁCIDO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Cultura escolar; Centro Interescolar; História das instituições escolares; CEDUP; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-ARTIGO-DENISE-MATIOLA-TODOROV-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/644380" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> UM DIÁLOGO COM ESTUDANTES DO 9º ANO DO ENSINO FUNDAMENTAL SOBRE O PROCESSO SELETIVO DE INGRESSO NO ENSINO MÉDIO INTEGRADO OFERTADO PELO IFC – CAMPUS IBIRAMA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">LEANDRO VENDRAMI</td>
+                <td style="padding:15px; font-size:13px;">FÁTIMA PEREZ ZAGO DE OLIVEIRA.</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Ensino Médio Integrado; Processo Seletivo; Juventude.; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-LEANDRO-VENDRAMI-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/646938" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> DESCOMPLICANDO PARA INCLUIR: UM ESTUDO SOBRE O PROGRAMA DE AUXÍLIOS ESTUDANTIS DO INSTITUTO FEDERAL CATARINENSE DISSERTAÇÃO DANIELA THOMAS RAUBER</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> ---</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">DANIELA THOMAS RAUBER</td>
+                <td style="padding:15px; font-size:13px;">VIVIANE GRIMM</td>
+                <td style="padding:15px; font-size:12px; color:#555;">---</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">---</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-DANIELA-THOMAS-RAUBER-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-DANIELA-THOMAS-RAUBER-PDF-A.pdf" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> LEITURA E COMPREENSÃO TEXTUAL: TESSITURA DE PROPOSTASPEDAGÓGICAS PARA O ENSINO MÉDIO INTEGRADO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">GLAUBER PEREIRA DE SOUZA</td>
+                <td style="padding:15px; font-size:13px;">DR. BRUNO NUNES BATISTA</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Leitura; Textualidade; ProfEPT; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-GLAUBER.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/598410" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;">---</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">SIMONE VOLTOLINI OLCZYK</td>
+                <td style="padding:15px; font-size:13px;">DRA. INGE R. F. SUHR Dissertação (RE)CONSTRUINDOOLHARES:CAMINHOS METODOLÓGICOS PARA CONHECER OS JOVENS DO ENSINO MÉDIO INTEGRADO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Juventude(s); Ensino Médio Integrado; Educação Integral; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/09/Dissertacao-Simone.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/569564" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> ENSINO MÉDIO INTEGRADO E ALTAS HABILIDADES/SUPERDOTAÇÃO: DESAFIOS E POSSIBILIDADES</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">CAROLINE RESENDE ZAGO</td>
+                <td style="padding:15px; font-size:13px;">DRA. INGE R. F. SUHR</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Altas habilidades/superdotação; educação especial e inclusiva; educação profissional e tecnológica; atendimento educacional especializado; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/09/Dissertacao-Caroline.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/573116" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> CIDADÃOS PARA O MUNDO DO TRABALHO: OS IFS E O PROJETO SOCIETÁRIO DE DESENVOLVIMENTO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JOÃO  CARLOS CICHACZEWSKI</td>
+                <td style="padding:15px; font-size:13px;">DR. CLOVES ALEXANDRE DE CASTRO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional Tecnológica; Institutos Federais de Ciência e Tecnologia; classe trabalhadora; estado; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-JOAO-CARLOS-CICHACZEWSKI.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/573120" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> PORTIFÓLIO FORMATIVO: UMA PROPOSTA DE FORMAÇÃO CONTINUADA SOBRE PRÁTICAS PEDAGÓGICAS E MATERIAIS DIDÁTICOS ACESSÍVEIS PARA INCLUSÃO DE ESTUDANTES CEGOS NO ENSINO MÉDIO INTEGRADO NO CONTEXTO DA EPT.</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">LUANA TILLMANN Orietadora: DRA. SÔNIA REGINA FERNANDES</td>
+                <td style="padding:15px; font-size:13px;">---</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Cegos – Educação. Educação inclusiva. Material didático. Estudantes do ensino médio integrado. IFC. PROFEPT.; curso</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-LUANA-TILMANN-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/574586" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;">---</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">VINÍCIUS VIEIRA DE SOUSA</td>
+                <td style="padding:15px; font-size:13px;">DRA. INGE RENATE  FROSE SUHR Dissertação CONTRA-BANDOS: PERCURSO DOS SUJEITOS DA EDUCAÇÃO DE JOVENS E ADULTOS INTEGRADA A EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA ATRAVÉS DA ESCRITA EM SI .</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação de Jovens e Adultos integrada à Educação Profissional e Tecnológica; Memorial; Sequência Didática.; Educação Profissional e TEcnológica; outro</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-VINCIUS-VIEIRA-DE-SOUSA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/574975" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;">---</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">CRISTIANE ALBANO MARQUETTI</td>
+                <td style="padding:15px; font-size:13px;">DR. HUMBERTO LUIS DE CESARO Dissertação intitulada MATERIAIS DIDÁTICOS ACESSÍVEIS PARA ALUNOS SURDOS: RESPEITO LINGUÍSTICO NO ENSINO MÉDIO INTEGRADO EM MODELAGEM DO VESTUÁRIO NO IFSC – JARAGUÁ DO SUL</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Educação Crítica / Emancipatória</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Profept; acessibilidade; respeito linguistico; moulage cartesiana; outro</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-PRODUTO-CRISTIANE-ALBANO-MARQUETTI-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/573602" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> A LITERATURA MARGINAL COMO CHAVE HERMENÊUTICA NO ESTUDO DA DITADURA MILITAR: UMA SEQUÊNCIA  DIDÁTICA INTERDISCLIPLINAR COMO PRODUTO EDUCACIONAL NA EPT</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">HENRIQUE PITT</td>
+                <td style="padding:15px; font-size:13px;">DR. REGINALDO LEANDRO PLÁCIDO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Formação Humana Integral / Omnilateralidade</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Ensino Médio Integrado; Sequência Didática; Literatura Marginal; outro</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-PRODUTO-HENRIQUE-PITT-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/573584" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> ACOLHER PARA INCLUIR: O ACOLHIMENTO COMO ARTICULADOR DAS PRÁTICAS EDUCACIONAIS INCLUSIVAS</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;"> C ÁTIA MARIA ALVES MONTEIRO</td>
+                <td style="padding:15px; font-size:13px;">DR. REGINALDO LEANDRO PLÁCIDO:</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Educação Crítica / Emancipatória</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Educação Inclusiva; Acolhimento; Educação Integral; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-CATIA-MARIA-ALVES-MONTEIRO.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/574365" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;">---</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">ROSELI BONFANTE</td>
+                <td style="padding:15px; font-size:13px;">DRA. INGE RENATE FROSE SUHR Dissertação O PROCESSO DE ESCOLHA PROFISSIONAL DE JOVENS DA CLASSE QUE VIVE DO TRABALHO: UM ESTUDO A PARTIR DO CAMPUS RIO DO SUL DO INSTITUTO FEDERAL CATARINENSE</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação profissional e tecnológica; Orietnação profissional; Mundo do trabalho; Escolha profisisonal; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Artigo_ps_banca-1.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/585079" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> PREVALÊNCIA DE MENINOS E MENINAS NOS CURSOS DO ENSINO MÉDIO INTEGRADO DO IFC: UMA PÁGINA DE INTERNET PARA REFLETIR SOBRE OS IMPACTOS DA DIVISÃO SEXUAL DO TRABALHO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">CAROLINA FONTOURA CARTANA</td>
+                <td style="padding:15px; font-size:13px;">DR. HUMBERTO LUIS DE CESARO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Divisão Sexual do Trabalho; Ensino Médio Integrado; Gênero; outro</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-CARLOLINA-CARTANA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/584480" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> FORMAÇÃO PARA O MUNDO DO TRABALHO OU PARA O MERCADO DE TRABALHO? UMA ANÁLISE DOS PLANOS DE ENSINO DOS CURSOS DE MECÂNICA INTEGRADOS AO ENSINO MÉDIO DO IFC E DO IFSC Produto Educional: SEQUÊNCIA DIDÁTICA – PENSAR A CONSTELAÇÃO DA CIÊNCIA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">VÂNIO DEMÉTRIO</td>
+                <td style="padding:15px; font-size:13px;">DR. EDUARDO WERNECK RIBEIRO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Educação Crítica / Emancipatória</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Teodoro Adorno; Ensino Médio Integrado; Sequência Didática; livro digital</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-VANIO-DEMETRIO-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/574381" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;">---</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">ALANA MOTA GERLACH</td>
+                <td style="padding:15px; font-size:13px;">DR. BRUNO NUNES BATISTA Dissertação GAMIFICATION:UMA PROPOSTA PARA O ENSINO DE LÍNGUA INGLESA NO ENSINO MÉDIO INTEGRADO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ensino Médio Integrado; Discentes; Percepções; outro</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-ALANA-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/584995" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> INDICADORES SOCIAIS E ECONÔMICOS COMO INSTRUMENTO DE GESTÃO NO PROCESSO DE DESENVOLVIMENTO DOS INSTITUTOS FEDERAIS: UM ESTUDO A PARTIR DO IFC/CAMPUS BRUSQUE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">VALNEI NUNES</td>
+                <td style="padding:15px; font-size:13px;">DR. EDUARDO WERNECK RIBEIRO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Indicadores Sociais e Econômicos; Matriz; Institutos Federais; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-VALNEI-NUNES.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://educapes.capes.gov.br/handle/capes/584436" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> DIFICULDADES DE APRENDIZAGEM EM MATEMÁTICA E O INSUCESSO NO CURSO SUBSEQUENTE EM EDIFICAÇÕES</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">CARLA MULLER</td>
+                <td style="padding:15px; font-size:13px;">DR. LEANDRO MARCOS ALVES SALGADO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Avaliação Diagnóstica; Educação Profissional e Tecnológica; Matemática; Interativo; ferramentas</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-CARLA-MULLER.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/586884" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> REVISITANDO OS CONCEITOS – BASE DA PROPOSTA CURRICULAR DO CURSO DE FORMAÇÃO DE PROFESSORES EM NÍVEL MÉDIO NO ESTADO DO PARANÁ</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JOSIANE RODRIGUES DE JESUS,</td>
+                <td style="padding:15px; font-size:13px;">DRA. INGE RENATE FROSE SUHR.</td>
+                <td style="padding:15px; font-size:12px; color:#555;">Materialismo Histórico-Dialético</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">trabalho como princípio educativo; práxis; práxis; integração curricular; integração curricular; direito da criança ao atendimento escolar; direito da criança ao atendimento escolar; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-JOSIANE-RODRIGUES-DE-JESUS-Copia.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/586253" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> TECNOLOGIAS ASSISTIVAS : TUTORIAL PEDAGÓGICO COMO FERRAMENTA FORMATIVA PARA PROFESSORES COM ESTUDANTES DISSERTAÇÃO KAREM APARECIDA SIMAS RESENDE</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> ---</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">KAREM APARECIDA SIMAS RESENDE</td>
+                <td style="padding:15px; font-size:13px;">DRA. SONIA REGINA DE SOUZA FERNANDES.</td>
+                <td style="padding:15px; font-size:12px; color:#555;">---</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">---</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-KAREM-APARECIDA-SIMAS-RESENDE.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-KAREM-APARECIDA-SIMAS-RESENDE.pdf" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O ENSINO MÉDIO INTEGRADO À EDUCAÇÃO PROFISSIONAL NO IFC CAMPUS IBIRAMA: CONSTRUÇÃO DE UM VÍDEO EXPLICATIVO A PARTIR DAS PERCEPÇÕES DE DISCENTES INGRESSANTES</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">LUANA CRISTINA GONÇALVES</td>
+                <td style="padding:15px; font-size:13px;">DR. HUMBERTO LUIS DE CESARO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Ensino Médio Integrado; Discentes; Percepções; outro</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-LUANA-CRISTINA-GONCALVES.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/584995" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> MEMÓRIA E PRODUÇÃO DA IDENTIDADE INSTITUCIONAL: CONTRIBUIÇÕES DO MEMORIAL DO IFC RIO DO SUL</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">TALITA DEANE ERN</td>
+                <td style="padding:15px; font-size:13px;">DR. CLOVES ALEXANDRE DE CASTRO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Rio do Sul; EAFRS; IFC; Memória; Educação Profissional e Tecnológica; áudio; imagem; texto; portal; vídeo</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-TALITA-DEANE-ERN-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/702858" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> DEMOCRACIA E PARTICIPAÇÃO: ANÁLISE DE DADOS TEXTUAIS DOS PLANOS DE DESENVOLVIMENTO INSTITUCIONAIS DOS INSTITUTOS FEDERAIS</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> EJA</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">SILVANI DA SILVA</td>
+                <td style="padding:15px; font-size:13px;">DR. EDUARDO AUGUSTO WERNECK RIBEIRO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Análise de Texto; Análise Léxica; apresentação</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Dissertacao-Produto-Silvani-da-Silva-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/586864" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;">---</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">HELEN CAROLINA FERREIRA SANTOS,</td>
+                <td style="padding:15px; font-size:13px;">DR. CLOVES ALEXANDRE DE CASTRO Dissertação Intitulada: CONTRIBUIÇÕES PARA PENSAR OS DESASTRES “NATURAIS” A PARTIR DE REFLEXÕES DE ESTUDANTES DO ENSINO MÉDIO ENSINO INTEGRADO DO IFC – CAMPUS SÃO BENTO DO SUL: O CASO DE RIO NEGRINHO-SC</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Desastres Naturais; Desastres; Rio Negrinho-SC; Vulnerabilidade; risco; perigo.; outro</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-HELEN-FERREIRA.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/644976" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O ATENDIMENTO AO PÚBLICO LGBTQI+ NO CAMPUS CAMBORIÚ – INSTITUTO FEDERAL CATARINENSE: POR UMA POLÍTICA INSTITUCIONAL NÃO EXCLUDENTE NO ENSINO MÉDIO INTEGRADO</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Outros</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">JAIR ADRIANO STRAPAZZON</td>
+                <td style="padding:15px; font-size:13px;">DR. HUMBERTO LUIS DE CESARO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Diversidade sexual; gênero; LGBTfobia; inclusão; Educação Profissional e Tecnológica; texto</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-VERSAO-FINAL-JAIR-ADRIANO-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/643836" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;"> O VALOR DE UMA AÇÃO SOCIAL: O CÃO-GUIA</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Graduação</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">SANDRO MARCOS LEVATI</td>
+                <td style="padding:15px; font-size:13px;">DR. HUMBERTO LUIS DE CESARO</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Cão-guia; Deficiência visual; Valor Social; áudio</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Artigo-Final-Sandro-Marcos-Levati-PDF-A.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/603617" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding:15px; min-width:280px;">
+                    <div style="font-weight:bold; color:#2d5a27; font-size:14px; line-height:1.2;">---</div>
+                    <div style="font-size:11px; color:#777; margin-top:4px;"><b>Nível:</b> Ensino Médio Integrado</div>
+                </td>
+                <td style="padding:15px; font-size:13px;">SHYRLEI KARYNA JAGIELSKI BENKENDORF</td>
+                <td style="padding:15px; font-size:13px;">DR. REGINALDO LEANDRO PLÁCIDO Dissertação Intitulada: TECENDO A HISTÓRIA DO INSTITUTO FEDERAL CATARINENSE, CAMPUS CONCÓRDIA (1965-1975): HISTÓRIAS DE (IN)DISCIPLINA</td>
+                <td style="padding:15px; font-size:12px; color:#555;">A definir (Análise Manual)</td>
+                <td style="padding:15px; font-size:12px; min-width:150px;"><span style="background:#e8f5e9; color:#2d5a27; padding:2px 8px; border-radius:4px; margin-right:5px; font-size:10px; border:1px solid #c8e6c9; display:inline-block; margin-top:3px;">Educação Profissional e Tecnológica; Cultura escolar; Indisciplina escolar; Escolas agrícolas; Internato; portal</span></td>
+                <td style="padding:15px; text-align:center;"><a href="https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-FINAL-SHYRLEI-BENKENDORF.pdf" target="_blank" style="color:#e63946; text-decoration:none; font-weight:bold;">📄 PDF</a></td>
+                <td style="padding:15px; text-align:center;"><a href="http://educapes.capes.gov.br/handle/capes/601242" target="_blank" style="color:#2d5a27; text-decoration:none; font-weight:bold;">📦 Produto</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+document.getElementById('filtroRapido').addEventListener('keyup', function() {
+    const busca = this.value.toLowerCase();
+    const linhas = document.querySelectorAll('#tabelaDados tr');
+    
+    linhas.forEach(linha => {
+        linha.style.display = linha.innerText.toLowerCase().includes(busca) ? "" : "none";
+    });
+});
+</script>
