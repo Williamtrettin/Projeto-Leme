@@ -473,7 +473,7 @@ Devem permanecer versionados:
 util.py
 requirements.txt
 README.md
-GUIA_DE_CONTINUIDADE.md
+GUIA.md
 DIAGRAMAS.md
 dados/referencia/*.json
 tests/test_fluxo.py

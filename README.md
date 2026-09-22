@@ -2,7 +2,7 @@
 
 Coleta as dissertações do ProfEPT/IFC, executa OCR nos PDFs, prepara a classificação pelo GPT e gera o painel HTML.
 
-A explicação completa para a continuidade do projeto está em [GUIA_DE_CONTINUIDADE.md](GUIA_DE_CONTINUIDADE.md).
+A explicação completa para a continuidade do projeto está em [GUIA.md](GUIA.md).
 Os diagramas de arquitetura, dados e execução estão em [DIAGRAMAS.md](DIAGRAMAS.md).
 
 ## Instalação
@@ -54,10 +54,6 @@ python 1_PegarDadosSiteIfc.py --inseguro-tls
 # testar coleta + OCR com poucos registros
 python 1_PegarDadosSiteIfc.py --limite 2
 ```
-
-## O que vai para o Git
-
-O repositório guarda somente código, testes, dependências, documentação e os JSONs de referência necessários. PDFs, planilhas, cache, relatórios, respostas do GPT e o painel são gerados localmente e ignorados pelo Git.
 
 ## Testes
 
