@@ -1,0 +1,2334 @@
+{
+  "schema_version": "leme-identidades-v1",
+  "proximo_numero": 111,
+  "identidades": [
+    {
+      "id": "EPT-0001",
+      "titulo": "EDUCAÇÃO FINANCEIRA COMO TEMA TRANSVERSAL NA EPT: UMA ANÁLISE DOS PPC´S DOS CURSOS TÉCNICOS INTEGRADOS AO ENSINO MÉDIO DO IFC",
+      "autor": "SILVANA DE OLIVEIRA RIBEIRO DA SILVA",
+      "ano": "2026",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2026/03/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_-SILVANA-DE-OLIVEIRA-RIBEIRO-DA-SILVA.pdf",
+      "novo_nome_pdf": "EPT-0001_educacao_financeira_como_tema_transversal_na_ept_uma_analise_dos_ppc_s_dos_cursos_tecnicos_integrados_ao_ensin.pdf",
+      "sha256": "a0052e815fea8a2627ad3c74f4fb979e3bfcb2d3faebf75b4d722d7c03cb01d4",
+      "aliases_conhecidos": {
+        "titulos": [
+          "EDUCAÇÃO FINANCEIRA COMO TEMA TRANSVERSAL NA EPT: UMA ANÁLISE DOS PPC´S DOS CURSOS TÉCNICOS INTEGRADOS AO ENSINO MÉDIO DO IFC"
+        ],
+        "autores": [
+          "SILVANA DE OLIVEIRA RIBEIRO DA SILVA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2026/03/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_-SILVANA-DE-OLIVEIRA-RIBEIRO-DA-SILVA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0002",
+      "titulo": "O USO DE MAQUETES NO PROCESSO DE APRENDIZAGEM CRÍTICA, DESENVOLVIMENTO DA PERCEPÇÃO ESPACIAL E SENSO DE ESCALA GEOMÉTRICA NO CURSO TÉCNICO EM EDIFICAÇÕES SUBSEQUENTE AO ENSINO MÉDIO DO IFC – CAMPUS FRAIBURGO",
+      "autor": "VICTOR MEIRELES AIRES",
+      "ano": "2026",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2026/03/DISSERTACAO_VICTOR-MEIRELES-AIRES.pdf",
+      "novo_nome_pdf": "EPT-0002_o_uso_de_maquetes_no_processo_de_aprendizagem_critica_desenvolvimento_da_percepcao_espacial_e_senso_de_escala.pdf",
+      "sha256": "c62c784eb2b46e381ce1d90e6aa3e0af64d445f1d33a9546089217bdf9f6c8bc",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O USO DE MAQUETES NO PROCESSO DE APRENDIZAGEM CRÍTICA, DESENVOLVIMENTO DA PERCEPÇÃO ESPACIAL E SENSO DE ESCALA GEOMÉTRICA NO CURSO TÉCNICO EM EDIFICAÇÕES SUBSEQUENTE AO ENSINO MÉDIO DO IFC – CAMPUS FRAIBURGO"
+        ],
+        "autores": [
+          "VICTOR MEIRELES AIRES"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2026/03/DISSERTACAO_VICTOR-MEIRELES-AIRES.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0003",
+      "titulo": "CURRICULARIZAÇÃO DA PESQUISA NO ENSINO MÉDIO INTEGRADO: PACTOS E PERSPECTIVAS DOCENTES NO IFC – CAMPUS RIO DO SUL",
+      "autor": "LETÍCIA BACHMANN KURTH",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/Dissertacao_IFC_-_LETCIA_BACHMANN_KURTH.pdf",
+      "novo_nome_pdf": "EPT-0003_curricularizacao_da_pesquisa_no_ensino_medio_integrado_pactos_e_perspectivas_docentes_no_ifc_campus_rio_do_sul.pdf",
+      "sha256": "6a1ade6863d7c1adf4a19ac0c9e84cf227627a395be331447e0b9fa333774dc5",
+      "aliases_conhecidos": {
+        "titulos": [
+          "CURRICULARIZAÇÃO DA PESQUISA NO ENSINO MÉDIO INTEGRADO: PACTOS E PERSPECTIVAS DOCENTES NO IFC – CAMPUS RIO DO SUL"
+        ],
+        "autores": [
+          "LETÍCIA BACHMANN KURTH"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/Dissertacao_IFC_-_LETCIA_BACHMANN_KURTH.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0004",
+      "titulo": "VIVÊNCIAS E EXPERIÊNCIAS COM O MOODLE NA EJA-EPT: UMA AUTOETNOGRAFIA NO CURSO DE ELETRICISTA INDUSTRIAL DO IFC BLUMENAU",
+      "autor": "ALEXANDRE VELOSO DOS SANTOS",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/Dissertacao_Alexandre_Veloso_dos_Santos.pdf",
+      "novo_nome_pdf": "EPT-0004_vivencias_e_experiencias_com_o_moodle_na_eja_ept_uma_autoetnografia_no_curso_de_eletricista_industrial_do_ifc.pdf",
+      "sha256": "9815a6ff54ec668d884fd41084fc617d5229edaeb803be80547ee560ace5d5ea",
+      "aliases_conhecidos": {
+        "titulos": [
+          "VIVÊNCIAS E EXPERIÊNCIAS COM O MOODLE NA EJA-EPT: UMA AUTOETNOGRAFIA NO CURSO DE ELETRICISTA INDUSTRIAL DO IFC BLUMENAU"
+        ],
+        "autores": [
+          "ALEXANDRE VELOSO DOS SANTOS"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/Dissertacao_Alexandre_Veloso_dos_Santos.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0005",
+      "titulo": "PRÁTICA PEDAGÓGICA INTEGRADORA EM ENSINO, PESQUISA E EXTENSÃO: UM ESTUDO NA FEIRA DO CONHECIMENTO DO INSTITUTO FEDERAL CATARINENSE.",
+      "autor": "LUZIANA DA SILVA DIAS",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/DISSERTACAO-LUZIANA-DA-SILVA-DIAS.pdf",
+      "novo_nome_pdf": "EPT-0005_pratica_pedagogica_integradora_em_ensino_pesquisa_e_extensao_um_estudo_na_feira_do_conhecimento_do_instituto_f.pdf",
+      "sha256": "2f2717caf4e80f6d08574c6f4a41aa790b1b53d41a1e613db2786a21e2b3a0fa",
+      "aliases_conhecidos": {
+        "titulos": [
+          "PRÁTICA PEDAGÓGICA INTEGRADORA EM ENSINO, PESQUISA E EXTENSÃO: UM ESTUDO NA FEIRA DO CONHECIMENTO DO INSTITUTO FEDERAL CATARINENSE."
+        ],
+        "autores": [
+          "LUZIANA DA SILVA DIAS"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/DISSERTACAO-LUZIANA-DA-SILVA-DIAS.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0006",
+      "titulo": "ACOLHIMENTO: UMA PRÁTICA PARA A PERMANÊNCIA E ÊXITO DOS ESTUDANTES DO CURSO TÉCNICO SUBSEQUENTE EM ADMINISTRAÇÃO DO IFSC CAMPUS GASPAR.",
+      "autor": "IDCE IHLENFELDT SEJAS",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_-IDCE-SEJAS.pdf",
+      "novo_nome_pdf": "EPT-0006_acolhimento_uma_pratica_para_a_permanencia_e_exito_dos_estudantes_do_curso_tecnico_subsequente_em_administraca.pdf",
+      "sha256": "32f68a11dfb9e129c0fd6cf0d03c73996c1a2d7c825b01fc14e5bcd712dbe80a",
+      "aliases_conhecidos": {
+        "titulos": [
+          "ACOLHIMENTO: UMA PRÁTICA PARA A PERMANÊNCIA E ÊXITO DOS ESTUDANTES DO CURSO TÉCNICO SUBSEQUENTE EM ADMINISTRAÇÃO DO IFSC CAMPUS GASPAR."
+        ],
+        "autores": [
+          "IDCE IHLENFELDT SEJAS"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_-IDCE-SEJAS.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0007",
+      "titulo": "O ESTÁGIO CURRICULAR COMO ESPAÇO PEDAGÓGICO DE REFLEXÃO ACERCA DO MUNDO DO TRABALHO",
+      "autor": "RAFAELA KRACIK SIQUEIRA",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/DISSERTACAO_E_PRODUTO_EDUCACIONAL___RAFAELA_KRACIK_SIQUEIRA.pdf",
+      "novo_nome_pdf": "EPT-0007_o_estagio_curricular_como_espaco_pedagogico_de_reflexao_acerca_do_mundo_do_trabalho.pdf",
+      "sha256": "69af738f42eb9c169665b9965ca78cd56ecdd793323ad68bcd152ca8ffa7274c",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O ESTÁGIO CURRICULAR COMO ESPAÇO PEDAGÓGICO DE REFLEXÃO ACERCA DO MUNDO DO TRABALHO"
+        ],
+        "autores": [
+          "RAFAELA KRACIK SIQUEIRA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/DISSERTACAO_E_PRODUTO_EDUCACIONAL___RAFAELA_KRACIK_SIQUEIRA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0008",
+      "titulo": "IMPACTO DO PAE (PROGRAMA DE AUXÍLIOS ESTUDANTIS) NA PERMANÊNCIA E ÊXITO ESCOLAR DE ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO IFC CAMPUS BLUMENAU",
+      "autor": "VALQUÍRIA CORREIA CAMPOS",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/DISSERTACAO_VALQUIRIA_CORRETA_pdfa_3.pdf",
+      "novo_nome_pdf": "EPT-0008_impacto_do_pae_programa_de_auxilios_estudantis_na_permanencia_e_exito_escolar_de_estudantes_do_ensino_medio_in.pdf",
+      "sha256": "a27bde26297778fed25ef5c99ba9388953b662fa29428647d8e3a0d19bb62a76",
+      "aliases_conhecidos": {
+        "titulos": [
+          "IMPACTO DO PAE (PROGRAMA DE AUXÍLIOS ESTUDANTIS) NA PERMANÊNCIA E ÊXITO ESCOLAR DE ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO IFC CAMPUS BLUMENAU"
+        ],
+        "autores": [
+          "VALQUÍRIA CORREIA CAMPOS"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/12/DISSERTACAO_VALQUIRIA_CORRETA_pdfa_3.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0009",
+      "titulo": "A HISTÓRIA DA IMPLANTAÇÃO (2012-2022) DO IFC CAMPUS SÃO BENTO DO SUL E A SUA RELAÇÃO COM OS ARRANJOS PRODUTIVOS, SOCIAIS E CULTURAIS LOCAIS",
+      "autor": "LARISSA MERLO MORALES DA SILVA",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/11/DISSERTACAO_-E_PRODUTO_EDUCACIONAL___LARISSA_MERLO_MORALES_DA_SILVA-1.pdf",
+      "novo_nome_pdf": "EPT-0009_a_historia_da_implantacao_2012_2022_do_ifc_campus_sao_bento_do_sul_e_a_sua_relacao_com_os_arranjos_produtivos.pdf",
+      "sha256": "b7ec2939892411f756994a52778d984934b3f32d095f65c19145411f5b14b034",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A HISTÓRIA DA IMPLANTAÇÃO (2012-2022) DO IFC CAMPUS SÃO BENTO DO SUL E A SUA RELAÇÃO COM OS ARRANJOS PRODUTIVOS, SOCIAIS E CULTURAIS LOCAIS"
+        ],
+        "autores": [
+          "LARISSA MERLO MORALES DA SILVA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/11/DISSERTACAO_-E_PRODUTO_EDUCACIONAL___LARISSA_MERLO_MORALES_DA_SILVA-1.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0010",
+      "titulo": "IDENTIFICAÇÃO DA REGULAMENTAÇÃO DAS NORMAS DE SEGURANÇA DO TRABALHO EM REGIME ESTATUTÁRIO NO ENSINO PROFISSIONAL E TECNOLÓGICO DO INSTITUTO FEDERAL CATARINENSE.",
+      "autor": "MAYKON DONIZETE DOS SANTOS",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/11/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_MAYKON-DONIZETE-DOS-SANTOS.-1.pdf",
+      "novo_nome_pdf": "EPT-0010_identificacao_da_regulamentacao_das_normas_de_seguranca_do_trabalho_em_regime_estatutario_no_ensino_profission.pdf",
+      "sha256": "eeebfa5416ead8acd4cfb0e5599e8e2e18896c788826f900ed3fcaef8c454867",
+      "aliases_conhecidos": {
+        "titulos": [
+          "IDENTIFICAÇÃO DA REGULAMENTAÇÃO DAS NORMAS DE SEGURANÇA DO TRABALHO EM REGIME ESTATUTÁRIO NO ENSINO PROFISSIONAL E TECNOLÓGICO DO INSTITUTO FEDERAL CATARINENSE."
+        ],
+        "autores": [
+          "MAYKON DONIZETE DOS SANTOS"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/11/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_MAYKON-DONIZETE-DOS-SANTOS.-1.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0011",
+      "titulo": "INTELIGÊNCIA ARTIFICIAL GENERATIVA NA EPT: EXPLORANDO O USO DO CHATGPT SOB A PERSPECTIVA DA PESQUISA COMO PRINCÍPIO PEDAGÓGICO.",
+      "autor": "KASSANDRA COELHO WALTRICH",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/10/DISSERTACAO-E-PRODUTO-EDUCACIONAL_KASSANDRA-COELHO-WALTRICH.pdf",
+      "novo_nome_pdf": "EPT-0011_inteligencia_artificial_generativa_na_ept_explorando_o_uso_do_chatgpt_sob_a_perspectiva_da_pesquisa_como_princ.pdf",
+      "sha256": "ad8bd0ee7cf2a67c356265d66c1907cb7cd23045dc67c3e3bdfe6f4d676e96f7",
+      "aliases_conhecidos": {
+        "titulos": [
+          "INTELIGÊNCIA ARTIFICIAL GENERATIVA NA EPT: EXPLORANDO O USO DO CHATGPT SOB A PERSPECTIVA DA PESQUISA COMO PRINCÍPIO PEDAGÓGICO."
+        ],
+        "autores": [
+          "KASSANDRA COELHO WALTRICH"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/10/DISSERTACAO-E-PRODUTO-EDUCACIONAL_KASSANDRA-COELHO-WALTRICH.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0012",
+      "titulo": "FAMÍLIA E ESCOLA: INFLUÊNCIAS SOCIAIS NA TRANSIÇÃO ENTRE O ENSINO FUNDAMENTAL AO ENSINO MÉDIO INTEGRADO NO IFSC (2018 A 2025)",
+      "autor": "CRISTIANE VIEIRA DOS SANTOS FÜRST",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/10/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_-CRISTIANE-FURST.pdf",
+      "novo_nome_pdf": "EPT-0012_familia_e_escola_influencias_sociais_na_transicao_entre_o_ensino_fundamental_ao_ensino_medio_integrado_no_ifsc.pdf",
+      "sha256": "4252b465fdae80871fe0c2e001f82c6585300486eccb049045c22b40b5f2eb1d",
+      "aliases_conhecidos": {
+        "titulos": [
+          "FAMÍLIA E ESCOLA: INFLUÊNCIAS SOCIAIS NA TRANSIÇÃO ENTRE O ENSINO FUNDAMENTAL AO ENSINO MÉDIO INTEGRADO NO IFSC (2018 A 2025)"
+        ],
+        "autores": [
+          "CRISTIANE VIEIRA DOS SANTOS FÜRST"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/10/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_-CRISTIANE-FURST.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0013",
+      "titulo": "BIBLIOTECA EDUCATIVA PÚBLICA E A EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA: EXPERIÊNCIAS NA FORMAÇÃO INTEGRAL",
+      "autor": "JOSELICE LEMES DE OLIVEIRA RODRIGUES",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/10/DISSERTACAO_JOSELICE_LEMES_DE_OLIVEIRA_RODRIGUES.pdf",
+      "novo_nome_pdf": "EPT-0013_biblioteca_educativa_publica_e_a_educacao_profissional_e_tecnologica_experiencias_na_formacao_integral.pdf",
+      "sha256": "c065571cfce2fb12eed0a45e9c9b7e9660bf0ca50104ee12e7b0dc1163117bb1",
+      "aliases_conhecidos": {
+        "titulos": [
+          "BIBLIOTECA EDUCATIVA PÚBLICA E A EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA: EXPERIÊNCIAS NA FORMAÇÃO INTEGRAL"
+        ],
+        "autores": [
+          "JOSELICE LEMES DE OLIVEIRA RODRIGUES"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/10/DISSERTACAO_JOSELICE_LEMES_DE_OLIVEIRA_RODRIGUES.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0014",
+      "titulo": "ENSINO AGRÍCOLA, AGRICULTURA FAMILIAR E AGROECOLOGIA: UMA APROXIMAÇÃO NECESSÁRIA",
+      "autor": "JAINARA PACHECO DE BRAGA",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/09/DISSERTACAO-E-PRODUTO-EDUCACIONAL_JAINARA.pdf",
+      "novo_nome_pdf": "EPT-0014_ensino_agricola_agricultura_familiar_e_agroecologia_uma_aproximacao_necessaria.pdf",
+      "sha256": "43efbe9b2e7c2e5aa934f2cfc26aa96164f1dc111e35d12437d7c77f31e515a5",
+      "aliases_conhecidos": {
+        "titulos": [
+          "ENSINO AGRÍCOLA, AGRICULTURA FAMILIAR E AGROECOLOGIA: UMA APROXIMAÇÃO NECESSÁRIA"
+        ],
+        "autores": [
+          "JAINARA PACHECO DE BRAGA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/09/DISSERTACAO-E-PRODUTO-EDUCACIONAL_JAINARA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0015",
+      "titulo": "CINEMA PARA UMA FORMAÇÃO HUMANA INTEGRAL CONTEMPORÂNEA: CONTRIBUIÇÕES PARA O ENSINO MÉDIO INTEGRADO NOS INSTITUTOS FEDERAIS .",
+      "autor": "LUCAS NETO",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/09/DISSERTAO_E_PRODUTO_EDUCACIONAL___LUCAS_NETO.pdf",
+      "novo_nome_pdf": "EPT-0015_cinema_para_uma_formacao_humana_integral_contemporanea_contribuicoes_para_o_ensino_medio_integrado_nos_institu.pdf",
+      "sha256": "eae101bdfed630b21a91b28bf2a7025a74a45ce95c51f3cfb8b0963254507289",
+      "aliases_conhecidos": {
+        "titulos": [
+          "CINEMA PARA UMA FORMAÇÃO HUMANA INTEGRAL CONTEMPORÂNEA: CONTRIBUIÇÕES PARA O ENSINO MÉDIO INTEGRADO NOS INSTITUTOS FEDERAIS ."
+        ],
+        "autores": [
+          "LUCAS NETO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/09/DISSERTAO_E_PRODUTO_EDUCACIONAL___LUCAS_NETO.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0016",
+      "titulo": "A PRESENÇA DO PÚBLICO FEMININO NA ÁREA ELÉTRICA: UM ESTUDO DE CASO A PARTIR DA EVASÃO NO CURSO TÉCNICO EM ELETROTÉCNICA DO SENAI BLUMENAU",
+      "autor": "LUCÉLIO BELETTI",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/09/DISSERTACAO_E_PRODUTO_EDUCACIONAL___LUCELIO_BELLETTI.pdf",
+      "novo_nome_pdf": "EPT-0016_a_presenca_do_publico_feminino_na_area_eletrica_um_estudo_de_caso_a_partir_da_evasao_no_curso_tecnico_em_eletr.pdf",
+      "sha256": "d3ae10d31889f2916a5e73ded93d73aae1fca65c18ef9dc8241dc1330472af5c",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A PRESENÇA DO PÚBLICO FEMININO NA ÁREA ELÉTRICA: UM ESTUDO DE CASO A PARTIR DA EVASÃO NO CURSO TÉCNICO EM ELETROTÉCNICA DO SENAI BLUMENAU"
+        ],
+        "autores": [
+          "LUCÉLIO BELETTI"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/09/DISSERTACAO_E_PRODUTO_EDUCACIONAL___LUCELIO_BELLETTI.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0017",
+      "titulo": "PREVENÇÃO E ENFRENTAMENTO ÀS VIOLÊNCIAS: UM ESTUDO A PARTIR DE UMA AÇÃO EDUCATIVA COM ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO IFSC – JARAGUÁ DO SUL CENTRO",
+      "autor": "LUCIANA DA CRUZ MORAES MAGARÃO ALVES",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/09/DISSERTACAO_E_PRODUTO_EDUCACIONAL___LUCIANA_ALVESpdfa-2.pdf",
+      "novo_nome_pdf": "EPT-0017_prevencao_e_enfrentamento_as_violencias_um_estudo_a_partir_de_uma_acao_educativa_com_estudantes_do_ensino_medi.pdf",
+      "sha256": "51ce807c5e9b1def9579800683db002d0d062228f6073b59d662355c8cc8f96a",
+      "aliases_conhecidos": {
+        "titulos": [
+          "PREVENÇÃO E ENFRENTAMENTO ÀS VIOLÊNCIAS: UM ESTUDO A PARTIR DE UMA AÇÃO EDUCATIVA COM ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO IFSC – JARAGUÁ DO SUL CENTRO"
+        ],
+        "autores": [
+          "LUCIANA DA CRUZ MORAES MAGARÃO ALVES"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/09/DISSERTACAO_E_PRODUTO_EDUCACIONAL___LUCIANA_ALVESpdfa-2.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0018",
+      "titulo": "A PERSPECTIVA ESTUDANTIL SOBRE A AFILIAÇÃO NO ENSINO MÉDIO INTEGRADO À EDUCAÇÃO PROFISSIONAL: UM ESTUDO COM ESTUDANTES DO INSTITUTO FEDERAL CATARINENSE (IFC) CAMPUS BLUMENAU .",
+      "autor": "GABRIELA BOEMER AMARAL MORETTO",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/08/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_-GABRIELA-BOEMER-AMARAL-MORETTO-2.pdf",
+      "novo_nome_pdf": "EPT-0018_a_perspectiva_estudantil_sobre_a_afiliacao_no_ensino_medio_integrado_a_educacao_profissional_um_estudo_com_est.pdf",
+      "sha256": "d7635ea02e547124365488ff83abfc1c6d2a4a272b16f1c7f6017c11a9548a0b",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A PERSPECTIVA ESTUDANTIL SOBRE A AFILIAÇÃO NO ENSINO MÉDIO INTEGRADO À EDUCAÇÃO PROFISSIONAL: UM ESTUDO COM ESTUDANTES DO INSTITUTO FEDERAL CATARINENSE (IFC) CAMPUS BLUMENAU ."
+        ],
+        "autores": [
+          "GABRIELA BOEMER AMARAL MORETTO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/08/DISSERTACAO-E-PRODUTO-EDUCACIONAL-_-GABRIELA-BOEMER-AMARAL-MORETTO-2.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0019",
+      "titulo": "SABERES COMPLEMENTARES PARA A FORMAÇÃO DE DOCENTES BACHARÉIS NA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA (EPT)",
+      "autor": "RAFAEL VINÍCIUS MARTINS",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/07/DISSERTACAO-E-PRODUTO-EDUCACIONAL_RAFAEL-VINICIUS-MARTINS-2.pdf",
+      "novo_nome_pdf": "EPT-0019_saberes_complementares_para_a_formacao_de_docentes_bachareis_na_educacao_profissional_e_tecnologica_ept.pdf",
+      "sha256": "e32b01b5c15d00bfb97fd04799a4a55ffedb1dd53bd69931b965fbf49ff72e3c",
+      "aliases_conhecidos": {
+        "titulos": [
+          "SABERES COMPLEMENTARES PARA A FORMAÇÃO DE DOCENTES BACHARÉIS NA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA (EPT)"
+        ],
+        "autores": [
+          "RAFAEL VINÍCIUS MARTINS"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/07/DISSERTACAO-E-PRODUTO-EDUCACIONAL_RAFAEL-VINICIUS-MARTINS-2.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0020",
+      "titulo": "ENSINO MÉDIO INTEGRADO PARA QUÊ E PARA QUEM: MOTIVAÇÕES E EXPECTATIVAS DOS ESTUDANTES INGRESSANTES NA ESCOLHA PELO EMI DO IFC SÃO BENTO DO SUL.",
+      "autor": "ALINE BUSS CARDOSO",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/06/DISSERTACAO-E-PRODUTO-EDUCACIONAL_ALINE-BUSS-CARDOSO-1.pdf",
+      "novo_nome_pdf": "EPT-0020_ensino_medio_integrado_para_que_e_para_quem_motivacoes_e_expectativas_dos_estudantes_ingressantes_na_escolha_p.pdf",
+      "sha256": "1ead39f1e6910733d2996bec4cbee8442d974071aa4e63034130bdb3ad2ed547",
+      "aliases_conhecidos": {
+        "titulos": [
+          "ENSINO MÉDIO INTEGRADO PARA QUÊ E PARA QUEM: MOTIVAÇÕES E EXPECTATIVAS DOS ESTUDANTES INGRESSANTES NA ESCOLHA PELO EMI DO IFC SÃO BENTO DO SUL."
+        ],
+        "autores": [
+          "ALINE BUSS CARDOSO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/06/DISSERTACAO-E-PRODUTO-EDUCACIONAL_ALINE-BUSS-CARDOSO-1.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0021",
+      "titulo": "DESAFIOS NO INGRESSO AOS CURSOS TÉCNICOS INTEGRADOS AO ENSINO MÉDIO NO INSTITUTO FEDERAL DE SANTA CATARINA – CÂMPUS ITAJAÍ: DA INSCRIÇÃO À EFETIVAÇÃO DA MATRÍCULA",
+      "autor": "GLAUCIA RAQUEL SPINDLER",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/06/DISSERTACAO-GLAUCIA-RAQUEL-SPINDLER.pdf",
+      "novo_nome_pdf": "EPT-0021_desafios_no_ingresso_aos_cursos_tecnicos_integrados_ao_ensino_medio_no_instituto_federal_de_santa_catarina_cam.pdf",
+      "sha256": "d12bf2425408cb8e9abc2b146f7a8d49633d7af9e8a9cd024778775f98423664",
+      "aliases_conhecidos": {
+        "titulos": [
+          "DESAFIOS NO INGRESSO AOS CURSOS TÉCNICOS INTEGRADOS AO ENSINO MÉDIO NO INSTITUTO FEDERAL DE SANTA CATARINA – CÂMPUS ITAJAÍ: DA INSCRIÇÃO À EFETIVAÇÃO DA MATRÍCULA"
+        ],
+        "autores": [
+          "GLAUCIA RAQUEL SPINDLER"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/06/DISSERTACAO-GLAUCIA-RAQUEL-SPINDLER.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0022",
+      "titulo": "INSTITUTO FEDERAL CATARINENSE CAMPUS ARAQUARI E A EXTENSÃO: UMA ANÁLISE NA PERSPECTIVA DA AÇÃO DIALÓGICA",
+      "autor": "SIMONE ELISA MAI",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/05/DISSERTACAO_SIMONE_ELISA_MAI.pdf",
+      "novo_nome_pdf": "EPT-0022_instituto_federal_catarinense_campus_araquari_e_a_extensao_uma_analise_na_perspectiva_da_acao_dialogica.pdf",
+      "sha256": "4687a9a63cd7bd4ddae314ee290fd803f93fa6ab46c40de3f4246aad4e06a9fc",
+      "aliases_conhecidos": {
+        "titulos": [
+          "INSTITUTO FEDERAL CATARINENSE CAMPUS ARAQUARI E A EXTENSÃO: UMA ANÁLISE NA PERSPECTIVA DA AÇÃO DIALÓGICA"
+        ],
+        "autores": [
+          "SIMONE ELISA MAI"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/05/DISSERTACAO_SIMONE_ELISA_MAI.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0023",
+      "titulo": "O ENSINO DE LITERATURA NUMA PERSPECTIVA DECOLONIAL: UM OLHAR A RESPEITO DO ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE.",
+      "autor": "ANA CLÁUDIA DE OLIVEIRA",
+      "ano": "2025",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/05/Dissertacao_Ana_Claudia_de_Oliveira.pdf",
+      "novo_nome_pdf": "EPT-0023_o_ensino_de_literatura_numa_perspectiva_decolonial_um_olhar_a_respeito_do_ensino_medio_integrado_do_instituto.pdf",
+      "sha256": "6e77f133b313f7693a22a84d4c2904b24eca0cb36951783feff632d7871039b4",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O ENSINO DE LITERATURA NUMA PERSPECTIVA DECOLONIAL: UM OLHAR A RESPEITO DO ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE."
+        ],
+        "autores": [
+          "ANA CLÁUDIA DE OLIVEIRA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/05/Dissertacao_Ana_Claudia_de_Oliveira.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0024",
+      "titulo": "DESAFIOS PEDAGÓGICOS NO DESENVOLVIMENTO DO CURRÍCULO INTEGRADO NO CURSO TÉCNICO EM ADMINISTRAÇÃO DE NÍVEL MÉDIO NO CEDUP – HERMANN HERING – BLUMENAU",
+      "autor": "ROSANA RICHTER",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao_Final_Rosana_Richter.pdf",
+      "novo_nome_pdf": "EPT-0024_desafios_pedagogicos_no_desenvolvimento_do_curriculo_integrado_no_curso_tecnico_em_administracao_de_nivel_medi.pdf",
+      "sha256": "8fe9bc174539c3233d1b3968aeb7ee6fd5daec26e5f0b8823071424c085d0c34",
+      "aliases_conhecidos": {
+        "titulos": [
+          "DESAFIOS PEDAGÓGICOS NO DESENVOLVIMENTO DO CURRÍCULO INTEGRADO NO CURSO TÉCNICO EM ADMINISTRAÇÃO DE NÍVEL MÉDIO NO CEDUP – HERMANN HERING – BLUMENAU"
+        ],
+        "autores": [
+          "ROSANA RICHTER"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao_Final_Rosana_Richter.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0025",
+      "titulo": "IFC E AEE: CONTRIBUIÇÕES PARA A PERCEPÇÃO DE ESTUDANTES COM DEFICIÊNCIA DO ENSINO MÉDIO INTEGRADO DO CAMPUS ARAQUARI SOBRE A INCLUSÃO ENQUANTO DIREITO.",
+      "autor": "CAROLINA BEIRO DA SILVEIRA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao-Carolina-Beiro-da-Silveira.pdf",
+      "novo_nome_pdf": "EPT-0025_ifc_e_aee_contribuicoes_para_a_percepcao_de_estudantes_com_deficiencia_do_ensino_medio_integrado_do_campus_ara.pdf",
+      "sha256": "aa0c80bebb5e52076e6fb4701f924535f273b97a53dd6a3b44f52020f17dc68b",
+      "aliases_conhecidos": {
+        "titulos": [
+          "IFC E AEE: CONTRIBUIÇÕES PARA A PERCEPÇÃO DE ESTUDANTES COM DEFICIÊNCIA DO ENSINO MÉDIO INTEGRADO DO CAMPUS ARAQUARI SOBRE A INCLUSÃO ENQUANTO DIREITO."
+        ],
+        "autores": [
+          "CAROLINA BEIRO DA SILVEIRA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao-Carolina-Beiro-da-Silveira.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0026",
+      "titulo": "O CONSELHO DE CLASSE E A ORGANIZAÇÃO DO TRABALHO PEDAGÓGICO EM CURSOS TÉCNICOS INTEGRADOS AO ENSINO MÉDIO DO IFSC, CAMPUS JARAGUÁ DO SUL – CENTRO: UMA CONSTRUÇÃO COLETIVA E DEMOCRÁTICA",
+      "autor": "KÉLY CRISTINA ZIMMERMANN",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao-Kely_Zimmermann.pdf",
+      "novo_nome_pdf": "EPT-0026_o_conselho_de_classe_e_a_organizacao_do_trabalho_pedagogico_em_cursos_tecnicos_integrados_ao_ensino_medio_do_i.pdf",
+      "sha256": "b6e98acbb997bb069827d74e08de9978b6a70975f326a31c68c153cd5e0ce177",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O CONSELHO DE CLASSE E A ORGANIZAÇÃO DO TRABALHO PEDAGÓGICO EM CURSOS TÉCNICOS INTEGRADOS AO ENSINO MÉDIO DO IFSC, CAMPUS JARAGUÁ DO SUL – CENTRO: UMA CONSTRUÇÃO COLETIVA E DEMOCRÁTICA"
+        ],
+        "autores": [
+          "KÉLY CRISTINA ZIMMERMANN"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao-Kely_Zimmermann.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0027",
+      "titulo": "PRÁTICAS EDUCATIVAS EM LABORATÓRIO DE EFICIÊNCIA ENERGÉTICA NO CENTRO DE EDUCAÇÃO PROFISSIONAL HERMANN HERING: AVALIANDO O IMPACTO NA COMPREENSÃO DOS ESTUDANTES SOBRE EFICIÊNCIA ENERGÉTICA .",
+      "autor": "VERIDIANA MERQUE FERRAZ",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao-Veridiana-Merque-Ferraz.pdf",
+      "novo_nome_pdf": "EPT-0027_praticas_educativas_em_laboratorio_de_eficiencia_energetica_no_centro_de_educacao_profissional_hermann_hering.pdf",
+      "sha256": "04b1d6cc3b05ad97051c8566a738b6a10d96d798a07b9cb651c41a1bdba4234c",
+      "aliases_conhecidos": {
+        "titulos": [
+          "PRÁTICAS EDUCATIVAS EM LABORATÓRIO DE EFICIÊNCIA ENERGÉTICA NO CENTRO DE EDUCAÇÃO PROFISSIONAL HERMANN HERING: AVALIANDO O IMPACTO NA COMPREENSÃO DOS ESTUDANTES SOBRE EFICIÊNCIA ENERGÉTICA ."
+        ],
+        "autores": [
+          "VERIDIANA MERQUE FERRAZ"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao-Veridiana-Merque-Ferraz.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0028",
+      "titulo": "ATENDIMENTO EDUCACIONAL ESPECIALIZADO: PRÁTICAS PEDAGÓGICAS E ARTICULAÇÕES PARA O ENSINO NO CURSO TÉCNICO DE INFORMÁTICA INTEGRADO AO ENSINO MÉDIO DO INSTITUTO FEDERAL CATARINENSE.",
+      "autor": "JUCÉLIA CORREIA DE SANTANA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/DISSERTACAO-JUCELIA_CORREIA_DE_SANTANA.pdf",
+      "novo_nome_pdf": "EPT-0028_atendimento_educacional_especializado_praticas_pedagogicas_e_articulacoes_para_o_ensino_no_curso_tecnico_de_in.pdf",
+      "sha256": "1d1723b0559421601d130f120384dbd7bbb49d0a57f0c2c859fbfc9cf92c500f",
+      "aliases_conhecidos": {
+        "titulos": [
+          "ATENDIMENTO EDUCACIONAL ESPECIALIZADO: PRÁTICAS PEDAGÓGICAS E ARTICULAÇÕES PARA O ENSINO NO CURSO TÉCNICO DE INFORMÁTICA INTEGRADO AO ENSINO MÉDIO DO INSTITUTO FEDERAL CATARINENSE."
+        ],
+        "autores": [
+          "JUCÉLIA CORREIA DE SANTANA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/DISSERTACAO-JUCELIA_CORREIA_DE_SANTANA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0029",
+      "titulo": "ENSINO DE INOVAÇÃO NA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA: UM ESTADO DO CONHECIMENTO",
+      "autor": "JÚNIOR CUNHA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao-Junior_Cunha.pdf",
+      "novo_nome_pdf": "EPT-0029_ensino_de_inovacao_na_educacao_profissional_e_tecnologica_um_estado_do_conhecimento.pdf",
+      "sha256": "2ad4efffe42d067f11a7a57cbf1ebe28527bb8c376bf5f4cdfe2fff0634e4605",
+      "aliases_conhecidos": {
+        "titulos": [
+          "ENSINO DE INOVAÇÃO NA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA: UM ESTADO DO CONHECIMENTO"
+        ],
+        "autores": [
+          "JÚNIOR CUNHA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/Dissertacao-Junior_Cunha.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0030",
+      "titulo": "UMA SEQUÊNCIA DIDÁTICA ENVOLVENDO O APLICATIVO TELEGRAM À PRÁTICA PEDAGÓGICA NO CEDUP GUARAMIRIM: OS IMPACTOS SOB A PERSPECTIVA DA APRENDIZAGEM SIGNIFICATIVA",
+      "autor": "EDUARDO DA SILVA SILVEIRA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/DISSERTACAO-FINAL-EDUARDO-DA-SILVA-SILVEIRA.pdf",
+      "novo_nome_pdf": "EPT-0030_uma_sequencia_didatica_envolvendo_o_aplicativo_telegram_a_pratica_pedagogica_no_cedup_guaramirim_os_impactos_s.pdf",
+      "sha256": "8fe0673bf833501c185c5a01840cc0db1494b9f5ab22c39a764c08b10b39a44e",
+      "aliases_conhecidos": {
+        "titulos": [
+          "UMA SEQUÊNCIA DIDÁTICA ENVOLVENDO O APLICATIVO TELEGRAM À PRÁTICA PEDAGÓGICA NO CEDUP GUARAMIRIM: OS IMPACTOS SOB A PERSPECTIVA DA APRENDIZAGEM SIGNIFICATIVA"
+        ],
+        "autores": [
+          "EDUARDO DA SILVA SILVEIRA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/01/DISSERTACAO-FINAL-EDUARDO-DA-SILVA-SILVEIRA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0031",
+      "titulo": "PRETOS, PARDOS E INDÍGENAS E A LEI DE COTAS: ACESSO DOS ESTUDANTES PPI NOS CURSOS DO ENSINO MÉDIO INTEGRADO NO INSTITUTO FEDERAL CATARINENSE – IFC CAMPUS CONCÓRDIA (2018-2022)",
+      "autor": "SILVIA DA SILVA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/12/Dissertacao-Silvia-da-Silva.pdf",
+      "novo_nome_pdf": "EPT-0031_pretos_pardos_e_indigenas_e_a_lei_de_cotas_acesso_dos_estudantes_ppi_nos_cursos_do_ensino_medio_integrado_no_i.pdf",
+      "sha256": "f08602f936affe45759edb15b472ea979c95c1151d77680964a824cd45b6670b",
+      "aliases_conhecidos": {
+        "titulos": [
+          "PRETOS, PARDOS E INDÍGENAS E A LEI DE COTAS: ACESSO DOS ESTUDANTES PPI NOS CURSOS DO ENSINO MÉDIO INTEGRADO NO INSTITUTO FEDERAL CATARINENSE – IFC CAMPUS CONCÓRDIA (2018-2022)"
+        ],
+        "autores": [
+          "SILVIA DA SILVA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/12/Dissertacao-Silvia-da-Silva.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0032",
+      "titulo": "TÉCNICAS VOCAIS E A VOZ EM CENA NA FORMAÇÃO INTEGRAL: UM OLHAR A RESPEITO DAS PERCEPÇÕES DOS PROFESSORES DE ARTE DO INSTITUTO FEDERAL CATARINENSE",
+      "autor": "FELIPE AUGUSTO BARSCH",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/12/Dissertacao-Felipe-Barsch.pdf",
+      "novo_nome_pdf": "EPT-0032_tecnicas_vocais_e_a_voz_em_cena_na_formacao_integral_um_olhar_a_respeito_das_percepcoes_dos_professores_de_art.pdf",
+      "sha256": "cc87ea668b235696a755c70d6007cb8df2290e459bec0d782b573db0b8739dcd",
+      "aliases_conhecidos": {
+        "titulos": [
+          "TÉCNICAS VOCAIS E A VOZ EM CENA NA FORMAÇÃO INTEGRAL: UM OLHAR A RESPEITO DAS PERCEPÇÕES DOS PROFESSORES DE ARTE DO INSTITUTO FEDERAL CATARINENSE"
+        ],
+        "autores": [
+          "FELIPE AUGUSTO BARSCH"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/12/Dissertacao-Felipe-Barsch.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0033",
+      "titulo": "O ENSINO DE EMPREENDEDORISMO EM CURSOS DE ENSINO MÉDIO INTEGRADO NOS CENTROS DE EDUCAÇÃO PROFISSIONAL (CEDUPS) DA REDE ESTADUAL DE EDUCAÇÃO DE SANTA CATARINA",
+      "autor": "FABIANO MAURÍCIO PONCIANO",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/12/Dissertacao-Fabiano-Ponciano.pdf",
+      "novo_nome_pdf": "EPT-0033_o_ensino_de_empreendedorismo_em_cursos_de_ensino_medio_integrado_nos_centros_de_educacao_profissional_cedups_d.pdf",
+      "sha256": "c1174d6f6115b1930560b2a8a1f5b62e4e8b4a612ebb593a29237ceda5cd7095",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O ENSINO DE EMPREENDEDORISMO EM CURSOS DE ENSINO MÉDIO INTEGRADO NOS CENTROS DE EDUCAÇÃO PROFISSIONAL (CEDUPS) DA REDE ESTADUAL DE EDUCAÇÃO DE SANTA CATARINA"
+        ],
+        "autores": [
+          "FABIANO MAURÍCIO PONCIANO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/12/Dissertacao-Fabiano-Ponciano.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0034",
+      "titulo": "A BIBLIOTECA NA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA: PERCEPÇÕES DE ESTUDANTES DE CURSO TÉCNICO SUBSEQUENTE DO IFSC JARAGUÁ DO SUL CÂMPUS RAU",
+      "autor": "IZOLDE REJANE DO CARMO",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/11/Dissertacao-Izolde-Rejane-do-Carmo.pdf",
+      "novo_nome_pdf": "EPT-0034_a_biblioteca_na_educacao_profissional_e_tecnologica_percepcoes_de_estudantes_de_curso_tecnico_subsequente_do_i.pdf",
+      "sha256": "22994b0c50f5abd0a6528cec9814e6e32b22880d056a5eddd9fe4b579dd10787",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A BIBLIOTECA NA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA: PERCEPÇÕES DE ESTUDANTES DE CURSO TÉCNICO SUBSEQUENTE DO IFSC JARAGUÁ DO SUL CÂMPUS RAU"
+        ],
+        "autores": [
+          "IZOLDE REJANE DO CARMO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/11/Dissertacao-Izolde-Rejane-do-Carmo.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0035",
+      "titulo": "A PERCEPÇÃO DOS ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE – CAMPUS RIO DO SUL – SOBRE O TRABALHO PARA O POVO XOKLENG LAKLÃNÕ DO ALTO VALE DO ITAJAÍ",
+      "autor": "JONAS FELÁCIO JÚNIOR",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/11/Dissertacao-Jonas-Felacio-Junior.pdf",
+      "novo_nome_pdf": "EPT-0035_a_percepcao_dos_estudantes_do_ensino_medio_integrado_do_instituto_federal_catarinense_campus_rio_do_sul_sobre.pdf",
+      "sha256": "645de991bf910b038a83d567c91894f37882d35c7c612b0678ae01f7c51fe83b",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A PERCEPÇÃO DOS ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE – CAMPUS RIO DO SUL – SOBRE O TRABALHO PARA O POVO XOKLENG LAKLÃNÕ DO ALTO VALE DO ITAJAÍ"
+        ],
+        "autores": [
+          "JONAS FELÁCIO JÚNIOR"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/11/Dissertacao-Jonas-Felacio-Junior.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0036",
+      "titulo": "A CONTRIBUIÇÃO DO RITMO PARA A FORMAÇÃO INTEGRAL NO CURSO TÉCNICO EM TEATRO DO IFSC CAMPUS JOINVILLE: UMA ANÁLISE A PARTIR DA PERCEPÇÃO DOCENTE",
+      "autor": "LAUSIVAN GRANGEIRO CORRÊA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Lausivan.pdf",
+      "novo_nome_pdf": "EPT-0036_a_contribuicao_do_ritmo_para_a_formacao_integral_no_curso_tecnico_em_teatro_do_ifsc_campus_joinville_uma_anali.pdf",
+      "sha256": "fe6498a9c8f613c64a0d5fa09160c9a80c50817c13f404dfc515c12835fcd6e7",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A CONTRIBUIÇÃO DO RITMO PARA A FORMAÇÃO INTEGRAL NO CURSO TÉCNICO EM TEATRO DO IFSC CAMPUS JOINVILLE: UMA ANÁLISE A PARTIR DA PERCEPÇÃO DOCENTE"
+        ],
+        "autores": [
+          "LAUSIVAN GRANGEIRO CORRÊA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Lausivan.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0037",
+      "titulo": "HISTÓRIA DA IMPLANTAÇÃO DO CEDUP TIMBÓ (2000 A 2004): DIÁLOGO ENTRE A HISTÓRIA E A CULTURA ESCOLAR",
+      "autor": "RAFAELA ALESSANDRA SCHNEIDER HINSCHING",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Rafaela.pdf",
+      "novo_nome_pdf": "EPT-0037_historia_da_implantacao_do_cedup_timbo_2000_a_2004_dialogo_entre_a_historia_e_a_cultura_escolar.pdf",
+      "sha256": "aaf8d717bee9930fc2cc8952eb4d6d7ebc64a9df99db29ee286021107405cb45",
+      "aliases_conhecidos": {
+        "titulos": [
+          "HISTÓRIA DA IMPLANTAÇÃO DO CEDUP TIMBÓ (2000 A 2004): DIÁLOGO ENTRE A HISTÓRIA E A CULTURA ESCOLAR"
+        ],
+        "autores": [
+          "RAFAELA ALESSANDRA SCHNEIDER HINSCHING"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Rafaela.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0038",
+      "titulo": "PERCEPÇÃO DOS PROFISSIONAIS ENFERMEIROS SOBRE OS REGISTROS DA ASSISTÊNCIA DE ENFERMAGEM E SUA ATUAÇÃO PROFISSIONAL NO INSTITUTO FEDERAL CATARINENSE",
+      "autor": "JULIANA AMADEI",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Juliana-Amadei.pdf",
+      "novo_nome_pdf": "EPT-0038_percepcao_dos_profissionais_enfermeiros_sobre_os_registros_da_assistencia_de_enfermagem_e_sua_atuacao_profissi.pdf",
+      "sha256": "3f5e8ef1c17c59f12d2a294dee37fac4b418c68fdbc221f98d4f0c973f7475c4",
+      "aliases_conhecidos": {
+        "titulos": [
+          "PERCEPÇÃO DOS PROFISSIONAIS ENFERMEIROS SOBRE OS REGISTROS DA ASSISTÊNCIA DE ENFERMAGEM E SUA ATUAÇÃO PROFISSIONAL NO INSTITUTO FEDERAL CATARINENSE"
+        ],
+        "autores": [
+          "JULIANA AMADEI"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Juliana-Amadei.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0039",
+      "titulo": "O SERVIÇO REMOTO DE TRADUÇÃO E INTERPRETAÇÃO DE LIBRAS NO IFC: IMPACTOS PÓS-PANDÊMICO",
+      "autor": "DOMINIQUE CALIXTO MARTINS",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Dominique.pdf",
+      "novo_nome_pdf": "EPT-0039_o_servico_remoto_de_traducao_e_interpretacao_de_libras_no_ifc_impactos_pos_pandemico.pdf",
+      "sha256": "a1902f6252cbda253888f362079d94994e084f19e402d958e2be08e0886c5379",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O SERVIÇO REMOTO DE TRADUÇÃO E INTERPRETAÇÃO DE LIBRAS NO IFC: IMPACTOS PÓS-PANDÊMICO"
+        ],
+        "autores": [
+          "DOMINIQUE CALIXTO MARTINS"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Dominique.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0040",
+      "titulo": "A PARTICIPAÇÃO DE ESTUDANTES NOS GRÊMIOS ESTUDANTIS DO INSTITUTO FEDERAL CATARINENSE – CAMPUS ARAQUARI E SEU IMPACTO PARA O DESENVOLVIMENTO DE CONSCIÊNCIA DE CLASSE",
+      "autor": "OTÁVIO PATRÍCIO NETTO",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Otavio-Patricio-Netto.pdf",
+      "novo_nome_pdf": "EPT-0040_a_participacao_de_estudantes_nos_gremios_estudantis_do_instituto_federal_catarinense_campus_araquari_e_seu_imp.pdf",
+      "sha256": "2c776794fb1080a1cf7e61fafc8dc13a9f0b8485dc61e10d04a2303d4f6e20b5",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A PARTICIPAÇÃO DE ESTUDANTES NOS GRÊMIOS ESTUDANTIS DO INSTITUTO FEDERAL CATARINENSE – CAMPUS ARAQUARI E SEU IMPACTO PARA O DESENVOLVIMENTO DE CONSCIÊNCIA DE CLASSE"
+        ],
+        "autores": [
+          "OTÁVIO PATRÍCIO NETTO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Otavio-Patricio-Netto.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0041",
+      "titulo": "FORMAÇÃO DE PROFESSORES E EPT NO CURSO DE LICENCIATURA EM QUÍMICA NO IFC – CAMPUS BRUSQUE",
+      "autor": "PAULA ANTÔNIA FERREIRA DE SOUZA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Paula-Souza.pdf",
+      "novo_nome_pdf": "EPT-0041_formacao_de_professores_e_ept_no_curso_de_licenciatura_em_quimica_no_ifc_campus_brusque.pdf",
+      "sha256": "3480eef1ceb60a02aa8967387b09c84c9a8dda6c00129aa0d83fd15abcc06a3b",
+      "aliases_conhecidos": {
+        "titulos": [
+          "FORMAÇÃO DE PROFESSORES E EPT NO CURSO DE LICENCIATURA EM QUÍMICA NO IFC – CAMPUS BRUSQUE"
+        ],
+        "autores": [
+          "PAULA ANTÔNIA FERREIRA DE SOUZA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Paula-Souza.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0042",
+      "titulo": "EDUCAÇÃO NO/DO CAMPO E PEDAGOGIA DA ALTERNÂNCIA NO CAMPUS AVANÇADO ABELARDO LUZ DO IFC SOB A PERSPECTIVA DOCENTE",
+      "autor": "LEANDRO SEVERINO NASCIMENTO DE OLIVEIRA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Leandro-Severino.pdf",
+      "novo_nome_pdf": "EPT-0042_educacao_no_do_campo_e_pedagogia_da_alternancia_no_campus_avancado_abelardo_luz_do_ifc_sob_a_perspectiva_docen.pdf",
+      "sha256": "bbab2822453f5806faddb3b89633416af48d7a62e7ee359acc1daadeb6f22d36",
+      "aliases_conhecidos": {
+        "titulos": [
+          "EDUCAÇÃO NO/DO CAMPO E PEDAGOGIA DA ALTERNÂNCIA NO CAMPUS AVANÇADO ABELARDO LUZ DO IFC SOB A PERSPECTIVA DOCENTE"
+        ],
+        "autores": [
+          "LEANDRO SEVERINO NASCIMENTO DE OLIVEIRA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Leandro-Severino.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0043",
+      "titulo": "EDUCAÇÃO DE SURDOS NO INSTITUTO FEDERAL CATARINENSE: POR UMA EDUCAÇÃO EMANCIPADORA NO ENSINO TÉCNICO INTEGRADO AO ENSINO MÉDIO",
+      "autor": "SAMARA DOS SANTOS",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Samara.pdf",
+      "novo_nome_pdf": "EPT-0043_educacao_de_surdos_no_instituto_federal_catarinense_por_uma_educacao_emancipadora_no_ensino_tecnico_integrado.pdf",
+      "sha256": "430374e56141087711b52edbeb96194ddab697320b727ef667d7d0baf68c8ad2",
+      "aliases_conhecidos": {
+        "titulos": [
+          "EDUCAÇÃO DE SURDOS NO INSTITUTO FEDERAL CATARINENSE: POR UMA EDUCAÇÃO EMANCIPADORA NO ENSINO TÉCNICO INTEGRADO AO ENSINO MÉDIO"
+        ],
+        "autores": [
+          "SAMARA DOS SANTOS"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Samara.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0044",
+      "titulo": "O PROGRAMA DE AUXÍLIOS ESTUDANTIS DO INSTITUTO FEDERAL CATARINENSE: O TRABALHO DAS COMISSÕES",
+      "autor": "NELZA DE MOURA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Nelza.pdf",
+      "novo_nome_pdf": "EPT-0044_o_programa_de_auxilios_estudantis_do_instituto_federal_catarinense_o_trabalho_das_comissoes.pdf",
+      "sha256": "88e280f4f995e2a8fd38fc5695c07697e590949492865238d17ebb60304ec1df",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O PROGRAMA DE AUXÍLIOS ESTUDANTIS DO INSTITUTO FEDERAL CATARINENSE: O TRABALHO DAS COMISSÕES"
+        ],
+        "autores": [
+          "NELZA DE MOURA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Nelza.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0045",
+      "titulo": "GAMIFICAÇÃO NA APRENDIZAGEM INDUSTRIAL: CONTRIBUIÇÕES PARA OS CURSOS DA ÁREA DA TECNOLOGIA DA INFORMAÇÃO NO SENAI TIMBÓ",
+      "autor": "HERMANO ROEPKE",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Hermano.pdf",
+      "novo_nome_pdf": "EPT-0045_gamificacao_na_aprendizagem_industrial_contribuicoes_para_os_cursos_da_area_da_tecnologia_da_informacao_no_sen.pdf",
+      "sha256": "67453a2e6453ee0415603560dea2fb5670e924bb6c53fa158c6afff997f5999b",
+      "aliases_conhecidos": {
+        "titulos": [
+          "GAMIFICAÇÃO NA APRENDIZAGEM INDUSTRIAL: CONTRIBUIÇÕES PARA OS CURSOS DA ÁREA DA TECNOLOGIA DA INFORMAÇÃO NO SENAI TIMBÓ"
+        ],
+        "autores": [
+          "HERMANO ROEPKE"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Hermano.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0046",
+      "titulo": "INCLUSÃO NA AVALIAÇÃO DA APRENDIZAGEM: UMA ANÁLISE A PARTIR DA PRÁTICA DOCENTE NOS CURSOS DE ENSINO MÉDIO INTEGRADO À EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA DO IFSC, CAMPUS GASPAR",
+      "autor": "TAIRA FRANCIELE SKERKE",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Taira-Franciele-Skerke.pdf",
+      "novo_nome_pdf": "EPT-0046_inclusao_na_avaliacao_da_aprendizagem_uma_analise_a_partir_da_pratica_docente_nos_cursos_de_ensino_medio_integ.pdf",
+      "sha256": "5c5e666216ef9e12fcdb94cfbe132fefe701b895e542f906ad1b319d21f7fd29",
+      "aliases_conhecidos": {
+        "titulos": [
+          "INCLUSÃO NA AVALIAÇÃO DA APRENDIZAGEM: UMA ANÁLISE A PARTIR DA PRÁTICA DOCENTE NOS CURSOS DE ENSINO MÉDIO INTEGRADO À EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA DO IFSC, CAMPUS GASPAR"
+        ],
+        "autores": [
+          "TAIRA FRANCIELE SKERKE"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Taira-Franciele-Skerke.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0047",
+      "titulo": "ACOLHIMENTO DE ESTUDANTES TRANS NOS CURSOS DE ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE",
+      "autor": "MOACIR DUTRA DE OLIVEIRA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Moacir.pdf",
+      "novo_nome_pdf": "EPT-0047_acolhimento_de_estudantes_trans_nos_cursos_de_ensino_medio_integrado_do_instituto_federal_catarinense.pdf",
+      "sha256": "19598f70df9cd53cca3d89ff3d7b73bb0084d39343436e94eb2a9efa44eb44fd",
+      "aliases_conhecidos": {
+        "titulos": [
+          "ACOLHIMENTO DE ESTUDANTES TRANS NOS CURSOS DE ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE"
+        ],
+        "autores": [
+          "MOACIR DUTRA DE OLIVEIRA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Moacir.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0048",
+      "titulo": "REFLEXÕES ACERCA DAS PRODUÇÕES CIENTÍFICAS DOS DOCENTES DE HISTÓRIA DO EMI DO IFC, SOBRE EPT: UMA BUSCA PELA INFLUÊNCIA TEÓRICA EM SEUS PLANOS DE ENSINO",
+      "autor": "MAÍRA CAMBRAIA ROCHA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Maira-Cambraia.pdf",
+      "novo_nome_pdf": "EPT-0048_reflexoes_acerca_das_producoes_cientificas_dos_docentes_de_historia_do_emi_do_ifc_sobre_ept_uma_busca_pela_inf.pdf",
+      "sha256": "0919a1b8736fee6f283b3802419c89124c922e80ea93a539d315b86763da811a",
+      "aliases_conhecidos": {
+        "titulos": [
+          "REFLEXÕES ACERCA DAS PRODUÇÕES CIENTÍFICAS DOS DOCENTES DE HISTÓRIA DO EMI DO IFC, SOBRE EPT: UMA BUSCA PELA INFLUÊNCIA TEÓRICA EM SEUS PLANOS DE ENSINO"
+        ],
+        "autores": [
+          "MAÍRA CAMBRAIA ROCHA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Maira-Cambraia.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0049",
+      "titulo": "CONHECER PARA USUFRUIR: A COMPREENSÃO DOS ESTUDANTES SOBRE O SISTEMA DE RESERVA DE VAGAS (COTAS) NO PROCESSO SELETIVO DE INGRESSO NOS CURSOS DO ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE",
+      "autor": "MARIA DO SOCORRO ALMEIDA DE ASSUNÇÃO VASCONCELOS",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Maria-Vasconcelos.pdf",
+      "novo_nome_pdf": "EPT-0049_conhecer_para_usufruir_a_compreensao_dos_estudantes_sobre_o_sistema_de_reserva_de_vagas_cotas_no_processo_sele.pdf",
+      "sha256": "1997f5769fb60d206a5472399657ff280d5699f50ee6a549f2ce24ac46f51111",
+      "aliases_conhecidos": {
+        "titulos": [
+          "CONHECER PARA USUFRUIR: A COMPREENSÃO DOS ESTUDANTES SOBRE O SISTEMA DE RESERVA DE VAGAS (COTAS) NO PROCESSO SELETIVO DE INGRESSO NOS CURSOS DO ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE"
+        ],
+        "autores": [
+          "MARIA DO SOCORRO ALMEIDA DE ASSUNÇÃO VASCONCELOS"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Maria-Vasconcelos.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0050",
+      "titulo": "EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA E OS TRADUTORES/INTÉRPRETES EM LIBRAS-PORTUGUÊS: O USO DAS TECNOLOGIAS DE INFORMAÇÃO E COMUNICAÇÃO",
+      "autor": "CRISTIANE APARECIDA LISSAK BILIBIO",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Cristiane.pdf",
+      "novo_nome_pdf": "EPT-0050_educacao_profissional_e_tecnologica_e_os_tradutores_interpretes_em_libras_portugues_o_uso_das_tecnologias_de_i.pdf",
+      "sha256": "f8770e700cea36a5e25c151c3b82e0224448fcdf817b74c2dc8771cacc3bd50f",
+      "aliases_conhecidos": {
+        "titulos": [
+          "EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA E OS TRADUTORES/INTÉRPRETES EM LIBRAS-PORTUGUÊS: O USO DAS TECNOLOGIAS DE INFORMAÇÃO E COMUNICAÇÃO"
+        ],
+        "autores": [
+          "CRISTIANE APARECIDA LISSAK BILIBIO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/10/Dissertacao-Cristiane.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0051",
+      "titulo": "EGRESSOS DO ENSINO MÉDIO INTEGRADO DO IFC: ANÁLISE DOS RELATÓRIOS DE ACOMPANHAMENTO",
+      "autor": "IGOR DE OLIVEIRA INSAURRIAGA SILVA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Igor.pdf",
+      "novo_nome_pdf": "EPT-0051_egressos_do_ensino_medio_integrado_do_ifc_analise_dos_relatorios_de_acompanhamento.pdf",
+      "sha256": "68c3389188233f234359d0d4becbf45bd90aac9cecafc09342fc9cab3964c92c",
+      "aliases_conhecidos": {
+        "titulos": [
+          "EGRESSOS DO ENSINO MÉDIO INTEGRADO DO IFC: ANÁLISE DOS RELATÓRIOS DE ACOMPANHAMENTO"
+        ],
+        "autores": [
+          "IGOR DE OLIVEIRA INSAURRIAGA SILVA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Igor.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0052",
+      "titulo": "A MUSICALIDADE NO TEATRO: PERSPECTIVAS SOBRE O APRENDIZADO DA AGÓGICA E DA DINÂMICA MUSICAL NO DESENVOLVIMENTO DA PERFORMANCE DOS ALUNOS DE TEATRO DO INSTITUTO FEDERAL DE SANTA CATARINA – CAMPUS JOINVILLE",
+      "autor": "CLAUDENOR FÁVERO",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Claudenor-Favero.pdf",
+      "novo_nome_pdf": "EPT-0052_a_musicalidade_no_teatro_perspectivas_sobre_o_aprendizado_da_agogica_e_da_dinamica_musical_no_desenvolvimento.pdf",
+      "sha256": "b447a5fb0c30d4384fc0305069dc63649be7fea69519b337cd613590c1f53533",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A MUSICALIDADE NO TEATRO: PERSPECTIVAS SOBRE O APRENDIZADO DA AGÓGICA E DA DINÂMICA MUSICAL NO DESENVOLVIMENTO DA PERFORMANCE DOS ALUNOS DE TEATRO DO INSTITUTO FEDERAL DE SANTA CATARINA – CAMPUS JOINVILLE"
+        ],
+        "autores": [
+          "CLAUDENOR FÁVERO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Claudenor-Favero.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0053",
+      "titulo": "NUTRINDO IDEIAS: EDUCAÇÃO ALIMENTAR E NUTRICIONAL NO ENSINO MÉDIO INTEGRADO",
+      "autor": "LIGIA BATISTON",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Ligia_Batiston.pdf",
+      "novo_nome_pdf": "EPT-0053_nutrindo_ideias_educacao_alimentar_e_nutricional_no_ensino_mediointegrado.pdf",
+      "sha256": "fa647fdbcba931b70b3bd7d39aa2c5ad6dcb952348c9e38ada88305763af58c8",
+      "aliases_conhecidos": {
+        "titulos": [
+          "NUTRINDO IDEIAS: EDUCAÇÃO ALIMENTAR E NUTRICIONAL NO ENSINO MÉDIOINTEGRADO",
+          "NUTRINDO IDEIAS: EDUCAÇÃO ALIMENTAR E NUTRICIONAL NO ENSINO MÉDIO INTEGRADO"
+        ],
+        "autores": [
+          "LIGIA BATISTON"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Ligia_Batiston.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0054",
+      "titulo": "IMPACTO DA QUALIFICAÇÃO STRICTO SENSU NO TRABALHO DE SERVIDORES DO IFC",
+      "autor": "BRUNO DUTRA VIEIRA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Bruno_Dutra.pdf",
+      "novo_nome_pdf": "EPT-0054_impacto_da_qualificacaostricto_sensuno_trabalho_de_servidores_do_ifc.pdf",
+      "sha256": "ddfff1192a7cc885708ac99f64b63253ea76317d311137208bc7120f3bd6e753",
+      "aliases_conhecidos": {
+        "titulos": [
+          "IMPACTO DA QUALIFICAÇÃOSTRICTO SENSUNO TRABALHO DE SERVIDORES DO IFC",
+          "IMPACTO DA QUALIFICAÇÃO STRICTO SENSU NO TRABALHO DE SERVIDORES DO IFC"
+        ],
+        "autores": [
+          "BRUNO DUTRA VIEIRA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Bruno_Dutra.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0055",
+      "titulo": "O “NOVO” ENSINO MÉDIO, JUVENTUDE E TRABALHO: UM ESTUDO SOBRE O COMPONENTE CURRICULAR PROJETO DE VIDA EM UMA ESCOLA DA REDE ESTADUAL DE SANTA CATARINA",
+      "autor": "ARIANA MENDES",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Ariana-Mendes.pdf",
+      "novo_nome_pdf": "EPT-0055_o_novo_ensino_medio_juventude_e_trabalho_um_estudo_sobre_o_componente_curricular_projeto_de_vida_em_uma_escola.pdf",
+      "sha256": "22f823afb99c21468108d971396ca4d5d9bd76fb46cf2c9f6f6386ab8e2ce13f",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O “NOVO” ENSINO MÉDIO, JUVENTUDE E TRABALHO: UM ESTUDO SOBRE O COMPONENTE CURRICULAR PROJETO DE VIDA EM UMA ESCOLA DA REDEESTADUAL DE SANTA CATARINA",
+          "O “NOVO” ENSINO MÉDIO, JUVENTUDE E TRABALHO: UM ESTUDO SOBRE O COMPONENTE CURRICULAR PROJETO DE VIDA EM UMA ESCOLA DA REDE ESTADUAL DE SANTA CATARINA"
+        ],
+        "autores": [
+          "ARIANA MENDES"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Ariana-Mendes.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0056",
+      "titulo": "A PERCEPÇÃO DOCENTE SOBRE O PROCESSO DE INCLUSÃO EDUCACIONAL NOS CURSOS TÉCNICOS INTEGRADO DO INSTITUTO FEDERAL CATARINENSE",
+      "autor": "ELIANA GASPODINI COLDEBELLA",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/04/Dissertacao-Eliana-Coldebella.pdf",
+      "novo_nome_pdf": "EPT-0056_a_percepcao_docente_sobre_o_processo_de_inclusao_educacional_nos_cursos_tecnicos_integrado_do_instituto_federa.pdf",
+      "sha256": "f1fc4fcb6dc10c810653c4877627a456b6b4bf9cf920de11c74b6a3e113018f9",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A PERCEPÇÃO DOCENTE SOBRE O PROCESSO DE INCLUSÃO EDUCACIONAL NOS CURSOS TÉCNICOS INTEGRADO DO INSTITUTO FEDERAL CATARINENSE"
+        ],
+        "autores": [
+          "ELIANA GASPODINI COLDEBELLA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2025/04/Dissertacao-Eliana-Coldebella.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0057",
+      "titulo": "A TEMÁTICA SEGURANÇA DO TRABALHO NO CURRÍCULO DO CURSO EJA-EPT QUALIFICAÇÃO PROFISSIONAL EM ELETRICISTA INDUSTRIAL DO IFC CAMPUS BLUMENAU: UM ESTUDO DE CASO",
+      "autor": "JOANA FONTANELA FORTUNATO",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Joana-Fontanela.pdf",
+      "novo_nome_pdf": "EPT-0057_a_tematica_seguranca_do_trabalho_no_curriculo_do_curso_eja_ept_qualificacao_profissional_em_eletricista_indust.pdf",
+      "sha256": "4327f56eb81db2c1d8b73f926b0d110481181d6cd60ad55bb84b0c971d1d7ab8",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A TEMÁTICA SEGURANÇA DO TRABALHO NO CURRÍCULO DO CURSO EJA-EPT QUALIFICAÇÃO PROFISSIONAL EM ELETRICISTA INDUSTRIAL DO IFC CAMPUSBLUMENAU: UM ESTUDO DE CASO",
+          "A TEMÁTICA SEGURANÇA DO TRABALHO NO CURRÍCULO DO CURSO EJA-EPT QUALIFICAÇÃO PROFISSIONAL EM ELETRICISTA INDUSTRIAL DO IFC CAMPUS BLUMENAU: UM ESTUDO DE CASO"
+        ],
+        "autores": [
+          "JOANA FONTANELA FORTUNATO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Joana-Fontanela.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0058",
+      "titulo": "A FEIRA DE MATEMÁTICA E SUA INTERLOCUÇÃO COM A PRÁXIS DOS DOCENTES QUE ENSINAM MATEMÁTICA NA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA DOS INSTITUTOS FEDERAIS",
+      "autor": "JUNIEL RODRIGUES LEITE",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Juniel.pdf",
+      "novo_nome_pdf": "EPT-0058_a_feira_de_matematica_e_sua_interlocucao_com_a_praxis_dos_docentes_que_ensinam_matematica_na_educacao_profissi.pdf",
+      "sha256": "d0a36c3d6024c27b0b23d6e82606ccade8116f974fde8cee79bd99bbd63cad8b",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A FEIRA DE MATEMÁTICA E SUA INTERLOCUÇÃO COM A PRÁXIS DOS DOCENTES QUE ENSINAM MATEMÁTICA NA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA DOS INSTITUTOS FEDERAIS"
+        ],
+        "autores": [
+          "JUNIEL RODRIGUES LEITE Orientatador: Dra. Fátima Peres Zago de Oliveira",
+          "JUNIEL RODRIGUES LEITE"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Juniel.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0059",
+      "titulo": "CURRICULARIZAÇÃO DA PESQUISA E EXTENSÃO NOS CURSOS TÉCNICOS DE INFORMÁTICA DO INSTITUTO FEDERAL CATARINENSE NOS CAMPI BLUMENAU E CAMBORIÚ",
+      "autor": "ANDRÉ EDUARDO KONELL",
+      "ano": "2024",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Andre-Eduardo-Konell.pdf",
+      "novo_nome_pdf": "EPT-0059_curricularizacao_da_pesquisa_e_extensao_nos_cursos_tecnicos_de_informatica_do_instituto_federal_catarinense_no.pdf",
+      "sha256": "ba7fb2586ebae19869574df3d3a75bd8cd301ed06e118dad3a687e28c90264d4",
+      "aliases_conhecidos": {
+        "titulos": [
+          "CURRICULARIZAÇÃO DA PESQUISA E EXTENSÃO NOS CURSOS TÉCNICOS DE INFORMÁTICA DO INSTITUTO FEDERAL CATARINENSE NOSCAMPIBLUMENAU ECAMBORIÚ",
+          "CURRICULARIZAÇÃO DA PESQUISA E EXTENSÃO NOS CURSOS TÉCNICOS DE INFORMÁTICA DO INSTITUTO FEDERAL CATARINENSE NOS CAMPI BLUMENAU E CAMBORIÚ"
+        ],
+        "autores": [
+          "ANDRÉ EDUARDO KONELL"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/07/Dissertacao-Andre-Eduardo-Konell.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0060",
+      "titulo": "CONSELHO DE CLASSE NO ENSINO MÉDIO INTEGRADO À EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA: A COMPREENSÃO DOS DOCENTES E DA EQUIPE PEDAGÓGICA, NUMA PERSPECTIVA DE FORMAÇÃO INTEGRAL",
+      "autor": "ANDRÉIA MATILDE BOTTAMEDI BAMBINETTI",
+      "ano": "2023",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/04/DISSERTACAO-ANDREIA-BAMBINETTI.pdf",
+      "novo_nome_pdf": "EPT-0060_conselho_de_classe_no_ensino_medio_integrado_a_educacao_profissional_e_tecnologica_a_compreensao_dos_docentes.pdf",
+      "sha256": "7b2e92298fb5e84a9218d29d1643ed17e66721b98b1f4ead99536c7dc11c6b40",
+      "aliases_conhecidos": {
+        "titulos": [
+          "CONSELHO DE CLASSE NO ENSINO MÉDIO INTEGRADO À EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA: A COMPREENSÃO DOS DOCENTES E DA EQUIPE PEDAGÓGICA, NUMA PERSPECTIVA DE FORMAÇÃO INTEGRAL"
+        ],
+        "autores": [
+          "ANDRÉIA MATILDE BOTTAMEDI BAMBINETTI"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/04/DISSERTACAO-ANDREIA-BAMBINETTI.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0061",
+      "titulo": "20 ANOS DA LEI 10/639/03 E FORMAÇÃO INTEGRAL. O ESTADO DA IMPLANTAÇÃO E IMPLEMENTAÇÃO DA LEI NO IFSC – CAMPUS GASPAR",
+      "autor": "NILSON DE SOUZA LEAL",
+      "ano": "2023",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/04/DISSERTTACAO-NILSON-DE-SOUZA-LEAL-1.pdf",
+      "novo_nome_pdf": "EPT-0061_20_anos_da_lei_10_639_03_e_formacao_integral_o_estado_da_implantacao_e_implementacao_da_lei_no_ifsc_campus_gas.pdf",
+      "sha256": "edb4ed881d0e8890693fa8b44a113d35a4d22f9426dc97a81cc58b937680137f",
+      "aliases_conhecidos": {
+        "titulos": [
+          "20 ANOS DA LEI 10/639/03 E FORMAÇÃO INTEGRAL. O ESTADO DA IMPLANTAÇÃO E IMPLEMENTAÇÃO DA LEI NO IFSC – CAMPUS GASPAR"
+        ],
+        "autores": [
+          "NILSON DE SOUZA LEAL"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/04/DISSERTTACAO-NILSON-DE-SOUZA-LEAL-1.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0062",
+      "titulo": "EDUCAÇÃO PROFISSIONAL NA REDE ESTADUAL DE ENSINO DE SANTA CATARINA: UM ESTUDO SOBRE AS IMPLICAÇÕES DA LEI 13.415/2017 NOS CURSOS DE ENSINO MÉDIO INTEGRADO",
+      "autor": "FERNANDA BIZARRI DE OLIVEIRA",
+      "ano": "2023",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/04/DISSERTACAO-FERNANDA_BIZARRI_DE_OLIVEIRA.pdf",
+      "novo_nome_pdf": "EPT-0062_educacao_profissional_na_rede_estadual_de_ensino_de_santa_catarina_um_estudo_sobre_as_implicacoes_da_lei_13_41.pdf",
+      "sha256": "088be3ad0ef3f6d8ae9a904e31813396e12fcf78b790e1d43248c41870987423",
+      "aliases_conhecidos": {
+        "titulos": [
+          "EDUCAÇÃO PROFISSIONAL NA REDE ESTADUAL DE ENSINO DE SANTA CATARINA: UM ESTUDO SOBRE AS IMPLICAÇÕES DA LEI 13.415/2017 NOS CURSOS DE ENSINO MÉDIO INTEGRADO"
+        ],
+        "autores": [
+          "FERNANDA BIZARRI DE OLIVEIRA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/04/DISSERTACAO-FERNANDA_BIZARRI_DE_OLIVEIRA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0063",
+      "titulo": "O TRABALHO COMO PRINCÍPIO EDUCATIVO NO PROGRAMA JOVEM APRENDIZ DESENVOLVIDO NAS ORGANIZAÇÕES DA SOCIEDADE CIVIL SEM FINS LUCRATIVOS",
+      "autor": "JOEL EYROFF",
+      "ano": "2023",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/01/O-TRABALHO-COMO-PRINCIPIO-EDUCATIVO-NO-PROGRAMA-JOVEM-APRENDIZ-DESENVOLVIDO-NAS-ORGANIZACOES-DA-SOCIEDADE-CIVIL-SEM-FINS-LUCRATIVOS.pdf",
+      "novo_nome_pdf": "EPT-0063_o_trabalho_como_principio_educativo_no_programa_jovem_aprendiz_desenvolvido_nas_organizacoes_da_sociedade_civi.pdf",
+      "sha256": "40847d50d6d524da1d6a5fe9b696a980ea17397fbb3ec4ebd1879e4b845703e0",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O TRABALHO COMO PRINCÍPIO EDUCATIVO NO PROGRAMA JOVEM APRENDIZ DESENVOLVIDO NAS ORGANIZAÇÕES DA SOCIEDADE CIVIL SEM FINS LUCRATIVOS"
+        ],
+        "autores": [
+          "JOEL EYROFF"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/01/O-TRABALHO-COMO-PRINCIPIO-EDUCATIVO-NO-PROGRAMA-JOVEM-APRENDIZ-DESENVOLVIDO-NAS-ORGANIZACOES-DA-SOCIEDADE-CIVIL-SEM-FINS-LUCRATIVOS.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0064",
+      "titulo": "QUEM SOMOS PERCEPÇÕES DOS COMUNICADORES DO INSTITUTO FEDERAL CATARINENSE SOBRE A IDENTIDADE ORGANIZACIONAL DA INSTITUIÇÃO",
+      "autor": "RAFAELA ZORZETTO DE CAMARGO",
+      "ano": "2023",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/01/QUEM-SOMOS-PERCEPCOES-DOS-COMUNICADORES-DO-INSTITUTO-FEDERAL-CATARINENSE-SOBRE-A-IDENTIDADE-ORGANIZACIONAL-DA-INSTITUICAO.pdf",
+      "novo_nome_pdf": "EPT-0064_quem_somos_percepcoes_dos_comunicadores_do_instituto_federal_catarinense_sobre_a_identidade_organizacional_da.pdf",
+      "sha256": "47066f9324400a1a7ea474e413129e6f494d5b26a6763506f875fddf6e9e323d",
+      "aliases_conhecidos": {
+        "titulos": [
+          "QUEM SOMOS PERCEPÇÕES DOS COMUNICADORES DO INSTITUTO FEDERAL CATARINENSE SOBRE A IDENTIDADE ORGANIZACIONAL DA INSTITUIÇÃO"
+        ],
+        "autores": [
+          "RAFAELA ZORZETTO DE CAMARGO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/01/QUEM-SOMOS-PERCEPCOES-DOS-COMUNICADORES-DO-INSTITUTO-FEDERAL-CATARINENSE-SOBRE-A-IDENTIDADE-ORGANIZACIONAL-DA-INSTITUICAO.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0065",
+      "titulo": "A UTILIZAÇÃO DE COMPOSIÇÕES MUSICAIS NOS MEIOS DIGITAIS UMA ANÁLISE DA COMPREENSÃO DOS ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO IFC CAMPUS BLUMENAU SOBRE DIREITOS AUTORAIS",
+      "autor": "MARCELO DARLAN HERPIC",
+      "ano": "2023",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/01/A-UTILIZACAO-DE-COMPOSICOES-MUSICAIS-NOS-MEIOS-DIGITAIS-UMA-ANALISE-DA-COMPREENSAO-DOS-ESTUDANTES-DO-ENSINO-MEDIO-INTEGRADO-DO-IFC-CAMPUS-BLUMENAU-SOBRE-DIREITOS-AUTORAIS.pdf",
+      "novo_nome_pdf": "EPT-0065_a_utilizacao_de_composicoes_musicais_nos_meios_digitais_uma_analise_da_compreensao_dos_estudantes_do_ensino_me.pdf",
+      "sha256": "639d2c20858f89e33b18e885632ad267d3a9aa6b4a3a8311a420e3411de77e78",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A UTILIZAÇÃO DE COMPOSIÇÕES MUSICAIS NOS MEIOS DIGITAIS UMA ANÁLISE DA COMPREENSÃO DOS ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO IFC CAMPUS BLUMENAU SOBRE DIREITOS AUTORAIS"
+        ],
+        "autores": [
+          "MARCELO DARLAN HERPIC"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/01/A-UTILIZACAO-DE-COMPOSICOES-MUSICAIS-NOS-MEIOS-DIGITAIS-UMA-ANALISE-DA-COMPREENSAO-DOS-ESTUDANTES-DO-ENSINO-MEDIO-INTEGRADO-DO-IFC-CAMPUS-BLUMENAU-SOBRE-DIREITOS-AUTORAIS.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0066",
+      "titulo": "DADOS, LINHAS E NÓS: UMA HISTÓRIA DA IMPLANTAÇÃO DO IFC CAMPUS IBIRAMA",
+      "autor": "FLÁVIA REGINA BACK",
+      "ano": "2023",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Flavia-Regina-Back.pdf",
+      "novo_nome_pdf": "EPT-0066_dados_linhas_e_nos_uma_historia_da_implantacao_do_ifc_campus_ibirama_produtos_educacional_texto_tour_pela_hist.pdf",
+      "sha256": "bc50fe0a3eba2016b910d5679c7edea942ccb056771a1f02e73ce007ab8d3497",
+      "aliases_conhecidos": {
+        "titulos": [
+          "DADOS, LINHAS E NÓS: UMA HISTÓRIA DA IMPLANTAÇÃO DO IFC CAMPUS IBIRAMA Produtos Educacional: Texto – TOUR PELA HISTÓRIA DO IFC IBIRAMA",
+          "DADOS, LINHAS E NÓS: UMA HISTÓRIA DA IMPLANTAÇÃO DO IFC CAMPUS IBIRAMA"
+        ],
+        "autores": [
+          "FLÁVIA REGINA BACK"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Flavia-Regina-Back.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0067",
+      "titulo": "CULTURA ESCOLAR NO MEIO DIGITAL EM TEMPOS DE PANDEMIA: DISCUSSÃO E PERCEPÇÃO PELOS ALUNOS A PARTIR DO AUDIOVISUAL",
+      "autor": "FELIPE IOP CAPELETO",
+      "ano": "2023",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Felipe-Iop-Capeletto.pdf",
+      "novo_nome_pdf": "EPT-0067_cultura_escolar_no_meio_digital_em_tempos_de_pandemia_discussao_e_percepcao_pelos_alunos_a_partir_do_audiovisu.pdf",
+      "sha256": "f6049adfd7f3d94f2fb024005fcc7d8029c6a12b3e462a58445fdad4fb3effa5",
+      "aliases_conhecidos": {
+        "titulos": [
+          "CULTURA ESCOLAR NO MEIO DIGITAL EM TEMPOS DE PANDEMIA: DISCUSSÃO E PERCEPÇÃO PELOS ALUNOS A PARTIR DO AUDIOVISUAL"
+        ],
+        "autores": [
+          "FELIPE IOP CAPELETO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Felipe-Iop-Capeletto.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0068",
+      "titulo": "CONCEPÇÕES DOS EDUCADORES DO IFC-BRUSQUE SOBRE A AVALIAÇÃO DA APRENDIZAGEM DOS ESTUDANTES NO ENSINO MÉDIO INTEGRADO",
+      "autor": "JOSÉ LUIS MACHADO",
+      "ano": "2023",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Jose-Luis-Machado.pdf",
+      "novo_nome_pdf": "EPT-0068_concepcoes_dos_educadores_do_ifc_brusque_sobre_a_avaliacao_da_aprendizagem_dos_estudantes_no_ensino_medio_inte.pdf",
+      "sha256": "2c76cd5c19f2fba6e3d9de99e92df4d10c5be4c7cf181abd4446a9f27cb72bd6",
+      "aliases_conhecidos": {
+        "titulos": [
+          "CONCEPÇÕES DOS EDUCADORES DO IFC-BRUSQUE SOBRE A AVALIAÇÃO DA APRENDIZAGEM DOS ESTUDANTES NO ENSINO MÉDIO INTEGRADO"
+        ],
+        "autores": [
+          "JOSÉ LUIS MACHADO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Jose-Luis-Machado.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0069",
+      "titulo": "ANÁLISE DO PERFIL DE ESTILO DE VIDA DOS ESTUDANTES DO ENSINO MÉDIO INTEGRADO: UM ESTUDO NO CAMPUS SÃO FRANCISCO DO SUL",
+      "autor": "DENISE DE CASTRO INSAURRIAGA SILVA",
+      "ano": "2023",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Denise-de-Castro-Insaurriaga-Silva.pdf",
+      "novo_nome_pdf": "EPT-0069_analise_do_perfil_de_estilo_de_vida_dos_estudantes_do_ensino_medio_integrado_um_estudo_no_campus_sao_francisco.pdf",
+      "sha256": "1f039e072d7c5957d34d69ec00cd2ba2ab9b50f118fcc4cd51f3992684e24ea3",
+      "aliases_conhecidos": {
+        "titulos": [
+          "ANÁLISE DO PERFIL DE ESTILO DE VIDA DOS ESTUDANTES DO ENSINO MÉDIO INTEGRADO: UM ESTUDO NO CAMPUS SÃO FRANCISCO DO SUL"
+        ],
+        "autores": [
+          "DENISE DE CASTRO INSAURRIAGA SILVA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Denise-de-Castro-Insaurriaga-Silva.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0070",
+      "titulo": "REFLEXOS: CULTURAS ESCOLARES DO IFC BLUMENAU A PARTIR DA ANÁLISE FOTOGRÁFICA",
+      "autor": "ROSIANE MAGALHÃES DE LIMA",
+      "ano": "2023",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Rosiane-Magalhaes-de-Lima.pdf",
+      "novo_nome_pdf": "EPT-0070_reflexos_culturas_escolares_do_ifc_blumenau_a_partir_da_analise_fotografica.pdf",
+      "sha256": "cb5e0837b344742a2e9a30cb6a24b7d338d84a2b4525869ef4efa382ff93049b",
+      "aliases_conhecidos": {
+        "titulos": [
+          "REFLEXOS: CULTURAS ESCOLARES DO IFC BLUMENAU A PARTIR DA ANÁLISE FOTOGRÁFICA"
+        ],
+        "autores": [
+          "ROSIANE MAGALHÃES DE LIMA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Rosiane-Magalhaes-de-Lima.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0071",
+      "titulo": "O PAPEL DO GRÊMIO ESTUDANTIL NA ESCOLA",
+      "autor": "VANDERLEI WOSNIACK",
+      "ano": "2023",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Vanderlei-Wosniak.pdf",
+      "novo_nome_pdf": "EPT-0071_o_papel_do_gremio_estudantil_na_escola.pdf",
+      "sha256": "d8a8466caa8b09d044951079472cd94323ebbc960084f873f0e56919782bf33a",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O PAPEL DO GRÊMIO ESTUDANTIL NA ESCOLA"
+        ],
+        "autores": [
+          "VANDERLEI WOSNIACK"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/11/Dissertacao-Vanderlei-Wosniak.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0072",
+      "titulo": "GESTÃO E CONFLITOS ESCOLARES NO ÂMBITO DO INSTITUTO FEDERAL CATARINENSE: DOCUMENTOS, PRÁTICAS E PERCEPÇÕES",
+      "autor": "ALYSSON CHRISTIANO PRIMOR",
+      "ano": "2022",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Dissertacao_Alysson_23-04.pdf",
+      "novo_nome_pdf": "EPT-0072_gestao_e_conflitos_escolares_no_ambito_do_instituto_federal_catarinense_documentos_praticas_e_percepcoes.pdf",
+      "sha256": "75d046c843e345ef4e4e0a2ea1eec29edeaf9334db857f1ce458d86a637603f3",
+      "aliases_conhecidos": {
+        "titulos": [
+          "GESTÃO E CONFLITOS ESCOLARES NO ÂMBITO DO INSTITUTO FEDERAL CATARINENSE: DOCUMENTOS, PRÁTICAS E PERCEPÇÕES"
+        ],
+        "autores": [
+          "ALYSSON CHRISTIANO PRIMOR"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Dissertacao_Alysson_23-04.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0073",
+      "titulo": "A PERCEPÇÃO DOS TÉCNICO-ADMINISTRATIVOS EM EDUCAÇÃO DO IFC SOBRE A CONCEPÇÃO PEDAGÓGICA DOS IFS",
+      "autor": "MAYSA EICHNER DA SILVA BAZANA",
+      "ano": "2022",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-A-PERCEPCAO-DOS-TAEs-DO-IFC-SOBRE-A-CONCEPCAO-PEDAGOGICA-DOS-IFs.pdf",
+      "novo_nome_pdf": "EPT-0073_a_percepcao_dos_tecnico_administrativos_em_educacao_do_ifc_sobre_a_concepcao_pedagogica_dos_ifs.pdf",
+      "sha256": "dfaa0ca7b3e9a6b90678efe0aedc4b2c7a10bf0814f8d7d9878b93d222bb658b",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A PERCEPÇÃO DOS TÉCNICO-ADMINISTRATIVOS EM EDUCAÇÃO DO IFC SOBRE A CONCEPÇÃO PEDAGÓGICA DOS IFS"
+        ],
+        "autores": [
+          "MAYSA EICHNER DA SILVA BAZANA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-A-PERCEPCAO-DOS-TAEs-DO-IFC-SOBRE-A-CONCEPCAO-PEDAGOGICA-DOS-IFs.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0074",
+      "titulo": "ABORDAGEM SOBRE OS ELEMENTOS DE PERMANÊNCIA DOS ESTUDANTES DOS CURSOS DO IFC – CAMPUS BLUMENAU",
+      "autor": "IGOR LUIZ DE PAULA",
+      "ano": "2022",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-IGOR-LUIZ-DE-PAULA-PDFA.pdf",
+      "novo_nome_pdf": "EPT-0074_abordagem_sobre_os_elementos_de_permanencia_dos_estudantes_dos_cursos_do_ifc_campus_blumenau.pdf",
+      "sha256": "7804aaa2da9be20cc17f314f0b0088089a63aa8ee0ecddfce3ede71f99cc1024",
+      "aliases_conhecidos": {
+        "titulos": [
+          "ABORDAGEM SOBRE OS ELEMENTOS DE PERMANÊNCIA DOS ESTUDANTES DOS CURSOS DO IFC – CAMPUS BLUMENAU"
+        ],
+        "autores": [
+          "IGOR LUIZ DE PAULA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-IGOR-LUIZ-DE-PAULA-PDFA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0075",
+      "titulo": "EDUCAÇÃO AMBIENTAL CRÍTICA DE CUNHO NACIONAL E EMANCIPATÓRIA NA EDUCAÇÃO PROFISSIONAL TECNOLÓGICA: UMA PROPOSTA DE ENSINO PARA ESTUDANTES DO ENSINO MÉDIO INTEGRADO",
+      "autor": "BRUNO WILWERT TOMIO",
+      "ano": "2022",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-BRUNO_WILWERT_TOMIO_PDFA.pdf",
+      "novo_nome_pdf": "EPT-0075_educacao_ambiental_critica_de_cunho_nacional_e_emancipatoria_na_educacao_profissional_tecnologica_uma_proposta.pdf",
+      "sha256": "db40c0d1bc9bb229935e42444ad0da84026863e3e95ca984a86facb544830a03",
+      "aliases_conhecidos": {
+        "titulos": [
+          "EDUCAÇÃO AMBIENTAL CRÍTICA DE CUNHO NACIONAL E EMANCIPATÓRIA NA EDUCAÇÃO PROFISSIONAL TECNOLÓGICA: UMA PROPOSTA DE ENSINO PARA ESTUDANTES DO ENSINO MÉDIO INTEGRADO"
+        ],
+        "autores": [
+          "BRUNO WILWERT TOMIO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-BRUNO_WILWERT_TOMIO_PDFA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0076",
+      "titulo": "O CONSELHO DE CLASSE NA PERCEPÇÃO DE CONSELHEIROS DE UM CURSO DE ENSINO MÉDIO INTEGRADO: NA TRILHA DA FORMAÇÃO HUMANA INTEGRAL",
+      "autor": "DÉBORA MAGNA SANTOS COSTA DE SOUZA,",
+      "ano": "2022",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Artigo-Debora-PDFA.pdf",
+      "novo_nome_pdf": "EPT-0076_o_conselho_de_classe_na_percepcao_de_conselheiros_de_um_curso_de_ensino_medio_integrado_na_trilha_da_formacao.pdf",
+      "sha256": "2a4c22058512e633090e9dab2061db03b3f78d9e675672c7a498301d8b429dd9",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O CONSELHO DE CLASSE NA PERCEPÇÃO DE CONSELHEIROS DE UM CURSO DE ENSINO MÉDIO INTEGRADO: NA TRILHA DA FORMAÇÃO HUMANA INTEGRAL"
+        ],
+        "autores": [
+          "DÉBORA MAGNA SANTOS COSTA DE SOUZA,"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Artigo-Debora-PDFA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0077",
+      "titulo": "O PAPEL DA MEDIAÇÃO PEDAGÓGICA NO CURSO DE EJA INTEGRADA À EPT – FORMAÇÃO BÁSICA EM ELETRICISTA – DO CAMPUS BLUMENAU",
+      "autor": "MARA CRISTINA CHAVES BARBOSA",
+      "ano": "2022",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-MARA-CRISTINA-CHAVES-BARBOSA-PDFA.pdf",
+      "novo_nome_pdf": "EPT-0077_o_papel_da_mediacao_pedagogica_no_curso_de_eja_integrada_a_ept_formacao_basica_em_eletricista_do_campus_blumen.pdf",
+      "sha256": "1679a89e465cf8beaa9c3b0766f8c4a2cc37220f672be0706e0271f5c1cd4317",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O PAPEL DA MEDIAÇÃO PEDAGÓGICA NO CURSO DE EJA INTEGRADA À EPT – FORMAÇÃO BÁSICA EM ELETRICISTA – DO CAMPUS BLUMENAU"
+        ],
+        "autores": [
+          "MARA CRISTINA CHAVES BARBOSA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-MARA-CRISTINA-CHAVES-BARBOSA-PDFA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0078",
+      "titulo": "EGRESSOS E NDB EM DIÁLOGO: O ACOMPANHAMENTO DE EGRESSOS COMO SUBSÍDIO EM PROCESSOS DE REFORMULAÇÃO DE CURSOS DE ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE – CAMPUS CONCÓRDIA",
+      "autor": "ALESSANDRA NITSCHKE",
+      "ano": "2021",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-ALESSANDRA-NITSCHKE.pdf",
+      "novo_nome_pdf": "EPT-0078_egressos_e_ndb_em_dialogo_o_acompanhamento_de_egressos_como_subsidio_em_processos_de_reformulacao_de_cursos_de.pdf",
+      "sha256": "4a791f86e7f59463b2db94e8303ac347f9d9272f343f0d874c04785aecadbff9",
+      "aliases_conhecidos": {
+        "titulos": [
+          "EGRESSOS E NDB EM DIÁLOGO: O ACOMPANHAMENTO DE EGRESSOS COMO SUBSÍDIO EM PROCESSOS DE REFORMULAÇÃO DE CURSOS DE ENSINO MÉDIO INTEGRADO DO INSTITUTO FEDERAL CATARINENSE – CAMPUS CONCÓRDIA"
+        ],
+        "autores": [
+          "ALESSANDRA NITSCHKE"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-ALESSANDRA-NITSCHKE.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0079",
+      "titulo": "ARQUITETURA ESCOLAR E CONCEPÇÕES PEDAGÓGICAS DA REDE FEDERAL DE EDUCAÇÃO PROFISSIONAL, CIENTÍFICA E TECNOLÓGICA: UM ESTUDO A PARTIR DO DESENVOLVIMENTO DE UM MANUAL",
+      "autor": "PIERRI EDUARDO BATISTA RODRIGUES",
+      "ano": "2021",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Artigo-Consolidado-Trabalho-de-Conclusao-Mestrado-Pierri-Rodrigues-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0079_arquitetura_escolar_e_concepcoes_pedagogicas_da_rede_federal_de_educacao_profissional_cientifica_e_tecnologica.pdf",
+      "sha256": "8bb25734b304c6c5c4851f5de7ce68e9272bc5df1544d890f4523119d9e4eb85",
+      "aliases_conhecidos": {
+        "titulos": [
+          "ARQUITETURA ESCOLAR E CONCEPÇÕES PEDAGÓGICAS DA REDE FEDERAL DE EDUCAÇÃO PROFISSIONAL, CIENTÍFICA E TECNOLÓGICA: UM ESTUDO A PARTIR DO DESENVOLVIMENTO DE UM MANUAL"
+        ],
+        "autores": [
+          "PIERRI EDUARDO BATISTA RODRIGUES"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Artigo-Consolidado-Trabalho-de-Conclusao-Mestrado-Pierri-Rodrigues-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0080",
+      "titulo": "CENÁRIOS E BASTIDORES DA IMPLANTAÇÃO DO PROEJA NO INSTITUTO FEDERAL CATARINENSE",
+      "autor": "KARIN TYEKO ANAMI",
+      "ano": "2021",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Versao-Final-Dissertacao-PDF-A-Karin.pdf",
+      "novo_nome_pdf": "EPT-0080_cenarios_e_bastidores_da_implantacao_do_proeja_no_instituto_federal_catarinense.pdf",
+      "sha256": "96b1ace4701704841ec448377701dda1e5a465f72d4cf09bfc5030a0356e6e1d",
+      "aliases_conhecidos": {
+        "titulos": [
+          "CENÁRIOS E BASTIDORES DA IMPLANTAÇÃO DO PROEJA NO INSTITUTO FEDERAL CATARINENSE"
+        ],
+        "autores": [
+          "KARIN TYEKO ANAMI"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Versao-Final-Dissertacao-PDF-A-Karin.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0081",
+      "titulo": "AS ORIGENS DO CEDUP HERMANN HERING: UMA LEITURA ATRAVÉS DE JORNAIS DOS ANOS DE 1973 A 1983",
+      "autor": "DENISE MATIOLA TODOROV",
+      "ano": "2021",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-ARTIGO-DENISE-MATIOLA-TODOROV-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0081_as_origens_do_cedup_hermann_hering_uma_leitura_atraves_de_jornais_dos_anos_de_1973_a_1983.pdf",
+      "sha256": "d61cecda58e8e9c42ea0c6e24c37bb83a02f415619e49064ce177609ceb9f3c8",
+      "aliases_conhecidos": {
+        "titulos": [
+          "AS ORIGENS DO CEDUP HERMANN HERING: UMA LEITURA ATRAVÉS DE JORNAIS DOS ANOS DE 1973 A 1983"
+        ],
+        "autores": [
+          "DENISE MATIOLA TODOROV"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-ARTIGO-DENISE-MATIOLA-TODOROV-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0082",
+      "titulo": "UM DIÁLOGO COM ESTUDANTES DO 9º ANO DO ENSINO FUNDAMENTAL SOBRE O PROCESSO SELETIVO DE INGRESSO NO ENSINO MÉDIO INTEGRADO OFERTADO PELO IFC – CAMPUS IBIRAMA",
+      "autor": "LEANDRO VENDRAMI",
+      "ano": "2021",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-LEANDRO-VENDRAMI-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0082_um_dialogo_com_estudantes_do_9o_ano_do_ensino_fundamental_sobre_o_processo_seletivo_de_ingresso_no_ensino_medi.pdf",
+      "sha256": "fcd5bd4d23aa4e2021e209337385d3bf88f3031701340ddee2cad7d8f72f7b70",
+      "aliases_conhecidos": {
+        "titulos": [
+          "UM DIÁLOGO COM ESTUDANTES DO 9º ANO DO ENSINO FUNDAMENTAL SOBRE O PROCESSO SELETIVO DE INGRESSO NO ENSINO MÉDIO INTEGRADO OFERTADO PELO IFC – CAMPUS IBIRAMA"
+        ],
+        "autores": [
+          "LEANDRO VENDRAMI"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-LEANDRO-VENDRAMI-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0083",
+      "titulo": "DANIELA THOMAS RAUBER",
+      "autor": "DANIELA THOMAS RAUBER",
+      "ano": "2021",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-DANIELA-THOMAS-RAUBER-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0083_descomplicando_para_incluir_um_estudo_sobre_o_programa_de_auxilios_estudantis_do_instituto_federal_catarinense.pdf",
+      "sha256": "413bcb443549619d8e867068130581f5b94647fd60d06cb49a681415844aa77a",
+      "aliases_conhecidos": {
+        "titulos": [
+          "DESCOMPLICANDO PARA INCLUIR: UM ESTUDO SOBRE O PROGRAMA DE AUXÍLIOS ESTUDANTIS DO INSTITUTO FEDERAL CATARINENSE DISSERTAÇÃO DANIELA THOMAS RAUBER",
+          "DANIELA THOMAS RAUBER"
+        ],
+        "autores": [
+          "DANIELA THOMAS RAUBER"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-DANIELA-THOMAS-RAUBER-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0084",
+      "titulo": "LEITURA E COMPREENSÃO TEXTUAL: TESSITURA DE PROPOSTAS PEDAGÓGICAS PARA O ENSINO MÉDIO INTEGRADO",
+      "autor": "GLAUBER PEREIRA DE SOUZA",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-GLAUBER.pdf",
+      "novo_nome_pdf": "EPT-0084_leitura_e_compreensao_textual_tessitura_de_propostaspedagogicas_para_o_ensino_medio_integrado.pdf",
+      "sha256": "100aea71664d36604f6b1a2ed8cb6cfa16a6a36df2e35a37759935f68046d91d",
+      "aliases_conhecidos": {
+        "titulos": [
+          "LEITURA E COMPREENSÃO TEXTUAL: TESSITURA DE PROPOSTASPEDAGÓGICAS PARA O ENSINO MÉDIO INTEGRADO",
+          "LEITURA E COMPREENSÃO TEXTUAL: TESSITURA DE PROPOSTAS PEDAGÓGICAS PARA O ENSINO MÉDIO INTEGRADO"
+        ],
+        "autores": [
+          "GLAUBER PEREIRA DE SOUZA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-GLAUBER.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0085",
+      "titulo": "(RE)CONSTRUINDOOLHARES:CAMINHOS METODOLÓGICOS PARA CONHECER OS JOVENS DO ENSINO MÉDIO INTEGRADO",
+      "autor": "SIMONE VOLTOLINI OLCZYK",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/09/Dissertacao-Simone.pdf",
+      "novo_nome_pdf": "EPT-0085_re_construindo_olhares_caminhos_metodologicos_para_conhecer_os_jovens_do_ensino_medio_integrado.pdf",
+      "sha256": "294f765c7139b187b65bbe0b2b84c459a7daa33156672effd2ce60a4c2320f80",
+      "aliases_conhecidos": {
+        "titulos": [
+          "(RE)CONSTRUINDO OLHARES: CAMINHOS METODOLÓGICOS PARA CONHECER OS JOVENS DO ENSINO MÉDIO INTEGRADO",
+          "(RE)CONSTRUINDOOLHARES:CAMINHOS METODOLÓGICOS PARA CONHECER OS JOVENS DO ENSINO MÉDIO INTEGRADO"
+        ],
+        "autores": [
+          "SIMONE VOLTOLINI OLCZYK"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/09/Dissertacao-Simone.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0086",
+      "titulo": "ENSINO MÉDIO INTEGRADO E ALTAS HABILIDADES/SUPERDOTAÇÃO: DESAFIOS E POSSIBILIDADES",
+      "autor": "CAROLINE RESENDE ZAGO",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/09/Dissertacao-Caroline.pdf",
+      "novo_nome_pdf": "EPT-0086_ensino_medio_integrado_e_altas_habilidades_superdotacao_desafios_e_possibilidades.pdf",
+      "sha256": "de8404838f95c17b5445b0e4c089fd7fd306416f7df2a50b15ab07958f4a112e",
+      "aliases_conhecidos": {
+        "titulos": [
+          "ENSINO MÉDIO INTEGRADO E ALTAS HABILIDADES/SUPERDOTAÇÃO: DESAFIOS E POSSIBILIDADES"
+        ],
+        "autores": [
+          "CAROLINE RESENDE ZAGO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2024/09/Dissertacao-Caroline.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0087",
+      "titulo": "CIDADÃOS PARA O MUNDO DO TRABALHO: OS IFS E O PROJETO SOCIETÁRIO DE DESENVOLVIMENTO",
+      "autor": "JOÃO CARLOS CICHACZEWSKI",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-JOAO-CARLOS-CICHACZEWSKI.pdf",
+      "novo_nome_pdf": "EPT-0087_cidadaos_para_o_mundo_do_trabalho_os_ifs_e_o_projeto_societario_de_desenvolvimento.pdf",
+      "sha256": "c0530ede8b4b67e6b9bafce1207c2f29c3e3d5d2553ffd82a9b4afe7f2164be1",
+      "aliases_conhecidos": {
+        "titulos": [
+          "CIDADÃOS PARA O MUNDO DO TRABALHO: OS IFS E O PROJETO SOCIETÁRIO DE DESENVOLVIMENTO"
+        ],
+        "autores": [
+          "JOÃO CARLOS CICHACZEWSKI"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-JOAO-CARLOS-CICHACZEWSKI.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0088",
+      "titulo": "PORTIFÓLIO FORMATIVO: UMA PROPOSTA DE FORMAÇÃO CONTINUADA SOBRE PRÁTICAS PEDAGÓGICAS E MATERIAIS DIDÁTICOS ACESSÍVEIS PARA INCLUSÃO DE ESTUDANTES CEGOS NO ENSINO MÉDIO INTEGRADO NO CONTEXTO DA EPT.",
+      "autor": "LUANA TILLMANN",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-LUANA-TILMANN-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0088_portfolio_formativo_uma_proposta_de_formacao_continuada_sobre_praticas_pedagogicas_e_materiais_didaticos_acess.pdf",
+      "sha256": "4cc421745d2bd1825e5c209783131db2e00a0376e074ed119e994798fe3a3b9c",
+      "aliases_conhecidos": {
+        "titulos": [
+          "PORTFÓLIO FORMATIVO: UMA PROPOSTA DE FORMAÇÃO CONTINUADA SOBRE PRÁTICAS PEDAGÓGICAS E MATERIAIS DIDÁTICOS ACESSÍVEIS PARA INCLUSÃO DE ESTUDANTES CEGOS NO ENSINO MÉDIO INTEGRADO NO CONTEXTO DA EPT",
+          "PORTIFÓLIO FORMATIVO: UMA PROPOSTA DE FORMAÇÃO CONTINUADA SOBRE PRÁTICAS PEDAGÓGICAS E MATERIAIS DIDÁTICOS ACESSÍVEIS PARA INCLUSÃO DE ESTUDANTES CEGOS NO ENSINO MÉDIO INTEGRADO NO CONTEXTO DA EPT."
+        ],
+        "autores": [
+          "LUANA TILLMANN"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-LUANA-TILMANN-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0089",
+      "titulo": "CONTRA-BANDOS: PERCURSO DOS SUJEITOS DA EDUCAÇÃO DE JOVENS E ADULTOS INTEGRADA A EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA ATRAVÉS DA ESCRITA EM SI .",
+      "autor": "VINÍCIUS VIEIRA DE SOUSA",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-VINCIUS-VIEIRA-DE-SOUSA.pdf",
+      "novo_nome_pdf": "EPT-0089_contra_bandos_percurso_dos_sujeitos_da_educacao_de_jovens_e_adultos_integrada_a_educacao_profissional_e_tecnol.pdf",
+      "sha256": "5e8b3d243eaba8e5030c5d08eeeff9329df6df7d8777d06ddc8fbb63f8c90dcc",
+      "aliases_conhecidos": {
+        "titulos": [
+          "CONTRA-BANDOS: PERCURSO DOS SUJEITOS DA EDUCAÇÃO DE JOVENS E ADULTOS INTEGRADA À EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA ATRAVÉS DA ESCRITA EM SI",
+          "CONTRA-BANDOS: PERCURSO DOS SUJEITOS DA EDUCAÇÃO DE JOVENS E ADULTOS INTEGRADA A EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA ATRAVÉS DA ESCRITA EM SI ."
+        ],
+        "autores": [
+          "VINÍCIUS VIEIRA DE SOUSA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-VINCIUS-VIEIRA-DE-SOUSA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0090",
+      "titulo": "MATERIAIS DIDÁTICOS ACESSÍVEIS PARA ALUNOS SURDOS: RESPEITO LINGUÍSTICO NO ENSINO MÉDIO INTEGRADO EM MODELAGEM DO VESTUÁRIO NO IFSC – JARAGUÁ DO SUL",
+      "autor": "CRISTIANE ALBANO MARQUETTI",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-PRODUTO-CRISTIANE-ALBANO-MARQUETTI-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0090_materiais_didaticos_acessiveis_para_alunos_surdos_respeito_linguistico_no_ensino_medio_integrado_em_modelagem.pdf",
+      "sha256": "4cce497aee2bea6a2b706ec3638b885f5cc6d8e81fe40027a04b419eaa2b4a8a",
+      "aliases_conhecidos": {
+        "titulos": [
+          "MATERIAIS DIDÁTICOS ACESSÍVEIS PARA ALUNOS SURDOS: RESPEITO LINGUÍSTICO NO ENSINO MÉDIO INTEGRADO EM MODELAGEM DO VESTUÁRIO NO IFSC – JARAGUÁ DO SUL"
+        ],
+        "autores": [
+          "CRISTIANE ALBANO MARQUETTI"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-PRODUTO-CRISTIANE-ALBANO-MARQUETTI-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0091",
+      "titulo": "A LITERATURA MARGINAL COMO CHAVE HERMENÊUTICA NO ESTUDO DA DITADURA MILITAR: UMA SEQUÊNCIA DIDÁTICA INTERDISCLIPLINAR COMO PRODUTO EDUCACIONAL NA EPT",
+      "autor": "HENRIQUE PITT",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-PRODUTO-HENRIQUE-PITT-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0091_a_literatura_marginal_como_chave_hermeneutica_no_estudo_da_ditadura_militar_uma_sequencia_didatica_interdiscli.pdf",
+      "sha256": "ae767df0b2e5dc13874cb229b73503e98e2e95394f73ae5539402739a354cb08",
+      "aliases_conhecidos": {
+        "titulos": [
+          "A LITERATURA MARGINAL COMO CHAVE HERMENÊUTICA NO ESTUDO DA DITADURA MILITAR: UMA SEQUÊNCIA DIDÁTICA INTERDISCLIPLINAR COMO PRODUTO EDUCACIONAL NA EPT"
+        ],
+        "autores": [
+          "HENRIQUE PITT"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-PRODUTO-HENRIQUE-PITT-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0092",
+      "titulo": "ACOLHER PARA INCLUIR: O ACOLHIMENTO COMO ARTICULADOR DAS PRÁTICAS EDUCACIONAIS INCLUSIVAS",
+      "autor": "C ÁTIA MARIA ALVES MONTEIRO",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-CATIA-MARIA-ALVES-MONTEIRO.pdf",
+      "novo_nome_pdf": "EPT-0092_acolher_para_incluir_o_acolhimento_como_articulador_das_praticas_educacionais_inclusivas.pdf",
+      "sha256": "ac28eeeb9229b35fd0fbfc4d131db903b8b2c9ed197e19cc6575d6d1b18267f1",
+      "aliases_conhecidos": {
+        "titulos": [
+          "ACOLHER PARA INCLUIR: O ACOLHIMENTO COMO ARTICULADOR DAS PRÁTICAS EDUCACIONAIS INCLUSIVAS"
+        ],
+        "autores": [
+          "CÁTIA MARIA ALVES MONTEIRO",
+          "C ÁTIA MARIA ALVES MONTEIRO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-CATIA-MARIA-ALVES-MONTEIRO.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0093",
+      "titulo": "O PROCESSO DE ESCOLHA PROFISSIONAL DE JOVENS DA CLASSE QUE VIVE DO TRABALHO: UM ESTUDO A PARTIR DO CAMPUS RIO DO SUL DO INSTITUTO FEDERAL CATARINENSE",
+      "autor": "ROSELI BONFANTE",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Artigo_ps_banca-1.pdf",
+      "novo_nome_pdf": "EPT-0093_o_processo_de_escolha_profissional_de_jovens_da_classe_que_vive_do_trabalho_um_estudo_a_partir_do_campus_rio_d.pdf",
+      "sha256": "ea49f81696ea5bfa3f7e3a278f4070229f280c96c92664d0be69b975106afaa8",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O PROCESSO DE ESCOLHA PROFISSIONAL DE JOVENS DA CLASSE QUE VIVE DO TRABALHO: UM ESTUDO A PARTIR DO CAMPUS RIO DO SUL DO INSTITUTO FEDERAL CATARINENSE"
+        ],
+        "autores": [
+          "ROSELI BONFANTE"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Artigo_ps_banca-1.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0094",
+      "titulo": "PREVALÊNCIA DE MENINOS E MENINAS NOS CURSOS DO ENSINO MÉDIO INTEGRADO DO IFC: UMA PÁGINA DE INTERNET PARA REFLETIR SOBRE OS IMPACTOS DA DIVISÃO SEXUAL DO TRABALHO",
+      "autor": "CAROLINA FONTOURA CARTANA",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-CARLOLINA-CARTANA.pdf",
+      "novo_nome_pdf": "EPT-0094_prevalencia_de_meninos_e_meninas_nos_cursos_do_ensino_medio_integrado_do_ifc_uma_pagina_de_internet_para_refle.pdf",
+      "sha256": "8a4ef7d5311bfdbb3efca6d685c33e279ebdd659c36a7a4c1d24c074f0b02978",
+      "aliases_conhecidos": {
+        "titulos": [
+          "PREVALÊNCIA DE MENINOS E MENINAS NOS CURSOS DO ENSINO MÉDIO INTEGRADO DO IFC: UMA PÁGINA DE INTERNET PARA REFLETIR SOBRE OS IMPACTOS DA DIVISÃO SEXUAL DO TRABALHO"
+        ],
+        "autores": [
+          "CAROLINA FONTOURA CARTANA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-CARLOLINA-CARTANA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0095",
+      "titulo": "FORMAÇÃO PARA O MUNDO DO TRABALHO OU PARA O MERCADO DE TRABALHO? UMA ANÁLISE DOS PLANOS DE ENSINO DOS CURSOS DE MECÂNICA INTEGRADOS AO ENSINO MÉDIO DO IFC E DO IFSC",
+      "autor": "VÂNIO DEMÉTRIO",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-VANIO-DEMETRIO-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0095_formacao_para_o_mundo_do_trabalho_ou_para_o_mercado_de_trabalho_uma_analise_dos_planos_de_ensino_dos_cursos_de.pdf",
+      "sha256": "813b455a31348a8ca78a0871cb2db7534f839957d801836d6e3808ca67384240",
+      "aliases_conhecidos": {
+        "titulos": [
+          "FORMAÇÃO PARA O MUNDO DO TRABALHO OU PARA O MERCADO DE TRABALHO? UMA ANÁLISE DOS PLANOS DE ENSINO DOS CURSOS DE MECÂNICA INTEGRADOS AO ENSINO MÉDIO DO IFC E DO IFSC Produto Educional: SEQUÊNCIA DIDÁTICA – PENSAR A CONSTELAÇÃO DA CIÊNCIA",
+          "FORMAÇÃO PARA O MUNDO DO TRABALHO OU PARA O MERCADO DE TRABALHO? UMA ANÁLISE DOS PLANOS DE ENSINO DOS CURSOS DE MECÂNICA INTEGRADOS AO ENSINO MÉDIO DO IFC E DO IFSC"
+        ],
+        "autores": [
+          "VÂNIO DEMÉTRIO"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-VANIO-DEMETRIO-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0096",
+      "titulo": "GAMIFICATION: UMA PROPOSTA PARA O ENSINO DE LÍNGUA INGLESA NO ENSINO MÉDIO INTEGRADO",
+      "autor": "ALANA MOTA GERLACH",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-ALANA-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0096_gamification_uma_proposta_para_o_ensino_de_lingua_inglesa_no_ensino_medio_integrado.pdf",
+      "sha256": "9e3f0ab1d872a5f8c31e884d3f581876864ca6b18a6b321cce788fffe1a8cb82",
+      "aliases_conhecidos": {
+        "titulos": [
+          "GAMIFICATION: UMA PROPOSTA PARA O ENSINO DE LÍNGUA INGLESA NO ENSINO MÉDIO INTEGRADO"
+        ],
+        "autores": [
+          "ALANA MOTA GERLACH"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-ALANA-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0097",
+      "titulo": "INDICADORES SOCIAIS E ECONÔMICOS COMO INSTRUMENTO DE GESTÃO NO PROCESSO DE DESENVOLVIMENTO DOS INSTITUTOS FEDERAIS: UM ESTUDO A PARTIR DO IFC/CAMPUS BRUSQUE",
+      "autor": "VALNEI NUNES",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-VALNEI-NUNES.pdf",
+      "novo_nome_pdf": "EPT-0097_indicadores_sociais_e_economicos_como_instrumento_de_gestao_no_processo_de_desenvolvimento_dos_institutos_fede.pdf",
+      "sha256": "c4c5c0c41352e289ef26a913a202722f73a5ba5f3ac9032f9e223c9f8924e7cf",
+      "aliases_conhecidos": {
+        "titulos": [
+          "INDICADORES SOCIAIS E ECONÔMICOS COMO INSTRUMENTO DE GESTÃO NO PROCESSO DE DESENVOLVIMENTO DOS INSTITUTOS FEDERAIS: UM ESTUDO A PARTIR DO IFC/CAMPUS BRUSQUE"
+        ],
+        "autores": [
+          "VALNEI NUNES"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-VALNEI-NUNES.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0098",
+      "titulo": "DIFICULDADES DE APRENDIZAGEM EM MATEMÁTICA E O INSUCESSO NO CURSO SUBSEQUENTE EM EDIFICAÇÕES",
+      "autor": "CARLA MULLER",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-CARLA-MULLER.pdf",
+      "novo_nome_pdf": "EPT-0098_dificuldades_de_aprendizagem_em_matematica_e_o_insucesso_no_curso_subsequente_em_edificacoes.pdf",
+      "sha256": "f2c7d489bc286f400dd14419337bfa0c54bd1abdc1d880f91674239f60ae7031",
+      "aliases_conhecidos": {
+        "titulos": [
+          "DIFICULDADES DE APRENDIZAGEM EM MATEMÁTICA E O INSUCESSO NO CURSO SUBSEQUENTE EM EDIFICAÇÕES"
+        ],
+        "autores": [
+          "CARLA MULLER"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-CARLA-MULLER.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0099",
+      "titulo": "REVISITANDO OS CONCEITOS – BASE DA PROPOSTA CURRICULAR DO CURSO DE FORMAÇÃO DE PROFESSORES EM NÍVEL MÉDIO NO ESTADO DO PARANÁ",
+      "autor": "JOSIANE RODRIGUES DE JESUS,",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-JOSIANE-RODRIGUES-DE-JESUS-Copia.pdf",
+      "novo_nome_pdf": "EPT-0099_revisitando_os_conceitos_base_da_proposta_curricular_do_curso_de_formacao_de_professores_em_nivel_medio_no_est.pdf",
+      "sha256": "6b317071f6dd24544045e7088c252c66c6a0abedabad2ed466843fc31e565960",
+      "aliases_conhecidos": {
+        "titulos": [
+          "REVISITANDO OS CONCEITOS – BASE DA PROPOSTA CURRICULAR DO CURSO DE FORMAÇÃO DE PROFESSORES EM NÍVEL MÉDIO NO ESTADO DO PARANÁ"
+        ],
+        "autores": [
+          "JOSIANE RODRIGUES DE JESUS",
+          "JOSIANE RODRIGUES DE JESUS,"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-JOSIANE-RODRIGUES-DE-JESUS-Copia.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0100",
+      "titulo": "KAREM APARECIDA SIMAS RESENDE",
+      "autor": "KAREM APARECIDA SIMAS RESENDE",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-KAREM-APARECIDA-SIMAS-RESENDE.pdf",
+      "novo_nome_pdf": "EPT-0100_tecnologias_assistivas_tutorial_pedagogico_como_ferramenta_formativa_para_professores_com_estudantes_cegos.pdf",
+      "sha256": "3c2cb08d045a81d72e3acb3958d0d7253b9308b12251ced72e57bba1bc4cae33",
+      "aliases_conhecidos": {
+        "titulos": [
+          "TECNOLOGIAS ASSISTIVAS: TUTORIAL PEDAGÓGICO COMO FERRAMENTA FORMATIVA PARA PROFESSORES COM ESTUDANTES CEGOS",
+          "KAREM APARECIDA SIMAS RESENDE"
+        ],
+        "autores": [
+          "KAREM APARECIDA SIMAS RESENDE"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-KAREM-APARECIDA-SIMAS-RESENDE.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0101",
+      "titulo": "O ENSINO MÉDIO INTEGRADO À EDUCAÇÃO PROFISSIONAL NO IFC CAMPUS IBIRAMA: CONSTRUÇÃO DE UM VÍDEO EXPLICATIVO A PARTIR DAS PERCEPÇÕES DE DISCENTES INGRESSANTES",
+      "autor": "LUANA CRISTINA GONÇALVES",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-LUANA-CRISTINA-GONCALVES.pdf",
+      "novo_nome_pdf": "EPT-0101_o_ensino_medio_integrado_a_educacao_profissional_no_ifc_campus_ibirama_construcao_de_um_video_explicativo_a_pa.pdf",
+      "sha256": "ade423798927ec6eb9be96b73043f82567baceb8c77b518e4b84cafe65553678",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O ENSINO MÉDIO INTEGRADO À EDUCAÇÃO PROFISSIONAL NO IFC CAMPUS IBIRAMA: CONSTRUÇÃO DE UM VÍDEO EXPLICATIVO A PARTIR DAS PERCEPÇÕES DE DISCENTES INGRESSANTES"
+        ],
+        "autores": [
+          "LUANA CRISTINA GONÇALVES"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/VERSAO-FINAL-DISSERTACAO-E-PRODUTO-EDUCACIONAL-LUANA-CRISTINA-GONCALVES.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0102",
+      "titulo": "MEMÓRIA E PRODUÇÃO DA IDENTIDADE INSTITUCIONAL: CONTRIBUIÇÕES DO MEMORIAL DO IFC RIO DO SUL",
+      "autor": "TALITA DEANE ERN",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-TALITA-DEANE-ERN-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0102_memoria_e_producao_da_identidade_institucional_contribuicoes_do_memorial_do_ifc_rio_do_sul.pdf",
+      "sha256": "4cc366a7599b5af6423a9c7365cabf617855f126c8de74d8dfc3946a22d30bd8",
+      "aliases_conhecidos": {
+        "titulos": [
+          "MEMÓRIA E PRODUÇÃO DA IDENTIDADE INSTITUCIONAL: CONTRIBUIÇÕES DO MEMORIAL DO IFC RIO DO SUL"
+        ],
+        "autores": [
+          "TALITA DEANE ERN"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-TALITA-DEANE-ERN-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0103",
+      "titulo": "DEMOCRACIA E PARTICIPAÇÃO: ANÁLISE DE DADOS TEXTUAIS DOS PLANOS DE DESENVOLVIMENTO INSTITUCIONAIS DOS INSTITUTOS FEDERAIS",
+      "autor": "SILVANI DA SILVA",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Dissertacao-Produto-Silvani-da-Silva-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0103_democracia_e_participacao_analise_de_dados_textuais_dos_planos_de_desenvolvimento_institucionais_dos_instituto.pdf",
+      "sha256": "6399abc67314793bfc75f5e82a766fa00663853d484998c56f9e510ef162e308",
+      "aliases_conhecidos": {
+        "titulos": [
+          "DEMOCRACIA E PARTICIPAÇÃO: ANÁLISE DE DADOS TEXTUAIS DOS PLANOS DE DESENVOLVIMENTO INSTITUCIONAIS DOS INSTITUTOS FEDERAIS"
+        ],
+        "autores": [
+          "SILVANI DA SILVA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Dissertacao-Produto-Silvani-da-Silva-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0104",
+      "titulo": "CONTRIBUIÇÕES PARA PENSAR OS DESASTRES “NATURAIS” A PARTIR DE REFLEXÕES DE ESTUDANTES DO ENSINO MÉDIO ENSINO INTEGRADO DO IFC – CAMPUS SÃO BENTO DO SUL: O CASO DE RIO NEGRINHO-SC",
+      "autor": "HELEN CAROLINA FERREIRA SANTOS,",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-HELEN-FERREIRA.pdf",
+      "novo_nome_pdf": "EPT-0104_contribuicoes_para_pensar_os_desastres_naturais_a_partir_de_reflexoes_de_estudantes_do_ensino_medio_integrado.pdf",
+      "sha256": "bd40479658a6bd92d122ceb1fc7f2e466bb2b559167a329bc8046752ff78a5b5",
+      "aliases_conhecidos": {
+        "titulos": [
+          "CONTRIBUIÇÕES PARA PENSAR OS DESASTRES NATURAIS A PARTIR DE REFLEXÕES DE ESTUDANTES DO ENSINO MÉDIO INTEGRADO DO IFC – CAMPUS SÃO BENTO DO SUL: O CASO DE RIO NEGRINHO-SC",
+          "CONTRIBUIÇÕES PARA PENSAR OS DESASTRES “NATURAIS” A PARTIR DE REFLEXÕES DE ESTUDANTES DO ENSINO MÉDIO ENSINO INTEGRADO DO IFC – CAMPUS SÃO BENTO DO SUL: O CASO DE RIO NEGRINHO-SC"
+        ],
+        "autores": [
+          "HELEN CAROLINA FERREIRA SANTOS",
+          "HELEN CAROLINA FERREIRA SANTOS,"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-HELEN-FERREIRA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0105",
+      "titulo": "O ATENDIMENTO AO PÚBLICO LGBTQI+ NO CAMPUS CAMBORIÚ – INSTITUTO FEDERAL CATARINENSE: POR UMA POLÍTICA INSTITUCIONAL NÃO EXCLUDENTE NO ENSINO MÉDIO INTEGRADO",
+      "autor": "JAIR ADRIANO STRAPAZZON",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-VERSAO-FINAL-JAIR-ADRIANO-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0105_o_atendimento_ao_publico_lgbtqi_no_campus_camboriu_instituto_federal_catarinense_por_uma_politica_instituciona.pdf",
+      "sha256": "6b141c5bf365e350d1a93809eafd7aa3fe9bfa0e27b3617b9fd3e8c3d62e3ba6",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O ATENDIMENTO AO PÚBLICO LGBTQI+ NO CAMPUS CAMBORIÚ – INSTITUTO FEDERAL CATARINENSE: POR UMA POLÍTICA INSTITUCIONAL NÃO EXCLUDENTE NO ENSINO MÉDIO INTEGRADO"
+        ],
+        "autores": [
+          "JAIR ADRIANO STRAPAZZON"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-VERSAO-FINAL-JAIR-ADRIANO-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0106",
+      "titulo": "O VALOR DE UMA AÇÃO SOCIAL: O CÃO-GUIA",
+      "autor": "SANDRO MARCOS LEVATI",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Artigo-Final-Sandro-Marcos-Levati-PDF-A.pdf",
+      "novo_nome_pdf": "EPT-0106_o_valor_de_uma_acao_social_o_cao_guia.pdf",
+      "sha256": "2d288638d397fe36498bc1d46cf07408ce9f337cb8579037f84cd06dffd39d7d",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O VALOR DE UMA AÇÃO SOCIAL: O CÃO-GUIA"
+        ],
+        "autores": [
+          "SANDRO MARCOS LEVATI"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/Artigo-Final-Sandro-Marcos-Levati-PDF-A.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0107",
+      "titulo": "TECENDO A HISTÓRIA DO INSTITUTO FEDERAL CATARINENSE, CAMPUS CONCÓRDIA (1965-1975): HISTÓRIAS DE (IN)DISCIPLINA",
+      "autor": "SHYRLEI KARYNA JAGIELSKI BENKENDORF",
+      "ano": "2020",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-FINAL-SHYRLEI-BENKENDORF.pdf",
+      "novo_nome_pdf": "EPT-0107_tecendo_a_historia_do_instituto_federal_catarinense_campus_concordia_1965_1975_historias_de_in_disciplina.pdf",
+      "sha256": "85742d143b0a5a15c6497e9d969d51c146167ea2ac1ab13b3e8e9c33c1d74860",
+      "aliases_conhecidos": {
+        "titulos": [
+          "TECENDO A HISTÓRIA DO INSTITUTO FEDERAL CATARINENSE, CAMPUS CONCÓRDIA (1965-1975): HISTÓRIAS DE (IN)DISCIPLINA"
+        ],
+        "autores": [
+          "SHYRLEI KARYNA JAGIELSKI BENKENDORF"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/ARTIGO-FINAL-SHYRLEI-BENKENDORF.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0108",
+      "titulo": "O COOPERATIVISMO NA ARTICULAÇÃO ENTRE TRABALHO E EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA NA FORMAÇÃO DE JOVENS APRENDIZES DO SETOR FINANCEIRO.",
+      "autor": "RAQUEL STUMPF BERNARDES",
+      "ano": "2026",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2026/07/DISSERTACAO_-RAQUEL_STUMPF_BERNARDES.pdf",
+      "novo_nome_pdf": "EPT-0108_o_cooperativismo_na_articulacao_entre_trabalho_e_educacao_profissional_e_tecnologica_na_formacao_de_jovens_apr.pdf",
+      "sha256": "d4d888c6b0ebfd03f04e9e04f24a4649e8c2c5bbb473f7d4cee2a79485e03c30",
+      "aliases_conhecidos": {
+        "titulos": [
+          "O COOPERATIVISMO NA ARTICULAÇÃO ENTRE TRABALHO E EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA NA FORMAÇÃO DE JOVENS APRENDIZES DO SETOR FINANCEIRO."
+        ],
+        "autores": [
+          "RAQUEL STUMPF BERNARDES"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2026/07/DISSERTACAO_-RAQUEL_STUMPF_BERNARDES.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0109",
+      "titulo": "CONTRIBUIÇÕES DO ESPORTE PARA A FORMAÇÃO HUMANA INTEGRAL NO ENSINO MÉDIO INTEGRADO: UM ESTUDO A PARTIR DAS PERCEPÇÕES DE DOCENTES DE EDUCAÇÃO FÍSICA NO INSTITUTO FEDERAL CATARINENSE",
+      "autor": "ROGES RAMOS DE RAMOS",
+      "ano": "2026",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2026/06/DISSERTACAO_E_PRODUTO_EDUCACIONAL_ROGES_RAMOS_DE_RAMOS-1.pdf",
+      "novo_nome_pdf": "EPT-0109_contribuicoes_do_esporte_para_a_formacao_humana_integral_no_ensino_medio_integrado_um_estudo_a_partir_das_perc.pdf",
+      "sha256": "6ac697d7c01ea940d499a163af791bda3c4143177de285be6b754f46dd710f42",
+      "aliases_conhecidos": {
+        "titulos": [
+          "CONTRIBUIÇÕES DO ESPORTE PARA A FORMAÇÃO HUMANA INTEGRAL NO ENSINO MÉDIO INTEGRADO: UM ESTUDO A PARTIR DAS PERCEPÇÕES DE DOCENTES DE EDUCAÇÃO FÍSICA NO INSTITUTO FEDERAL CATARINENSE"
+        ],
+        "autores": [
+          "ROGES RAMOS DE RAMOS"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2026/06/DISSERTACAO_E_PRODUTO_EDUCACIONAL_ROGES_RAMOS_DE_RAMOS-1.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    },
+    {
+      "id": "EPT-0110",
+      "titulo": "AS ESTRATÉGIAS DE INCLUSÃO NA TRANSIÇÃO EDUCACIONAL DOS ALUNOS SURDOS PARA INGRESSO NO CURSO TÉCNICO EM MODELAGEM DO VESTUÁRIO INTEGRADO AO ENSINO MÉDIO DO IFSC.",
+      "autor": "ELINE SANTOS SILVA",
+      "ano": "2026",
+      "url_pdf": "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2026/06/DISSERTACAO_E_PRODUTO_EDUCACIONAL__ELINE_SANTOS_SILVA.pdf",
+      "novo_nome_pdf": "EPT-0110_as_estrategias_de_inclusao_na_transicao_educacional_dos_alunos_surdos_para_ingresso_no_curso_tecnico_em_modela.pdf",
+      "sha256": "f409c148f25a2e6211a1a44d9bc029cf82e29f9828f28f988133e900ac7670d8",
+      "aliases_conhecidos": {
+        "titulos": [
+          "AS ESTRATÉGIAS DE INCLUSÃO NA TRANSIÇÃO EDUCACIONAL DOS ALUNOS SURDOS PARA INGRESSO NO CURSO TÉCNICO EM MODELAGEM DO VESTUÁRIO INTEGRADO AO ENSINO MÉDIO DO IFSC."
+        ],
+        "autores": [
+          "ELINE SANTOS SILVA"
+        ],
+        "urls_pdf": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2026/06/DISSERTACAO_E_PRODUTO_EDUCACIONAL__ELINE_SANTOS_SILVA.pdf"
+        ]
+      },
+      "vinculo_confirmado": true
+    }
+  ]
+}

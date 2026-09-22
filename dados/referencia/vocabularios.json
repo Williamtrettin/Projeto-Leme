@@ -1,0 +1,1492 @@
+{
+  "schema_version": "leme-vocabularios-v2",
+  "criado_em": "2026-08-21T21:54:14+00:00",
+  "politica": "Somente equivalências comprovadas são canônicas; dúvida permanece A revisar.",
+  "linhas_de_pesquisa": {
+    "Práticas Educativas em Educação Profissional e Tecnológica (EPT)": [
+      "Práticas Educativas em EPT",
+      "Práticas Educativas em Educação Profissional e Tecnológica (EPT)"
+    ],
+    "Organização e Memórias de Espaços Pedagógicos na Educação Profissional e Tecnológica (EPT)": [
+      "Organização e Memórias de Espaços Pedagógicos na EPT",
+      "Organização e Memórias de Espaços Pedagógicos na Educação Profissional e Tecnológica (EPT)"
+    ]
+  },
+  "macroprojetos": {
+    "MP1": "Propostas metodológicas e recursos didáticos em espaços formais e não formais de ensino na EPT",
+    "MP2": "Inclusão e diversidade em espaços formais e não formais de ensino na EPT",
+    "MP3": "Práticas Educativas no Currículo Integrado",
+    "MP4": "História e memórias no contexto da EPT",
+    "MP5": "Organização do currículo integrado na EPT",
+    "MP6": "Organização de espaços pedagógicos na EPT"
+  },
+  "relacao_linha_macro": {
+    "Práticas Educativas em Educação Profissional e Tecnológica (EPT)": [
+      "MP1",
+      "MP2",
+      "MP3"
+    ],
+    "Organização e Memórias de Espaços Pedagógicos na Educação Profissional e Tecnológica (EPT)": [
+      "MP4",
+      "MP5",
+      "MP6"
+    ]
+  },
+  "orientadores": {
+    "modo": "confirmados_fontes_ifc_v1",
+    "canonicos": {
+      "Sara Nunes": {
+        "aliases": [
+          "Drª. Sara Nunes",
+          "Dra. Sara Nunes",
+          "Sara Nunes"
+        ],
+        "confianca": "alta",
+        "regra": "mesmo nome após remoção de título, caixa e pontuação"
+      },
+      "Raquel Cardoso de Faria e Custódio": {
+        "aliases": [
+          "Drª. Raquel Cardoso de Faria e Custódio",
+          "Raquel Cardoso de Faria e Custódio"
+        ],
+        "confianca": "alta",
+        "regra": "mesmo nome após remoção de título, caixa e pontuação"
+      },
+      "Jorge da Cunha Dutra": {
+        "aliases": [
+          "Dr. Jorge da Cunha Dutra",
+          "Jorge da Cunha Dutra"
+        ],
+        "confianca": "alta",
+        "regra": "mesmo nome após remoção de título, caixa e pontuação"
+      },
+      "Fátima Peres Zago de Oliveira": {
+        "aliases": [
+          "Drª. Fátima Peres Zago de Oliveira",
+          "Dra. Fátima Peres Zago de Oliveira",
+          "DRA. FÁTIMA PEREZ ZAGO DE OLIVEIRA",
+          "FÁTIMA PERES ZAGO DE OLIVEIRA",
+          "Fátima Peres Zago de Oliveira",
+          "FÁTIMA PERES ZAGO DE OLIVEIRA.",
+          "FÁTIMA PEREZ ZAGO DE OLIVEIRA",
+          "FÁTIMA PEREZ ZAGO DE OLIVEIRA.",
+          "Fátima Perez Zago de Oliveira"
+        ],
+        "confianca": "alta",
+        "regra": "equivalência nominal confirmada em fonte institucional do IFC",
+        "evidencias": [
+          "https://profept.ifc.edu.br/docentes/",
+          "https://profept.ifc.edu.br/dissertacoes/"
+        ]
+      },
+      "Eder Aparecido de Carvalho": {
+        "aliases": [
+          "Dr. Eder Aparecido de Carvalho",
+          "Eder Aparecido de Carvalho"
+        ],
+        "confianca": "alta",
+        "regra": "mesmo nome após remoção de título, caixa e pontuação"
+      },
+      "REGINALDO LEANDRO PLÁCIDO": {
+        "aliases": [
+          "Dr.Reginaldo Leandro Plácido",
+          "DR. REGINALDO LEANDRO PLÁCIDO:",
+          "DR. REGINALDO LEANDRO PLÁCIDO",
+          "Dr. Reginaldo Leandro Plácido.",
+          "Dr.: Reginaldo Leandro Plácido",
+          "Reginaldo Leandro Plácido",
+          "REGINALDO LEANDRO PLÁCIDO"
+        ],
+        "confianca": "alta",
+        "regra": "mesmo nome após remoção de título, caixa e pontuação"
+      },
+      "Denise Fernandes": {
+        "aliases": [
+          "Denise Fernandes",
+          "Dra. Denise Fernandes",
+          "Drª. Denise Fernandes"
+        ],
+        "confianca": "alta",
+        "regra": "mesmo nome após remoção de título, caixa e pontuação"
+      },
+      "Eduardo Augusto Werneck Ribeiro": {
+        "aliases": [
+          "DR. EDUARDO AUGUSTO WERNECK RIBEIRO",
+          "Dr. Eduardo Augusto Werneck Ribeiro",
+          "DR. EDUARDO WERNECK RIBEIRO",
+          "Eduardo Augusto Werneck Ribeiro",
+          "EDUARDO AUGUSTO WERNECK RIBEIRO",
+          "Eduardo Werneck Ribeiro",
+          "EDUARDO WERNECK RIBEIRO"
+        ],
+        "confianca": "alta",
+        "regra": "equivalência nominal confirmada em fonte institucional do IFC",
+        "evidencias": [
+          "https://profept.ifc.edu.br/docentes/",
+          "https://profept.ifc.edu.br/dissertacoes/"
+        ]
+      },
+      "Cloves Alexandre de Castro": {
+        "aliases": [
+          "CLOVES ALEXANDRE DE CASTRO",
+          "Cloves Alexandre de Castro",
+          "ClOVES ALEXANDRE DE CASTRO",
+          "DR. CLOVES ALEXANDRE DE CASTRO",
+          "Dr. Cloves Alexandre de Castro",
+          "Dr.Cloves Alexandre de Castro",
+          "DR. ClOVES ALEXANDRE DE CASTRO",
+          "Dr. CLOVES ALEXANDRE DE CASTRO"
+        ],
+        "confianca": "alta",
+        "regra": "mesmo nome após remoção de título, caixa e pontuação"
+      },
+      "Viviane Grimm": {
+        "aliases": [
+          "DRA. VIVIANE GRIMM",
+          "Drª. Viviane Grimm",
+          "Drª Viviane Grimm",
+          "Dra. Viviane Grimm",
+          "DRA. VIVIANE GRIMM.",
+          "Dra.: Viviane Grimm",
+          "Viviane Grimm",
+          "VIVIANE GRIMM"
+        ],
+        "confianca": "alta",
+        "regra": "mesmo nome após remoção de título, caixa e pontuação"
+      },
+      "Simão Alberto": {
+        "aliases": [
+          "Dr. Simão Alberto",
+          "Simão Alberto"
+        ],
+        "confianca": "alta",
+        "regra": "mesmo nome após remoção de título, caixa e pontuação"
+      },
+      "Juliene Marques Bogo": {
+        "aliases": [
+          "Dra. Juliene Marques Bogo",
+          "Dra.: Juliene Marques Bogo",
+          "Juliene Marques Bogo"
+        ],
+        "confianca": "alta",
+        "regra": "mesmo nome após remoção de título, caixa e pontuação"
+      },
+      "Leandro Marcos Salgado Alves": {
+        "aliases": [
+          "DR. LEANDRO MARCOS ALVES SALGADO",
+          "DR. LEANDRO MARCOS SALGADO ALVES",
+          "LEANDRO MARCOS ALVES SALGADO",
+          "Leandro Marcos Alves Salgado",
+          "Leandro Marcos Salgado Alves",
+          "LEANDRO MARCOS SALGADO ALVES"
+        ],
+        "confianca": "alta",
+        "regra": "equivalência nominal confirmada em fonte institucional do IFC",
+        "evidencias": [
+          "https://profept.ifc.edu.br/agenda-de-eventos/",
+          "https://profept.ifc.edu.br/dissertacoes/"
+        ]
+      },
+      "BRUNO NUNES BATISTA": {
+        "aliases": [
+          "BRUNO NUNES BATISTA",
+          "DR. BRUNO NUNES BATISTA"
+        ],
+        "confianca": "alta",
+        "regra": "mesmo nome após remoção de título, caixa e pontuação"
+      },
+      "Inge Renate Fröse Suhr": {
+        "aliases": [
+          "DRA. INGE R. F. SUHR",
+          "DRA. INGE RENATE FROSE SUHR.",
+          "DRA. INGE RENATE FROSE SUHR",
+          "INGE R. F. SUHR",
+          "Inge R. F. Suhr",
+          "INGE RENATE FROSE SUHR",
+          "Inge Renate Fröse Suhr",
+          "Inge Renate Frose Suhr"
+        ],
+        "confianca": "alta",
+        "regra": "equivalência nominal confirmada em fonte institucional do IFC",
+        "evidencias": [
+          "https://pedagogia.blumenau.ifc.edu.br/corpo-docente/",
+          "https://sig.ifc.edu.br/sigaa/public/programa/defesas.jsf?id=1010"
+        ]
+      },
+      "Sonia Regina de Souza Fernandes": {
+        "aliases": [
+          "DRA. SONIA REGINA DE SOUZA FERNANDES.",
+          "DRA. SÔNIA REGINA FERNANDES",
+          "SONIA REGINA DE SOUZA FERNANDES",
+          "Sonia Regina de Souza Fernandes",
+          "SÔNIA REGINA FERNANDES",
+          "Sônia Regina Fernandes"
+        ],
+        "confianca": "alta",
+        "regra": "equivalência nominal confirmada em fonte institucional do IFC",
+        "evidencias": [
+          "https://profept.ifc.edu.br/wp-content/uploads/sites/54/2023/09/DISSERTACAO-LUANA-TILLMANN-PDF-A.pdf",
+          "https://profept.ifc.edu.br/dissertacoes/"
+        ]
+      },
+      "HUMBERTO LUIS DE CESARO": {
+        "aliases": [
+          "DR. HUMBERTO LUIS DE CESARO",
+          "HUMBERTO LUIS DE CESARO"
+        ],
+        "confianca": "alta",
+        "regra": "mesmo nome após remoção de título, caixa e pontuação"
+      }
+    },
+    "possiveis_equivalencias_nao_aplicadas": []
+  },
+  "categorias": {
+    "Base Epistemológica": {
+      "preservar_nao_mapeados": true,
+      "canonicos": {
+        "Educação Crítica / Emancipatória": {
+          "aliases": [
+            "Educação Crítica / Emancipatória"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Humana Integral / Omnilateralidade": {
+          "aliases": [
+            "Formação Humana Integral / Omnilateralidade"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Currículo Integrado": {
+          "aliases": [
+            "Currículo Integrado"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Trabalho como Princípio Educativo": {
+          "aliases": [
+            "Trabalho como Princípio Educativo"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Materialismo Histórico-Dialético": {
+          "aliases": [
+            "Materialismo Histórico-Dialético"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Integral / Omnilateralidade": {
+          "aliases": [
+            "Formação Integral / Omnilateralidade"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Crítica / Formação Integral": {
+          "aliases": [
+            "Educação Crítica / Formação Integral"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Integral": {
+          "aliases": [
+            "Formação Integral"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Trabalho como Princípio Educativo / Educação Crítica": {
+          "aliases": [
+            "Trabalho como Princípio Educativo / Educação Crítica"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "História e Memória da EPT": {
+          "aliases": [
+            "História e Memória da EPT"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Integral / Educação em Saúde": {
+          "aliases": [
+            "Formação Integral / Educação em Saúde"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Inclusão e Acessibilidade": {
+          "aliases": [
+            "Inclusão e Acessibilidade"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Trabalho como Princípio Educativo / Formação Humana Integral": {
+          "aliases": [
+            "Trabalho como Princípio Educativo / Formação Humana Integral"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Humana Integral / Educação do Campo": {
+          "aliases": [
+            "Formação Humana Integral / Educação do Campo"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Inclusiva / Educação Emancipadora": {
+          "aliases": [
+            "Educação Inclusiva / Educação Emancipadora"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Permanência e Êxito / Assistência Estudantil": {
+          "aliases": [
+            "Permanência e Êxito / Assistência Estudantil"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Trabalho como Princípio Educativo / Metodologias Ativas": {
+          "aliases": [
+            "Trabalho como Princípio Educativo / Metodologias Ativas"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Inclusiva / Desenho Universal para a Aprendizagem": {
+          "aliases": [
+            "Educação Inclusiva / Desenho Universal para a Aprendizagem"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Inclusiva / Diversidade de Gênero": {
+          "aliases": [
+            "Educação Inclusiva / Diversidade de Gênero"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "História e Memória da EPT / Formação Integrada": {
+          "aliases": [
+            "História e Memória da EPT / Formação Integrada"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Inclusiva / Democratização do Acesso": {
+          "aliases": [
+            "Educação Inclusiva / Democratização do Acesso"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Inclusiva / Acessibilidade Linguística": {
+          "aliases": [
+            "Educação Inclusiva / Acessibilidade Linguística"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Materialismo Histórico-Dialético / Educação Crítica": {
+          "aliases": [
+            "Materialismo Histórico-Dialético / Educação Crítica"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Humana Integral / Currículo Integrado": {
+          "aliases": [
+            "Formação Humana Integral / Currículo Integrado"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Materialismo Histórico-Dialético / Pedagogia Histórico-Crítica": {
+          "aliases": [
+            "Materialismo Histórico-Dialético / Pedagogia Histórico-Crítica"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Humana Integral / Institucionalidade dos Institutos Federais": {
+          "aliases": [
+            "Formação Humana Integral / Institucionalidade dos Institutos Federais"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "História das Instituições Escolares / Cultura Escolar": {
+          "aliases": [
+            "História das Instituições Escolares / Cultura Escolar"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Cultura Escolar / Estudos sobre Espaços Educativos": {
+          "aliases": [
+            "Cultura Escolar / Estudos sobre Espaços Educativos"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Pedagogia Histórico-Crítica / Perspectiva Histórico-Cultural": {
+          "aliases": [
+            "Pedagogia Histórico-Crítica / Perspectiva Histórico-Cultural"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Humana Integral / Educação Crítica": {
+          "aliases": [
+            "Formação Humana Integral / Educação Crítica"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Humana Integral / Direitos Sociais": {
+          "aliases": [
+            "Formação Humana Integral / Direitos Sociais"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Inclusiva / Formação Humana Integral": {
+          "aliases": [
+            "Educação Inclusiva / Formação Humana Integral"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Materialismo Histórico-Dialético / Formação Omnilateral": {
+          "aliases": [
+            "Materialismo Histórico-Dialético / Formação Omnilateral"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Inclusiva / Educação Bilíngue": {
+          "aliases": [
+            "Educação Inclusiva / Educação Bilíngue"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Interacionismo sócio-histórico-cultural / Politecnia": {
+          "aliases": [
+            "Interacionismo sócio-histórico-cultural / Politecnia"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Materialismo Histórico-Dialético / Abordagem Sócio-Histórica": {
+          "aliases": [
+            "Materialismo Histórico-Dialético / Abordagem Sócio-Histórica"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Crítica / Estudos de Gênero": {
+          "aliases": [
+            "Educação Crítica / Estudos de Gênero"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Integrada / Teoria Crítica": {
+          "aliases": [
+            "Formação Integrada / Teoria Crítica"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Metodologias Ativas / Ensino de Línguas por Tarefas": {
+          "aliases": [
+            "Metodologias Ativas / Ensino de Línguas por Tarefas"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Gestão Educacional / Desenvolvimento Regional": {
+          "aliases": [
+            "Gestão Educacional / Desenvolvimento Regional"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Metodologias Ativas / Avaliação Diagnóstica": {
+          "aliases": [
+            "Metodologias Ativas / Avaliação Diagnóstica"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Trabalho como Princípio Educativo / Formação Docente": {
+          "aliases": [
+            "Trabalho como Princípio Educativo / Formação Docente"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Inclusiva / Tecnologia Assistiva / Desenho Universal para Aprendizagem": {
+          "aliases": [
+            "Educação Inclusiva / Tecnologia Assistiva / Desenho Universal para Aprendizagem"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Integrada / Ensino Médio Integrado": {
+          "aliases": [
+            "Formação Integrada / Ensino Médio Integrado"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "História e Memória da EPT / Materialismo histórico": {
+          "aliases": [
+            "História e Memória da EPT / Materialismo histórico"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Gestão democrática / Educação crítica": {
+          "aliases": [
+            "Gestão democrática / Educação crítica"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Inclusiva / Diversidade": {
+          "aliases": [
+            "Educação Inclusiva / Diversidade"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Inclusão Social / Tecnologia Assistiva": {
+          "aliases": [
+            "Inclusão Social / Tecnologia Assistiva"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "História e Memória da EPT / Cultura Escolar": {
+          "aliases": [
+            "História e Memória da EPT / Cultura Escolar"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        }
+      }
+    },
+    "Nível de Aplicação": {
+      "modo": "niveis_controlados_v1",
+      "preservar_nao_mapeados": true,
+      "canonicos": {
+        "Aprendizagem Profissional": {
+          "aliases": [
+            "Aprendizagem Profissional",
+            "Aprendizagem profissional / Jovem Aprendiz"
+          ],
+          "confianca": "alta",
+          "regra": "nível controlado por termos educacionais explícitos"
+        },
+        "Comunidade externa": {
+          "aliases": [
+            "Comunidade externa"
+          ],
+          "confianca": "alta",
+          "regra": "nível controlado por termos educacionais explícitos"
+        },
+        "Curso Técnico": {
+          "aliases": [
+            "Curso Técnico",
+            "Cursos Técnicos",
+            "Educação Profissional Técnica / instituição escolar"
+          ],
+          "confianca": "alta",
+          "regra": "nível controlado por termos educacionais explícitos"
+        },
+        "Curso Técnico Subsequente": {
+          "aliases": [
+            "Curso Técnico Subsequente",
+            "Curso Técnico Subsequente em Edificações"
+          ],
+          "confianca": "alta",
+          "regra": "nível controlado por termos educacionais explícitos"
+        },
+        "Educação Profissional e Tecnológica": {
+          "aliases": [
+            "Educação Profissional e Tecnológica",
+            "Educação Profissional e Tecnológica / ambiente escolar",
+            "Educação Profissional e Tecnológica / aulas remotas",
+            "Educação Profissional e Tecnológica / Campus Abelardo Luz",
+            "Educação Profissional e Tecnológica / docentes",
+            "EPT / formação de treinadores e instrutores de cães-guia",
+            "EPT / instituição escolar",
+            "EPT / Institutos Federais"
+          ],
+          "confianca": "alta",
+          "regra": "nível controlado por termos educacionais explícitos"
+        },
+        "EJA-EPT / PROEJA": {
+          "aliases": [
+            "EJA-EPT / PROEJA"
+          ],
+          "confianca": "alta",
+          "regra": "nível controlado por termos educacionais explícitos"
+        },
+        "Ensino Médio": {
+          "aliases": [
+            "Ensino Médio"
+          ],
+          "confianca": "alta",
+          "regra": "nível controlado por termos educacionais explícitos"
+        },
+        "Ensino Médio Integrado": {
+          "aliases": [
+            "Ensino Médio Integrado",
+            "Ensino Médio Integrado / 9º ano do Ensino Fundamental",
+            "Ensino Médio Integrado / Curso Técnico em Agropecuária",
+            "Ensino Médio Integrado / Curso Técnico em Mecânica",
+            "Ensino Médio Integrado / Educação Técnica Profissional de nível médio",
+            "Ensino Médio Integrado / EMIEP",
+            "Ensino Médio Integrado / Institucional",
+            "Ensino Médio Integrado / instituição escolar",
+            "Ensino Médio Integrado / Moradia Estudantil",
+            "EPT / Ensino Médio Integrado"
+          ],
+          "confianca": "alta",
+          "regra": "nível controlado por termos educacionais explícitos"
+        },
+        "Formação de professores": {
+          "aliases": [
+            "Ensino Superior / Formação de Professores",
+            "Formação de professores"
+          ],
+          "confianca": "alta",
+          "regra": "nível controlado por termos educacionais explícitos"
+        },
+        "Institucional / Educação Profissional e Tecnológica": {
+          "aliases": [
+            "Educação Profissional e Tecnológica / IFC",
+            "Gestão Institucional / Assistência Estudantil",
+            "Gestão institucional da EPT / Campus IFC Brusque",
+            "Institucional / Educação Profissional e Tecnológica",
+            "Institucional / Rede Federal de EPT"
+          ],
+          "confianca": "alta",
+          "regra": "nível controlado por termos educacionais explícitos"
+        },
+        "Transição para o Ensino Médio Integrado": {
+          "aliases": [
+            "Ensino Fundamental / transição para Ensino Médio Integrado",
+            "Transição para o Ensino Médio Integrado"
+          ],
+          "confianca": "alta",
+          "regra": "nível controlado por termos educacionais explícitos"
+        }
+      }
+    },
+    "Tipo de Produto Educacional": {
+      "modo": "tipos_controlados_semanticos_v3",
+      "preservar_nao_mapeados": false,
+      "canonicos": {
+        "Aplicativo / software": {
+          "aliases": [
+            "aplicativo móvel",
+            "Aplicativo / software",
+            "software/aplicativo / observatório"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Apresentação": {
+          "aliases": [
+            "Apresentação",
+            "apresentação / palestra"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Caderno": {
+          "aliases": [
+            "Caderno",
+            "Caderno de orientações",
+            "caderno didático-pedagógico"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Cartilha": {
+          "aliases": [
+            "Cartilha",
+            "cartilha",
+            "Cartilha de orientações"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Curso / formação": {
+          "aliases": [
+            "Capacitação / curso formativo",
+            "curso",
+            "Curso de formação + vídeos",
+            "Curso / formação",
+            "curso/portfólio formativo",
+            "curso / produto audiovisual",
+            "curso/videoaulas"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "E-book": {
+          "aliases": [
+            "E-book",
+            "e-book",
+            "E-book / curso formativo",
+            "E-book / sequência didática gamificada",
+            "Ebook",
+            "ebook",
+            "eBook",
+            "livro digital",
+            "Livro digital",
+            "Livro digital / E-book",
+            "livro digital/guia",
+            "Livro digital / história em quadrinhos",
+            "livro digital / oficina"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Exposição": {
+          "aliases": [
+            "Exposição",
+            "exposição fotográfica"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Folder / material informativo": {
+          "aliases": [
+            "folder",
+            "folder educativo",
+            "Folder / material informativo",
+            "panfleto digital / material didático instrucional"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Guia": {
+          "aliases": [
+            "guia",
+            "Guia",
+            "guia / apresentação",
+            "guia/cartilha informativa",
+            "Guia digital bilíngue",
+            "guia digital / e-book",
+            "Guia formativo",
+            "guia formativo / sequência didática"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "História em quadrinhos": {
+          "aliases": [
+            "história em quadrinhos",
+            "História em quadrinhos",
+            "história em quadrinhos (HQ)"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Infográfico": {
+          "aliases": [
+            "infográfico",
+            "Infográfico",
+            "infográfico / hipertexto virtual"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Instrumento de gestão": {
+          "aliases": [
+            "Instrumento de gestão",
+            "prontuário unificado e calendário de ações"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Jogo educacional": {
+          "aliases": [
+            "Jogo educacional",
+            "quiz / jogo educacional"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Manual": {
+          "aliases": [
+            "Manual",
+            "manual",
+            "manual / e-book",
+            "Manual / metodologia reflexiva",
+            "Manual técnico / matriz de indicadores"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Material didático": {
+          "aliases": [
+            "Material de apoio / apresentação/tutorial",
+            "Material didático",
+            "material didático",
+            "material histórico / produto educacional"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Oficina": {
+          "aliases": [
+            "oficina",
+            "Oficina",
+            "Oficina pedagógica",
+            "oficina / relatório técnico"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Podcast": {
+          "aliases": [
+            "podcast",
+            "Podcast",
+            "podcast educativo"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Proposta normativa": {
+          "aliases": [
+            "Proposta normativa",
+            "proposta normativa"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Proposta pedagógica": {
+          "aliases": [
+            "proposta pedagógica",
+            "Proposta pedagógica"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Sequência didática": {
+          "aliases": [
+            "Sequência didática",
+            "sequência didática",
+            "sequência didática / e-book / cartilha eletrônica"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Site / portal": {
+          "aliases": [
+            "memorial virtual",
+            "Página de internet / storytelling",
+            "portal eletrônico / tour 360°",
+            "Portal / site memorial",
+            "site",
+            "Site",
+            "Site / ferramenta de avaliação diagnóstica",
+            "Site / memorial digital",
+            "Site / portal",
+            "site/portal",
+            "Website / repositório digital"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Tutorial": {
+          "aliases": [
+            "Tutorial",
+            "tutorial",
+            "Tutorial pedagógico / videoaula"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        },
+        "Vídeo / audiovisual": {
+          "aliases": [
+            "audiovisual / animação",
+            "produto audiovisual / lives",
+            "projeto de extensão / narrativa audiovisual",
+            "vídeo",
+            "Vídeo / audiovisual",
+            "Vídeo em animação gráfica traduzido em Libras",
+            "Vídeo explicativo",
+            "vídeo / material audiovisual"
+          ],
+          "confianca": "alta",
+          "regra": "equivalência semântica confirmada de formato de produto"
+        }
+      },
+      "pendentes_revisao": []
+    },
+    "Área Temática": {
+      "preservar_nao_mapeados": true,
+      "canonicos": {
+        "Currículo Integrado": {
+          "aliases": [
+            "Currículo Integrado"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Ensino e Aprendizagem": {
+          "aliases": [
+            "Ensino e Aprendizagem"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Inclusão e Diversidade": {
+          "aliases": [
+            "Inclusão e Diversidade"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Permanência e Êxito": {
+          "aliases": [
+            "Permanência e Êxito"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Mundo do Trabalho": {
+          "aliases": [
+            "Mundo do Trabalho"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "História e Memória da EPT": {
+          "aliases": [
+            "História e Memória da EPT"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Gestão Educacional": {
+          "aliases": [
+            "Gestão Educacional"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Tecnologias Educacionais": {
+          "aliases": [
+            "Tecnologias Educacionais"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Espaços Pedagógicos": {
+          "aliases": [
+            "Espaços Pedagógicos"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Docente": {
+          "aliases": [
+            "Formação Docente"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Inclusão e Diversidade / Ações Afirmativas": {
+          "aliases": [
+            "Inclusão e Diversidade / Ações Afirmativas"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Arte, Linguagem e Formação Integral": {
+          "aliases": [
+            "Arte, Linguagem e Formação Integral"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Currículo Integrado / Empreendedorismo crítico": {
+          "aliases": [
+            "Currículo Integrado / Empreendedorismo crítico"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Biblioteca e Mediação Pedagógica": {
+          "aliases": [
+            "Biblioteca e Mediação Pedagógica"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Currículo Integrado / Educação Indígena": {
+          "aliases": [
+            "Currículo Integrado / Educação Indígena"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Arte, Música e Teatro na EPT": {
+          "aliases": [
+            "Arte, Música e Teatro na EPT"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Saúde Escolar / Gestão de Serviços Educacionais": {
+          "aliases": [
+            "Saúde Escolar / Gestão de Serviços Educacionais"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Inclusão e Acessibilidade / Libras": {
+          "aliases": [
+            "Inclusão e Acessibilidade / Libras"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "História e Memória da EPT / Participação Estudantil": {
+          "aliases": [
+            "História e Memória da EPT / Participação Estudantil"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação de Professores e Currículo": {
+          "aliases": [
+            "Formação de Professores e Currículo"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação do Campo": {
+          "aliases": [
+            "Educação do Campo"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Inclusão e Acessibilidade": {
+          "aliases": [
+            "Inclusão e Acessibilidade"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Tecnologias e Metodologias de Ensino": {
+          "aliases": [
+            "Tecnologias e Metodologias de Ensino"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Avaliação da Aprendizagem e Inclusão": {
+          "aliases": [
+            "Avaliação da Aprendizagem e Inclusão"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Acesso, Cotas e Políticas Afirmativas": {
+          "aliases": [
+            "Acesso, Cotas e Políticas Afirmativas"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Relações Étnico-raciais / Inclusão e Diversidade": {
+          "aliases": [
+            "Relações Étnico-raciais / Inclusão e Diversidade"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Currículo Integrado / Políticas Curriculares": {
+          "aliases": [
+            "Currículo Integrado / Políticas Curriculares"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Trabalho e Educação / Formação Profissional": {
+          "aliases": [
+            "Trabalho e Educação / Formação Profissional"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Comunicação Institucional / Identidade Organizacional": {
+          "aliases": [
+            "Comunicação Institucional / Identidade Organizacional"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Direitos Autorais / Mídias Digitais": {
+          "aliases": [
+            "Direitos Autorais / Mídias Digitais"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "História e Memória Institucional": {
+          "aliases": [
+            "História e Memória Institucional"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Cultura Escolar / Tecnologias Digitais": {
+          "aliases": [
+            "Cultura Escolar / Tecnologias Digitais"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Avaliação da Aprendizagem / Currículo Integrado": {
+          "aliases": [
+            "Avaliação da Aprendizagem / Currículo Integrado"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Saúde, Qualidade de Vida e Educação Física": {
+          "aliases": [
+            "Saúde, Qualidade de Vida e Educação Física"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "História e Memória Institucional / Cultura Escolar": {
+          "aliases": [
+            "História e Memória Institucional / Cultura Escolar"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Gestão Democrática e Protagonismo Estudantil": {
+          "aliases": [
+            "Gestão Democrática e Protagonismo Estudantil"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Gestão Educacional e Convivência Escolar": {
+          "aliases": [
+            "Gestão Educacional e Convivência Escolar"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Currículo Integrado e Projeto Pedagógico": {
+          "aliases": [
+            "Currículo Integrado e Projeto Pedagógico"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Ambiental": {
+          "aliases": [
+            "Educação Ambiental"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Avaliação da Aprendizagem e Conselho de Classe": {
+          "aliases": [
+            "Avaliação da Aprendizagem e Conselho de Classe"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação de Jovens e Adultos": {
+          "aliases": [
+            "Educação de Jovens e Adultos"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Currículo Integrado e Acompanhamento de Egressos": {
+          "aliases": [
+            "Currículo Integrado e Acompanhamento de Egressos"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Espaços Pedagógicos e Arquitetura Escolar": {
+          "aliases": [
+            "Espaços Pedagógicos e Arquitetura Escolar"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Ingresso e Orientação Educacional": {
+          "aliases": [
+            "Ingresso e Orientação Educacional"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Assistência Estudantil / Permanência e Êxito": {
+          "aliases": [
+            "Assistência Estudantil / Permanência e Êxito"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Linguagens / Língua Portuguesa": {
+          "aliases": [
+            "Linguagens / Língua Portuguesa"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Docente / Juventude": {
+          "aliases": [
+            "Formação Docente / Juventude"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "História e Políticas da EPT": {
+          "aliases": [
+            "História e Políticas da EPT"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "História, Literatura e Interdisciplinaridade na EPT": {
+          "aliases": [
+            "História, Literatura e Interdisciplinaridade na EPT"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Inclusão, Acessibilidade e Acolhimento": {
+          "aliases": [
+            "Inclusão, Acessibilidade e Acolhimento"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Mundo do Trabalho e Orientação Profissional": {
+          "aliases": [
+            "Mundo do Trabalho e Orientação Profissional"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Gênero, Diversidade e Trabalho": {
+          "aliases": [
+            "Gênero, Diversidade e Trabalho"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Currículo Integrado e Mundo do Trabalho": {
+          "aliases": [
+            "Currículo Integrado e Mundo do Trabalho"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Tecnologias Educacionais e Ensino de Língua Inglesa": {
+          "aliases": [
+            "Tecnologias Educacionais e Ensino de Língua Inglesa"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Gestão Educacional e Desenvolvimento Institucional": {
+          "aliases": [
+            "Gestão Educacional e Desenvolvimento Institucional"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Matemática, Avaliação e Permanência/Êxito": {
+          "aliases": [
+            "Matemática, Avaliação e Permanência/Êxito"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Formação Docente e Currículo": {
+          "aliases": [
+            "Formação Docente e Currículo"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Inclusão, Acessibilidade e Tecnologias Assistivas": {
+          "aliases": [
+            "Inclusão, Acessibilidade e Tecnologias Assistivas"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Ensino Médio Integrado / Orientação Institucional": {
+          "aliases": [
+            "Ensino Médio Integrado / Orientação Institucional"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Gestão Democrática e Planejamento Institucional": {
+          "aliases": [
+            "Gestão Democrática e Planejamento Institucional"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Educação Ambiental, Geografia e Desastres Socioambientais": {
+          "aliases": [
+            "Educação Ambiental, Geografia e Desastres Socioambientais"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Inclusão e Diversidade / Gênero e Sexualidade": {
+          "aliases": [
+            "Inclusão e Diversidade / Gênero e Sexualidade"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        },
+        "Inclusão, Tecnologia Assistiva e Cães-guia": {
+          "aliases": [
+            "Inclusão, Tecnologia Assistiva e Cães-guia"
+          ],
+          "confianca": "alta",
+          "regra": "variação determinística de caixa, acento ou pontuação"
+        }
+      }
+    }
+  },
+  "publico_alvo": {
+    "modo": "classes_amplas_v2",
+    "ordem": [
+      "Comunidade escolar",
+      "Comunidade externa",
+      "Docentes",
+      "Egressos",
+      "Estudantes",
+      "Famílias e responsáveis",
+      "Gestão e equipes institucionais",
+      "Pesquisadores",
+      "Servidores e profissionais"
+    ],
+    "regras_palavras_chave": [
+      {
+        "canonico": "Comunidade escolar",
+        "termos": [
+          "comunidade escolar",
+          "comunidade academica",
+          "comunidade interna"
+        ],
+        "regra": "palavra-chave controlada no público-alvo histórico"
+      },
+      {
+        "canonico": "Comunidade externa",
+        "termos": [
+          "comunidade externa",
+          "sociedade",
+          "populacao local",
+          "publico interessado"
+        ],
+        "regra": "palavra-chave controlada no público-alvo histórico"
+      },
+      {
+        "canonico": "Docentes",
+        "termos": [
+          "docente",
+          "professor",
+          "educador"
+        ],
+        "regra": "palavra-chave controlada no público-alvo histórico"
+      },
+      {
+        "canonico": "Egressos",
+        "termos": [
+          "egresso"
+        ],
+        "regra": "palavra-chave controlada no público-alvo histórico"
+      },
+      {
+        "canonico": "Estudantes",
+        "termos": [
+          "estudante",
+          "discente",
+          "aluno",
+          "educando"
+        ],
+        "regra": "palavra-chave controlada no público-alvo histórico"
+      },
+      {
+        "canonico": "Famílias e responsáveis",
+        "termos": [
+          "familia",
+          "responsavel"
+        ],
+        "regra": "palavra-chave controlada no público-alvo histórico"
+      },
+      {
+        "canonico": "Gestão e equipes institucionais",
+        "termos": [
+          "gestor",
+          "gestao",
+          "coordenador",
+          "equipe",
+          "comissao",
+          "nucleo"
+        ],
+        "regra": "palavra-chave controlada no público-alvo histórico"
+      },
+      {
+        "canonico": "Pesquisadores",
+        "termos": [
+          "pesquisador"
+        ],
+        "regra": "palavra-chave controlada no público-alvo histórico"
+      },
+      {
+        "canonico": "Servidores e profissionais",
+        "termos": [
+          "servidor",
+          "tecnico administrativo",
+          "profissional",
+          "enfermeiro",
+          "tradutor"
+        ],
+        "regra": "palavra-chave controlada no público-alvo histórico"
+      }
+    ]
+  }
+}

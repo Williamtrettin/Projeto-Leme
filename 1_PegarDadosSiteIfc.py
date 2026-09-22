@@ -1,661 +1,667 @@
-import re
-import unicodedata
-import urllib3
-from pathlib import Path
-from urllib.parse import urljoin, urlparse, unquote
+"""Coleta os dados e PDFs e, ao terminar, executa o OCR automaticamente.
 
+Execução:
+    python 1_PegarDadosSiteIfc.py
+"""
+
+from __future__ import annotations
+
+import argparse
+from collections import defaultdict
+import json
+from pathlib import Path
+import re
+import subprocess
+import sys
+from urllib.parse import urljoin, urlsplit
+
+from bs4 import BeautifulSoup
 import pandas as pd
 import requests
-from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+
+from util import (
+    agora_utc,
+    criar_sessao_http,
+    handle_educapes,
+    ler_json,
+    limpar_texto,
+    normalizar_busca,
+    salvar_json_atomico,
+    sha256_arquivo,
+    slugificar,
+    url_canonica,
+)
 
 
-# ============================================================
-# CONFIGURAÇÕES PRINCIPAIS
-# ============================================================
-# Se o endereço do site mudar futuramente, altere apenas aqui.
 URL_PROFEPT = "https://profept.ifc.edu.br/dissertacoes/"
+URL_API_PROFEPT = "https://profept.ifc.edu.br/wp-json/wp/v2/pages?slug=dissertacoes"
+ARQUIVO_IDENTIDADES = Path("dados/referencia/identidades.json")
+ARQUIVO_SAIDA = Path("dados/1_PegarDadosSiteIfc.xlsx")
+PASTA_PDFS = Path("pdf")
+PASTA_CACHE = Path("dados/cache")
+SCHEMA_IDENTIDADES = "leme-identidades-v1"
+INSTITUICAO_CORPUS = "Instituto Federal Catarinense"
+CAMPUS_CORPUS = "Blumenau"
+PROGRAMA_CORPUS = "ProfEPT"
+ORIGEM_CONTEXTO_INSTITUCIONAL = (
+    "Página oficial de dissertações do ProfEPT/IFC e metadados complementares "
+    "do eduCAPES."
+)
+HOSTS_FALLBACK_TLS = {"profept.ifc.edu.br"}
 
-# Nome da planilha que será gerada.
-ARQUIVO_SAIDA = Path("1_DadosExtraidosSiteIfc.xlsx")
-
-# Pasta onde os PDFs serão salvos/reaproveitados.
-PASTA_PDFS = Path("pdfs")
-
-# Tempo máximo de espera para carregar a página, em milissegundos.
-TIMEOUT_MS = 60000
-
-# Timeout do download de cada PDF, em segundos.
-TIMEOUT_DOWNLOAD_PDF = 90
-
-# SSL do site do ProfEPT/IFC pode falhar no Python em alguns ambientes.
-# Mantemos verify=False só no download dos PDFs públicos do site.
-VERIFICAR_SSL_PDF = False
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
-
-# ============================================================
-# FUNÇÕES DE APOIO PARA LINKS
-# ============================================================
-
-def extrair_links(texto: str) -> tuple[str, list[str]]:
-    """
-    Extrai links marcados no formato [LINK: url] e devolve:
-    - o texto sem os marcadores de link;
-    - uma lista com os links encontrados.
-    """
-    if not texto:
-        return "", []
-
-    links = re.findall(r"\[LINK:\s*(.*?)\]", texto)
-
-    texto_limpo = re.sub(r"\[LINK:\s*.*?\]", "", texto)
-    texto_limpo = limpar_espacos(texto_limpo)
-
-    return texto_limpo, links
+ROTULOS = re.compile(
+    r"(?P<autor>\b(?:Acad[eê]mic[oa]s?|Alun[oa]s?|Autor(?:es)?|Mestrand[oa]s?)\s*:)|"
+    r"(?P<coorientador>\bCoorientador(?:a|es|as)?\s*:)|"
+    r"(?P<orientador>\b(?:Orientador(?:a|es|as)?|Orietador(?:a|es|as)?|Orientatador)\s*:)|"
+    r"(?P<dissertacao>(?<![-/_])\bDisserta[cç][aã]o(?:\s+Intitulada)?\s*:?\s*)|"
+    r"(?P<produto>\bProdutos?\s+Educ(?:acional|ional)\s*:)",
+    flags=re.IGNORECASE,
+)
 
 
-def normalizar_link(link: str) -> str:
-    """
-    Transforma link relativo em absoluto quando necessário.
-    """
-    link = limpar_espacos(link)
-    if not link:
-        return ""
-    return urljoin(URL_PROFEPT, link)
+def argumentos() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--offline", action="store_true", help="usa somente caches já existentes")
+    parser.add_argument("--sem-educapes", action="store_true", help="não consulta metadados do eduCAPES")
+    parser.add_argument("--sem-download", action="store_true", help="não baixa PDFs")
+    parser.add_argument(
+        "--inseguro-tls",
+        action="store_true",
+        help="desativa verificação TLS explicitamente (somente para contornar o certificado IFC local)",
+    )
+    parser.add_argument("--limite", type=int, default=0, help="limita registros para diagnóstico")
+    return parser.parse_args()
 
 
-def atribuir_links(entrada: dict, links: list[str], campo_origem: str) -> None:
-    """
-    Distribui os links encontrados para as colunas corretas.
-
-    Regras usadas:
-    - Se o campo atual for Produto Educacional, tenta salvar em Link do Produto.
-    - Se o campo atual for Dissertação, tenta salvar em Link do PDF.
-    - Se o link terminar ou contiver .pdf, salva em Link do PDF.
-    - Se não conseguir identificar, preenche primeiro o Link do PDF e depois o Link do Produto.
-    """
-    campo_origem = (campo_origem or "").lower()
-
-    for link in links:
-        link = normalizar_link(link)
-        link_lower = link.lower()
-
-        if not link:
-            continue
-
-        if "produto" in campo_origem and not entrada["Link do Produto"]:
-            entrada["Link do Produto"] = link
-
-        elif "disserta" in campo_origem and not entrada["Link do PDF"]:
-            entrada["Link do PDF"] = link
-
-        elif ".pdf" in link_lower and not entrada["Link do PDF"]:
-            entrada["Link do PDF"] = link
-
-        elif not entrada["Link do PDF"]:
-            entrada["Link do PDF"] = link
-
-        elif not entrada["Link do Produto"]:
-            entrada["Link do Produto"] = link
-
-
-# ============================================================
-# FUNÇÕES DE LIMPEZA DE TEXTO
-# ============================================================
-
-def limpar_espacos(texto: str) -> str:
-    """
-    Remove espaços duplicados, quebras estranhas e espaços no começo/fim.
-    """
-    if not texto:
-        return ""
-
-    return re.sub(r"\s+", " ", str(texto)).strip()
-
-
-def remover_marcadores_linha(linha: str) -> str:
-    """
-    Remove marcadores comuns de lista, como:
-    - texto
-    • texto
-    * texto
-    """
-    return re.sub(r"^[-•*]\s*", "", linha).strip()
-
-
-def remover_acentos(texto: str) -> str:
-    """
-    Remove acentos para gerar nomes de arquivos seguros.
-    """
-    texto = unicodedata.normalize("NFD", texto)
-    return "".join(c for c in texto if unicodedata.category(c) != "Mn")
-
-
-def slugificar(texto: str, limite: int = 70) -> str:
-    """
-    Gera um pedaço de nome seguro para arquivo.
-    """
-    texto = limpar_espacos(texto)
-    texto = remover_acentos(texto).lower()
-    texto = re.sub(r"[^a-z0-9]+", "_", texto)
-    texto = re.sub(r"_+", "_", texto).strip("_")
-
-    if not texto:
-        texto = "trabalho"
-
-    return texto[:limite].strip("_") or "trabalho"
-
-
-def nome_base_do_link(link: str) -> str:
-    """
-    Pega um nome aproveitável a partir do final da URL do PDF.
-    """
+def requisicao_http(
+    sessao: requests.Session,
+    url: str,
+    args: argparse.Namespace,
+    **opcoes,
+) -> requests.Response:
+    """Tenta TLS normal e contorna apenas o certificado conhecido do IFC."""
+    inseguro_solicitado = bool(getattr(args, "inseguro_tls", False))
     try:
-        caminho = urlparse(link).path
-        nome = unquote(Path(caminho).stem)
-        return limpar_espacos(nome)
-    except Exception:
-        return ""
+        return sessao.get(url, verify=not inseguro_solicitado, **opcoes)
+    except requests.exceptions.SSLError:
+        host = (urlsplit(url).hostname or "").casefold()
+        if inseguro_solicitado or host not in HOSTS_FALLBACK_TLS:
+            raise
+        requests.packages.urllib3.disable_warnings(
+            requests.packages.urllib3.exceptions.InsecureRequestWarning
+        )
+        if not getattr(args, "_fallback_tls_avisado", False):
+            print(
+                "AVISO: o certificado do site do IFC não pôde ser validado. "
+                "A conexão será repetida sem validar o certificado somente para esse domínio."
+            )
+            args._fallback_tls_avisado = True
+        return sessao.get(url, verify=False, **opcoes)
 
 
-def preparar_html_com_links_marcados(html: str) -> str:
-    """
-    Recebe o HTML da página e substitui cada link <a> por:
-    texto_do_link [LINK: url]
-    """
+def marcar_links_no_elemento(elemento) -> str:
+    copia = BeautifulSoup(str(elemento), "html.parser")
+    for ancora in copia.find_all("a"):
+        href = urljoin(URL_PROFEPT, limpar_texto(ancora.get("href")))
+        texto = limpar_texto(ancora.get_text(" ", strip=True))
+        ancora.replace_with(f"{texto} [LINK:{href}]")
+    return limpar_texto(copia.get_text(" ", strip=True))
+
+
+def separar_links(texto: str) -> tuple[str, list[str]]:
+    links = [url_canonica(url) for url in re.findall(r"\[LINK:(.*?)\]", texto)]
+    return limpar_texto(re.sub(r"\[LINK:.*?\]", "", texto)), links
+
+
+def fragmentos_rotulados(texto: str) -> list[tuple[str, str, list[str]]]:
+    correspondencias = list(ROTULOS.finditer(texto))
+    resultado: list[tuple[str, str, list[str]]] = []
+    for posicao, match in enumerate(correspondencias):
+        fim = correspondencias[posicao + 1].start() if posicao + 1 < len(correspondencias) else len(texto)
+        valor, links = separar_links(texto[match.end() : fim])
+        campo = next(nome for nome, conteudo in match.groupdict().items() if conteudo)
+        resultado.append((campo, valor, links))
+    return resultado
+
+
+def extrair_trabalhos_html(html: str) -> list[dict]:
+    """Extrai registros pela sequência de rótulos, tolerando mais de um trabalho por lista."""
     soup = BeautifulSoup(html, "html.parser")
+    ano_atual = ""
+    atual: dict | None = None
+    trabalhos: list[dict] = []
 
-    for a in soup.find_all("a"):
-        href = a.get("href", "").strip()
+    def concluir() -> None:
+        nonlocal atual
+        if atual and atual.get("autor"):
+            trabalhos.append(atual)
+        atual = None
 
-        if not href:
+    for elemento in soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "p", "li"]):
+        if elemento.name != "li" and elemento.find_parent("li") is not None:
+            continue
+        texto_simples = limpar_texto(elemento.get_text(" ", strip=True))
+        if elemento.name != "li":
+            if len(texto_simples) <= 80:
+                anos = re.findall(r"\b20\d{2}\b", texto_simples)
+                if anos and re.search(r"defesa|disserta|20\d{2}", texto_simples, re.IGNORECASE):
+                    ano_atual = anos[-1]
+            continue
+        texto = marcar_links_no_elemento(elemento)
+        for campo, valor, links in fragmentos_rotulados(texto):
+            if campo == "autor":
+                concluir()
+                atual = {
+                    "ano": ano_atual,
+                    "autor": valor,
+                    "orientador": "",
+                    "coorientador": "",
+                    "titulo": "",
+                    "produto_educacional": "",
+                    "url_pdf": "",
+                    "url_produto": "",
+                }
+                continue
+            if atual is None:
+                continue
+            if campo == "orientador":
+                atual["orientador"] = valor
+            elif campo == "coorientador":
+                atual["coorientador"] = valor
+            elif campo == "dissertacao":
+                atual["titulo"] = valor
+                if links:
+                    atual["url_pdf"] = links[0]
+            elif campo == "produto":
+                atual["produto_educacional"] = valor
+                if links:
+                    atual["url_produto"] = links[0]
+    concluir()
+
+    for posicao, trabalho in enumerate(trabalhos, 1):
+        trabalho["ordem_na_pagina"] = posicao
+    return trabalhos
+
+
+def obter_pagina_oficial(sessao: requests.Session, args: argparse.Namespace) -> tuple[str, dict]:
+    cache = PASTA_CACHE / "profept_dissertacoes.json"
+    if args.offline:
+        resposta = ler_json(cache)
+        if not resposta:
+            raise FileNotFoundError(f"Cache oficial não encontrado: {cache}")
+    else:
+        requisicao = requisicao_http(sessao, URL_API_PROFEPT, args, timeout=90)
+        requisicao.raise_for_status()
+        resposta = requisicao.json()
+        salvar_json_atomico(resposta, cache)
+    if not isinstance(resposta, list) or not resposta:
+        raise ValueError("A API oficial não retornou a página de dissertações")
+    pagina = resposta[0]
+    html = pagina.get("content", {}).get("rendered", "")
+    if not html:
+        raise ValueError("A página oficial não contém content.rendered")
+    metadados = {
+        "url": URL_PROFEPT,
+        "api": URL_API_PROFEPT,
+        "pagina_id": pagina.get("id"),
+        "modificado_em": pagina.get("modified"),
+        "coletado_em": agora_utc(),
+    }
+    return html, metadados
+
+
+def carregar_identidades(caminho: Path = ARQUIVO_IDENTIDADES) -> dict:
+    documento = ler_json(caminho)
+    if not documento or documento.get("schema_version") != SCHEMA_IDENTIDADES:
+        raise ValueError(
+            f"Identidades ausentes ou inválidas em {caminho}. "
+            "Restaure dados/referencia/identidades.json do Git."
+        )
+    return documento
+
+
+def chaves_identidade(identidade: dict) -> dict[str, set]:
+    aliases = identidade.get("aliases_conhecidos", {})
+    urls = set(aliases.get("urls_pdf", [])) | {identidade.get("url_pdf", "")}
+    titulos = set(aliases.get("titulos", [])) | {identidade.get("titulo", "")}
+    autores = set(aliases.get("autores", [])) | {identidade.get("autor", "")}
+    return {
+        "urls": {url_canonica(v) for v in urls if v},
+        "titulos": {normalizar_busca(v) for v in titulos if v},
+        "autores": {normalizar_busca(v) for v in autores if v},
+    }
+
+
+def resolver_identidades(trabalhos: list[dict], documento: dict) -> list[dict]:
+    identidades = documento["identidades"]
+    por_url: defaultdict[str, list[dict]] = defaultdict(list)
+    por_trinca: defaultdict[tuple[str, str, str], list[dict]] = defaultdict(list)
+    for identidade in identidades:
+        chaves = chaves_identidade(identidade)
+        for url in chaves["urls"]:
+            por_url[url].append(identidade)
+        for autor in chaves["autores"]:
+            for titulo in chaves["titulos"]:
+                por_trinca[(autor, titulo, limpar_texto(identidade.get("ano")))].append(identidade)
+
+    usados: set[str] = set()
+    proximo = max(
+        int(documento.get("proximo_numero", 1)),
+        max(int(i["id"].split("-")[1]) for i in identidades) + 1,
+    )
+    for trabalho in trabalhos:
+        url = url_canonica(trabalho.get("url_pdf"))
+        trinca = (
+            normalizar_busca(trabalho.get("autor")),
+            normalizar_busca(trabalho.get("titulo")),
+            limpar_texto(trabalho.get("ano")),
+        )
+        candidatos_url = [i for i in por_url.get(url, []) if i["id"] not in usados] if url else []
+        candidatos_trinca = [i for i in por_trinca.get(trinca, []) if i["id"] not in usados]
+        candidatos = candidatos_url or candidatos_trinca
+        metodo = "url_pdf_exata" if candidatos_url else "autor_titulo_ano_exatos"
+        if len(candidatos) == 1:
+            identidade = candidatos[0]
+        elif not candidatos and all(trinca) and url:
+            identificador = f"EPT-{proximo:04d}"
+            proximo += 1
+            identidade = {
+                "id": identificador,
+                "titulo": trabalho["titulo"],
+                "autor": trabalho["autor"],
+                "ano": trabalho["ano"],
+                "url_pdf": url,
+                "novo_nome_pdf": f"{identificador}_{slugificar(trabalho['titulo'])}.pdf",
+                "sha256": "",
+                "aliases_conhecidos": {
+                    "titulos": [trabalho["titulo"]],
+                    "autores": [trabalho["autor"]],
+                    "urls_pdf": [url],
+                },
+                "vinculo_confirmado": True,
+            }
+            identidades.append(identidade)
+            por_url[url].append(identidade)
+            por_trinca[trinca].append(identidade)
+            metodo = "novo_registro_oficial_campos_fortes_unicos"
+        else:
+            trabalho.update(
+                {
+                    "id": None,
+                    "vinculo_confirmado": False,
+                    "metodo_vinculo": "ambiguo" if candidatos else "evidencia_insuficiente",
+                    "candidatos_identidade": [item["id"] for item in candidatos],
+                }
+            )
             continue
 
-        href = normalizar_link(href)
-        texto_link = a.get_text(strip=True)
-        a.replace_with(f"{texto_link} [LINK: {href}]")
+        identificador = identidade["id"]
+        usados.add(identificador)
+        trabalho.update(
+            {
+                "id": identificador,
+                "vinculo_confirmado": bool(identidade.get("vinculo_confirmado", True)),
+                "metodo_vinculo": metodo,
+                "candidatos_identidade": [identificador],
+            }
+        )
+        identidade["titulo"] = trabalho["titulo"] or identidade.get("titulo", "")
+        identidade["autor"] = trabalho["autor"] or identidade.get("autor", "")
+        identidade["ano"] = trabalho["ano"] or identidade.get("ano", "")
+        identidade["url_pdf"] = url or identidade.get("url_pdf", "")
+        aliases = identidade["aliases_conhecidos"]
+        for chave, valor in (("titulos", trabalho["titulo"]), ("autores", trabalho["autor"]), ("urls_pdf", url)):
+            if valor and valor not in aliases[chave]:
+                aliases[chave].append(valor)
 
-    return soup.get_text(separator="\n")
+    documento["identidades"].sort(key=lambda item: item["id"])
+    documento["proximo_numero"] = proximo
+    return trabalhos
 
 
-def forcar_quebras_por_rotulos(texto: str) -> str:
-    """
-    Insere quebras de linha antes dos rótulos principais.
-    """
-    padrao_rotulos = (
-        r"(Acadêmic[oa]s?:|"
-        r"Alunos?:|"
-        r"Autor(?:es)?s?:|"
-        r"Mestrandos?:|"
-        r"Orientador[a]?s?:|"
-        r"Dissertaç[ãa]o\s*:|"
-        r"Produto Educacional\s*:)"
+def consultar_educapes(sessao: requests.Session, url: str, args: argparse.Namespace) -> dict:
+    handle = handle_educapes(url)
+    if not handle:
+        return {"status": "sem_handle", "handle": "", "campos_dc": {}, "bitstreams": []}
+    cache = PASTA_CACHE / "educapes" / f"{slugificar(handle)}.html"
+    if cache.exists():
+        html = cache.read_text(encoding="utf-8")
+        origem = "cache"
+    elif args.offline:
+        return {"status": "cache_ausente", "handle": handle, "campos_dc": {}, "bitstreams": []}
+    else:
+        resposta = requisicao_http(
+            sessao,
+            f"https://educapes.capes.gov.br/handle/{handle}?mode=full",
+            args,
+            timeout=90,
+        )
+        resposta.raise_for_status()
+        html = resposta.text
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        temporario = cache.with_suffix(".html.tmp")
+        temporario.write_text(html, encoding="utf-8")
+        temporario.replace(cache)
+        origem = "rede"
+
+    soup = BeautifulSoup(html, "html.parser")
+    campos: defaultdict[str, list[str]] = defaultdict(list)
+    for rotulo in soup.select(".metadataFieldLabel"):
+        valor = rotulo.find_next(class_="metadataFieldValue")
+        if valor is None:
+            continue
+        match = re.search(r"\b(dc\.[a-z0-9_.-]+)", limpar_texto(rotulo.get_text(" ", strip=True)), re.I)
+        texto = limpar_texto(valor.get_text(" ", strip=True))
+        if match and texto and texto not in campos[match.group(1).casefold()]:
+            campos[match.group(1).casefold()].append(texto)
+    bitstreams = []
+    for ancora in soup.select('a[href*="/bitstream/"]'):
+        link = urljoin("https://educapes.capes.gov.br", ancora.get("href", ""))
+        if link and link not in bitstreams:
+            bitstreams.append(link)
+    return {
+        "status": "sucesso",
+        "origem_consulta": origem,
+        "handle": handle,
+        "campos_dc": dict(sorted(campos.items())),
+        "bitstreams": bitstreams,
+    }
+
+
+def nome_campus(valor: str) -> str:
+    palavras = re.findall(r"[0-9A-Za-zÀ-ÖØ-öø-ÿ]+", limpar_texto(valor))
+    conectivos = {"da", "das", "de", "do", "dos", "e"}
+    return " ".join(
+        palavra.casefold() if palavra.casefold() in conectivos else palavra.capitalize()
+        for palavra in palavras
     )
 
-    return re.sub(padrao_rotulos, r"\n\1", texto, flags=re.IGNORECASE)
 
-
-# ============================================================
-# FUNÇÕES DE IDENTIFICAÇÃO DE CAMPOS
-# ============================================================
-
-def criar_entrada_vazia(ano: str) -> dict:
-    """
-    Cria o modelo padrão de um registro.
-    """
-    return {
-        "Ano": ano,
-        "Autor": "",
-        "Orientador": "",
-        "Título da Dissertação": "",
-        "Produto Educacional": "",
-        "Link do PDF": "",
-        "Link do Produto": "",
-    }
-
-
-def identificar_ano(linha: str) -> str | None:
-    """
-    Tenta identificar se a linha representa um ano de defesa.
-    """
-    linha_limpa = limpar_espacos(linha)
-
-    match = re.search(r"\b(20[0-9]{2})\b", linha_limpa)
-
-    if not match:
-        return None
-
-    if len(linha_limpa) > 50:
-        return None
-
-    if re.search(r"(acadêmic|autor|aluno|dissertaç|produto|orientador)", linha_limpa, re.IGNORECASE):
-        return None
-
-    return match.group(1)
-
-
-def extrair_valor_rotulo(linha: str, padrao: str) -> str:
-    """
-    Remove o rótulo do começo da linha e devolve apenas o valor.
-    """
-    valor = re.sub(padrao, "", linha, flags=re.IGNORECASE)
-    return limpar_espacos(valor)
-
-
-def linha_eh_autor(linha: str) -> bool:
-    return bool(re.match(r"^(Acadêmic[oa]s?|Alunos?|Autor(?:es)?|Mestrandos?)\s*:", linha, re.IGNORECASE))
-
-
-def linha_eh_orientador(linha: str) -> bool:
-    return bool(re.match(r"^Orientador[a]?s?\s*:", linha, re.IGNORECASE))
-
-
-def linha_eh_dissertacao(linha: str) -> bool:
-    return bool(re.match(r"^Dissertaç[ãa]o\s*:", linha, re.IGNORECASE))
-
-
-def linha_eh_produto(linha: str) -> bool:
-    return bool(re.match(r"^Produto Educacional\s*:", linha, re.IGNORECASE))
-
-
-# ============================================================
-# COLETA DO HTML
-# ============================================================
-
-def baixar_html_pagina(url: str) -> str:
-    """
-    Abre a página com Playwright e retorna o HTML carregado.
-    """
-    print("Abrindo navegador virtual com Playwright...")
-
-    try:
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            page = browser.new_page()
-
-            print("Acessando página do ProfEPT...")
-            page.goto(url, wait_until="networkidle", timeout=TIMEOUT_MS)
-
-            html = page.content()
-            browser.close()
-
-            return html
-
-    except PlaywrightTimeoutError:
-        raise RuntimeError(
-            "A página demorou demais para carregar. "
-            "Tente novamente ou aumente o TIMEOUT_MS."
+def resolver_instituicao_campus(educapes: dict) -> tuple[str, str, str]:
+    """Usa campus explícito do eduCAPES sem confundir local pesquisado com campus do programa."""
+    contribuidores = educapes.get("campos_dc", {}).get("dc.contributor", [])
+    for valor in contribuidores:
+        texto = limpar_texto(valor)
+        campus = ""
+        encontrado = re.search(
+            r"\bcampus\s*[-:/]?\s*([A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ\s'-]*)",
+            texto,
+            flags=re.IGNORECASE,
         )
-
-    except Exception as erro:
-        raise RuntimeError(f"Erro ao acessar a página: {erro}")
-
-
-# ============================================================
-# EXTRAÇÃO DOS REGISTROS
-# ============================================================
-
-def processar_linhas(texto: str) -> list[dict]:
-    """
-    Processa o texto da página linha por linha e monta uma lista de registros.
-    """
-    linhas = texto.split("\n")
-
-    entradas = []
-    entrada_atual = None
-    ano_atual = "Desconhecido"
-    campo_atual = None
-
-    for linha in linhas:
-        linha = limpar_espacos(linha)
-        linha = remover_marcadores_linha(linha)
-
-        if not linha:
-            continue
-
-        ano_detectado = identificar_ano(linha)
-        if ano_detectado:
-            ano_atual = ano_detectado
-            campo_atual = None
-            continue
-
-        if linha_eh_autor(linha):
-            if entrada_atual:
-                entradas.append(entrada_atual)
-
-            entrada_atual = criar_entrada_vazia(ano_atual)
-
-            valor = extrair_valor_rotulo(
-                linha,
-                r"^(Acadêmic[oa]s?|Alunos?|Autor(?:es)?|Mestrandos?)\s*:\s*"
+        if encontrado:
+            campus = nome_campus(encontrado.group(1))
+        else:
+            encontrado = re.fullmatch(
+                r"\s*IFC\s*[-/]\s*([A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ\s'-]*)\s*\.?\s*",
+                texto,
+                flags=re.IGNORECASE,
             )
-
-            valor, links = extrair_links(valor)
-
-            entrada_atual["Autor"] = valor
-            campo_atual = "Autor"
-
-            atribuir_links(entrada_atual, links, campo_atual)
-            continue
-
-        if not entrada_atual:
-            continue
-
-        if linha_eh_orientador(linha):
-            valor = extrair_valor_rotulo(linha, r"^Orientador[a]?s?\s*:\s*")
-            valor, links = extrair_links(valor)
-
-            entrada_atual["Orientador"] = valor
-            campo_atual = "Orientador"
-
-            atribuir_links(entrada_atual, links, campo_atual)
-            continue
-
-        if linha_eh_dissertacao(linha):
-            valor = extrair_valor_rotulo(linha, r"^Dissertaç[ãa]o\s*:\s*")
-            valor, links = extrair_links(valor)
-
-            entrada_atual["Título da Dissertação"] = valor
-            campo_atual = "Título da Dissertação"
-
-            atribuir_links(entrada_atual, links, campo_atual)
-            continue
-
-        if linha_eh_produto(linha):
-            valor = extrair_valor_rotulo(linha, r"^Produto Educacional\s*:\s*")
-            valor, links = extrair_links(valor)
-
-            entrada_atual["Produto Educacional"] = valor
-            campo_atual = "Produto Educacional"
-
-            atribuir_links(entrada_atual, links, campo_atual)
-            continue
-
-        valor, links = extrair_links(linha)
-
-        if links:
-            atribuir_links(entrada_atual, links, campo_atual or "")
-
-        if valor and campo_atual:
-            valor_lower = valor.lower()
-            textos_genericos = {"clique aqui", "link", "download", "pdf", "acessar"}
-
-            if valor_lower not in textos_genericos:
-                entrada_atual[campo_atual] = limpar_espacos(
-                    entrada_atual[campo_atual] + " " + valor
-                )
-
-    if entrada_atual:
-        entradas.append(entrada_atual)
-
-    return entradas
+            if encontrado:
+                campus = nome_campus(encontrado.group(1))
+        if campus:
+            return INSTITUICAO_CORPUS, campus, "eduCAPES: dc.contributor"
+    return (
+        INSTITUICAO_CORPUS,
+        CAMPUS_CORPUS,
+        "contexto do ProfEPT/IFC; eduCAPES sem campus explícito",
+    )
 
 
-# ============================================================
-# DOWNLOAD / REAPROVEITAMENTO DOS PDFs
-# ============================================================
-
-def gerar_caminho_pdf_local(indice: int, row: pd.Series) -> Path:
-    """
-    Gera o nome local do PDF no padrão:
-    pdfs/001_titulo_do_trabalho.pdf
-
-    Para reaproveitar os arquivos que você já baixou, antes de baixar o script
-    também procura qualquer PDF começando com o mesmo número, por exemplo:
-    pdfs/001_*.pdf
-    """
-    numero = f"{indice + 1:03d}"
-
-    titulo = limpar_espacos(row.get("Título da Dissertação", ""))
-    produto = limpar_espacos(row.get("Produto Educacional", ""))
-    link_pdf = limpar_espacos(row.get("Link do PDF", ""))
-
-    base_nome = titulo or produto or nome_base_do_link(link_pdf) or "trabalho"
-    nome_arquivo = f"{numero}_{slugificar(base_nome)}.pdf"
-
-    return PASTA_PDFS / nome_arquivo
+def pdf_valido(caminho: Path) -> bool:
+    if not caminho.is_file() or caminho.stat().st_size < 1024:
+        return False
+    with caminho.open("rb") as arquivo:
+        return arquivo.read(5) == b"%PDF-"
 
 
-def localizar_pdf_existente(indice: int, caminho_preferido: Path) -> Path | None:
-    """
-    Procura se o PDF já existe.
+def pessoa_equivalente(valor_oficial: str, candidatos: list[str]) -> bool:
+    def assinatura(valor: str) -> set[str]:
+        termos = normalizar_busca(valor).split()
+        descartados = {"dr", "dra", "prof", "profa", "me", "mestre", "mestra"}
+        return {termo for termo in termos if termo not in descartados and len(termo) > 1}
 
-    Primeiro testa o caminho preferido.
-    Depois procura qualquer arquivo com o mesmo prefixo numérico:
-    001_*.pdf, 002_*.pdf etc.
-    """
-    if caminho_preferido.exists() and caminho_preferido.stat().st_size > 1000:
-        return caminho_preferido
-
-    prefixo = f"{indice + 1:03d}_"
-    candidatos = sorted(PASTA_PDFS.glob(f"{prefixo}*.pdf"))
-
+    oficial = assinatura(valor_oficial)
     for candidato in candidatos:
-        if candidato.exists() and candidato.stat().st_size > 1000:
-            return candidato
-
-    return None
-
-
-def baixar_pdf_para_arquivo(link_pdf: str, caminho_destino: Path) -> None:
-    """
-    Baixa o PDF para a pasta pdfs/.
-
-    Usa verify=False porque o certificado do site do ProfEPT/IFC pode falhar
-    no Python em alguns ambientes, mesmo abrindo normal pelo navegador.
-    """
-    url = limpar_espacos(link_pdf)
-    if not url:
-        raise ValueError("Link do PDF vazio")
-
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (X11; Linux x86_64; rv:120.0) "
-            "Gecko/20100101 Firefox/120.0"
-        ),
-        "Accept": "application/pdf,text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
-        "Referer": URL_PROFEPT,
-        "Connection": "keep-alive",
-    }
-
-    caminho_temporario = caminho_destino.with_suffix(".tmp")
-    caminho_temporario.unlink(missing_ok=True)
-
-    with requests.Session() as session:
-        resposta = session.get(
-            url,
-            headers=headers,
-            timeout=TIMEOUT_DOWNLOAD_PDF,
-            allow_redirects=True,
-            stream=True,
-            verify=VERIFICAR_SSL_PDF,
-        )
-
-        resposta.raise_for_status()
-
-        total_bytes = 0
-        with open(caminho_temporario, "wb") as arquivo:
-            for parte in resposta.iter_content(chunk_size=1024 * 128):
-                if parte:
-                    arquivo.write(parte)
-                    total_bytes += len(parte)
-
-    if total_bytes < 1000:
-        caminho_temporario.unlink(missing_ok=True)
-        raise ValueError("Arquivo baixado está muito pequeno ou vazio")
-
-    inicio = caminho_temporario.read_bytes()[:200]
-    content_type = resposta.headers.get("Content-Type", "").lower()
-
-    if b"%PDF" not in inicio and "pdf" not in content_type:
-        caminho_temporario.unlink(missing_ok=True)
-        raise ValueError(
-            f"O link não retornou PDF válido. Content-Type={content_type}; Bytes={total_bytes}"
-        )
-
-    caminho_temporario.replace(caminho_destino)
+        termos = assinatura(candidato)
+        comuns = oficial & termos
+        if comuns and (
+            len(comuns) / min(len(oficial), len(termos)) >= 0.75
+            or len(comuns) / len(oficial) >= 0.65
+        ):
+            return True
+    return False
 
 
-def baixar_ou_reaproveitar_pdfs(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Para cada linha da planilha:
-    - verifica se o PDF já existe pelo nome/prefixo numérico;
-    - se existe, reaproveita;
-    - se não existe, baixa;
-    - registra o resultado em colunas da planilha.
-    """
-    if df.empty:
-        return df
+def titulo_equivalente(valores_oficiais: list[str], candidatos: list[str]) -> bool:
+    oficiais = [set(normalizar_busca(valor).split()) for valor in valores_oficiais if valor]
+    for candidato in candidatos:
+        termos = set(normalizar_busca(candidato).split())
+        for oficial in oficiais:
+            if termos and oficial and len(termos & oficial) / min(len(termos), len(oficial)) >= 0.55:
+                return True
+    return False
 
-    PASTA_PDFS.mkdir(exist_ok=True)
 
-    colunas = [
-        "Arquivo PDF Local",
-        "Status Download PDF",
-        "Erro Download PDF",
-    ]
-
-    for coluna in colunas:
-        if coluna not in df.columns:
-            df[coluna] = ""
-
-    total = len(df)
-    print("\nBaixando/reaproveitando PDFs...")
-
-    for index, row in df.iterrows():
-        link_pdf = limpar_espacos(row.get("Link do PDF", ""))
-        caminho_preferido = gerar_caminho_pdf_local(index, row)
-        existente = localizar_pdf_existente(index, caminho_preferido)
-
-        if existente:
-            df.at[index, "Arquivo PDF Local"] = str(existente)
-            df.at[index, "Status Download PDF"] = "Sucesso local"
-            df.at[index, "Erro Download PDF"] = ""
-            print(f"[{index + 1}/{total}] OK local | {existente}")
-            continue
-
-        if not link_pdf:
-            df.at[index, "Arquivo PDF Local"] = ""
-            df.at[index, "Status Download PDF"] = "Sem link"
-            df.at[index, "Erro Download PDF"] = "Coluna Link do PDF vazia"
-            print(f"[{index + 1}/{total}] Sem link de PDF")
-            continue
-
+def obter_pdf(
+    sessao: requests.Session,
+    trabalho: dict,
+    identidade: dict,
+    args: argparse.Namespace,
+) -> dict:
+    destino = PASTA_PDFS / identidade["novo_nome_pdf"]
+    esperado = identidade.get("sha256", "")
+    if destino.exists():
+        hash_atual = sha256_arquivo(destino) if pdf_valido(destino) else ""
+        status = "validado" if hash_atual and (not esperado or hash_atual == esperado) else "conflito_local"
+    elif args.sem_download:
+        hash_atual = ""
+        status = "não_processado_por_opção"
+    elif args.offline:
+        hash_atual = ""
+        status = "pdf_ausente_offline"
+    else:
+        url = trabalho.get("url_pdf", "")
+        if not url:
+            return {"caminho": str(destino), "status": "url_pdf_ausente", "sha256": ""}
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        temporario = destino.with_suffix(".pdf.tmp")
         try:
-            print(f"[{index + 1}/{total}] Baixando PDF: {link_pdf}")
-            baixar_pdf_para_arquivo(link_pdf, caminho_preferido)
+            with requisicao_http(sessao, url, args, timeout=180, stream=True) as resposta:
+                resposta.raise_for_status()
+                with temporario.open("wb") as arquivo:
+                    for bloco in resposta.iter_content(1024 * 1024):
+                        if bloco:
+                            arquivo.write(bloco)
+            if not pdf_valido(temporario):
+                raise ValueError("conteúdo baixado não é um PDF válido")
+            hash_atual = sha256_arquivo(temporario)
+            temporario.replace(destino)
+            status = "baixado"
+        finally:
+            temporario.unlink(missing_ok=True)
 
-            df.at[index, "Arquivo PDF Local"] = str(caminho_preferido)
-            df.at[index, "Status Download PDF"] = "Sucesso baixado"
-            df.at[index, "Erro Download PDF"] = ""
-            print(f"   OK baixado | {caminho_preferido}")
-
-        except Exception as erro:
-            df.at[index, "Arquivo PDF Local"] = ""
-            df.at[index, "Status Download PDF"] = "Erro"
-            df.at[index, "Erro Download PDF"] = str(erro)
-            print(f"   FALHOU PDF | {erro}")
-
-    return df
+    if hash_atual and not identidade.get("sha256"):
+        identidade["sha256"] = hash_atual
+    return {"caminho": str(destino), "status": status, "sha256": hash_atual}
 
 
-# ============================================================
-# TRATAMENTO FINAL E EXPORTAÇÃO
-# ============================================================
+def registros_para_planilha(registros: list[dict]) -> pd.DataFrame:
+    """Transforma a coleta estruturada na entrada pública e estável da etapa 2."""
+    linhas = []
+    for registro in registros:
+        arquivo = registro.get("arquivo_pdf", {})
+        validacao = registro.get("validacao", {})
+        linhas.append(
+            {
+                "ID": registro.get("id"),
+                "Ano": registro.get("ano"),
+                "Título da Dissertação": registro.get("titulo"),
+                "Autor": registro.get("autor"),
+                "Orientador": registro.get("orientador"),
+                "Coorientador": registro.get("coorientador"),
+                "Instituição": registro.get("instituicao"),
+                "Campus": registro.get("campus"),
+                "Fonte do Campus": registro.get("fonte_campus"),
+                "Programa": registro.get("programa"),
+                "Produto Educacional": registro.get("produto_educacional"),
+                "Link da Página": registro.get("url_oficial"),
+                "Link do PDF": registro.get("url_pdf"),
+                "Link do Produto": registro.get("url_produto"),
+                "Handle eduCAPES": registro.get("handle_educapes"),
+                "Nome do PDF": Path(arquivo.get("caminho", "")).name,
+                "SHA-256": arquivo.get("sha256"),
+                "Status do PDF": arquivo.get("status"),
+                "Vínculo Confirmado": validacao.get("vinculo_confirmado", False),
+                "Método do Vínculo": validacao.get("metodo_vinculo"),
+                "Ordem Atual na Página": registro.get("ordem_na_pagina"),
+                "Conflitos de Fonte": json.dumps(
+                    validacao.get("conflitos", []), ensure_ascii=False
+                ),
+            }
+        )
+    return pd.DataFrame(linhas)
 
-def criar_dataframe(entradas: list[dict]) -> pd.DataFrame:
-    """
-    Converte a lista de registros em DataFrame e aplica limpezas finais.
-    """
-    df = pd.DataFrame(entradas)
 
-    if df.empty:
-        return df
+def salvar_planilha_atomica(registros: list[dict], caminho: Path = ARQUIVO_SAIDA) -> None:
+    caminho.parent.mkdir(parents=True, exist_ok=True)
+    temporario = caminho.with_name(caminho.stem + ".tmp.xlsx")
+    try:
+        registros_para_planilha(registros).to_excel(temporario, index=False)
+        temporario.replace(caminho)
+    finally:
+        temporario.unlink(missing_ok=True)
 
-    for coluna in df.columns:
-        if df[coluna].dtype == "object":
-            df[coluna] = df[coluna].fillna("").astype(str).map(limpar_espacos)
 
-    df = df.drop_duplicates(
-        subset=["Autor", "Título da Dissertação"],
-        keep="first"
-    ).reset_index(drop=True)
+def executar(args: argparse.Namespace) -> dict:
+    if args.inseguro_tls:
+        requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
+        print("AVISO: verificação TLS desativada explicitamente para esta execução.")
+    sessao = criar_sessao_http()
+    html, fonte = obter_pagina_oficial(sessao, args)
+    trabalhos = extrair_trabalhos_html(html)
+    if not trabalhos:
+        raise ValueError("Nenhum trabalho foi extraído da página oficial")
+    if args.limite:
+        trabalhos = trabalhos[: args.limite]
 
-    colunas_ordenadas = [
-        "Ano",
-        "Autor",
-        "Orientador",
-        "Título da Dissertação",
-        "Produto Educacional",
-        "Link do PDF",
-        "Link do Produto",
-        "Arquivo PDF Local",
-        "Status Download PDF",
-        "Erro Download PDF",
+    documento_identidades = carregar_identidades()
+    resolver_identidades(trabalhos, documento_identidades)
+    por_id = {item["id"]: item for item in documento_identidades["identidades"]}
+    registros = []
+    for numero, trabalho in enumerate(trabalhos, 1):
+        if numero == 1 or numero % 10 == 0:
+            print(f"Processando registro {numero}/{len(trabalhos)}...")
+        identificador = trabalho.get("id")
+        identidade = por_id.get(identificador) if identificador else None
+        educapes = (
+            consultar_educapes(sessao, trabalho.get("url_produto", ""), args)
+            if not args.sem_educapes
+            else {
+                "status": "não_consultado_por_opção",
+                "handle": handle_educapes(trabalho.get("url_produto")),
+                "campos_dc": {},
+                "bitstreams": [],
+            }
+        )
+        arquivo_pdf = (
+            obter_pdf(sessao, trabalho, identidade, args)
+            if identidade
+            else {"caminho": "", "status": "identidade_não_resolvida", "sha256": ""}
+        )
+        instituicao, campus, fonte_campus = resolver_instituicao_campus(educapes)
+        conflitos = []
+        autores_educapes = educapes.get("campos_dc", {}).get("dc.contributor.author", [])
+        titulos_educapes = educapes.get("campos_dc", {}).get("dc.title", [])
+        if autores_educapes and not pessoa_equivalente(trabalho["autor"], autores_educapes):
+            conflitos.append({"campo": "autor", "oficial_profept": trabalho["autor"], "educapes": autores_educapes})
+        if (
+            titulos_educapes
+            and trabalho["produto_educacional"]
+            and not titulo_equivalente([trabalho["produto_educacional"]], titulos_educapes)
+        ):
+            conflitos.append(
+                {
+                    "campo": "titulo_produto",
+                    "oficial_profept": trabalho["produto_educacional"],
+                    "educapes": titulos_educapes,
+                }
+            )
+        registros.append(
+            {
+                "id": identificador,
+                "ano": trabalho["ano"] or None,
+                "autor": trabalho["autor"] or None,
+                "orientador": trabalho["orientador"] or None,
+                "coorientador": trabalho["coorientador"] or None,
+                "titulo": trabalho["titulo"] or None,
+                "produto_educacional": trabalho["produto_educacional"] or None,
+                "instituicao": instituicao,
+                "campus": campus,
+                "programa": PROGRAMA_CORPUS,
+                "instituicao_campus": f"IFC {campus}",
+                "fonte_campus": fonte_campus,
+                "url_oficial": URL_PROFEPT,
+                "url_pdf": trabalho["url_pdf"] or None,
+                "url_produto": trabalho["url_produto"] or None,
+                "handle_educapes": educapes.get("handle") or None,
+                "ordem_na_pagina": trabalho["ordem_na_pagina"],
+                "arquivo_pdf": arquivo_pdf,
+                "metadados_educapes": educapes,
+                "proveniencia": {
+                    "campos_oficiais": "Página oficial de dissertações do ProfEPT no IFC",
+                    "contexto_institucional": ORIGEM_CONTEXTO_INSTITUCIONAL,
+                    "metadados_complementares": "eduCAPES" if educapes.get("status") == "sucesso" else None,
+                    "coletado_em": agora_utc(),
+                },
+                "validacao": {
+                    "vinculo_confirmado": trabalho["vinculo_confirmado"],
+                    "metodo_vinculo": trabalho["metodo_vinculo"],
+                    "candidatos_identidade": trabalho["candidatos_identidade"],
+                    "conflitos": conflitos,
+                },
+            }
+        )
+
+    ids = [registro["id"] for registro in registros if registro["id"]]
+    pendentes = [
+        registro.get("id") or f"ordem-{registro['ordem_na_pagina']}"
+        for registro in registros
+        if not registro["validacao"]["vinculo_confirmado"]
     ]
+    duplicados = sorted({item for item in ids if ids.count(item) > 1})
+    saida = {
+        "schema_version": "leme-coleta-site-v2",
+        "gerado_em": agora_utc(),
+        "fonte": fonte,
+        "resumo": {
+            "quantidade": len(registros),
+            "vinculos_confirmados": len(registros) - len(pendentes),
+            "vinculos_para_revisao": pendentes,
+            "ids_duplicados": duplicados,
+        },
+        "trabalhos": registros,
+    }
+    salvar_json_atomico(documento_identidades, ARQUIVO_IDENTIDADES)
+    salvar_planilha_atomica(registros, ARQUIVO_SAIDA)
+    if duplicados:
+        raise ValueError(f"IDs duplicados após resolução: {duplicados}")
+    return saida
 
-    for coluna in colunas_ordenadas:
-        if coluna not in df.columns:
-            df[coluna] = ""
 
-    df = df[colunas_ordenadas]
+def main() -> int:
+    args = argumentos()
+    resultado = executar(args)
+    print(json.dumps(resultado["resumo"], ensure_ascii=False, indent=2))
+    if resultado["resumo"]["ids_duplicados"]:
+        return 2
 
-    return df
-
-
-def salvar_planilha(df: pd.DataFrame, caminho_saida: Path) -> None:
-    """
-    Salva a planilha em Excel.
-    """
-    df.to_excel(caminho_saida, index=False)
-
-
-# ============================================================
-# FUNÇÃO PRINCIPAL
-# ============================================================
-
-def extrair_dados_profept() -> pd.DataFrame:
-    """
-    Executa o processo completo:
-    1. baixa o HTML;
-    2. marca os links;
-    3. força quebras nos rótulos;
-    4. extrai os registros;
-    5. monta a planilha;
-    6. baixa ou reaproveita os PDFs locais;
-    7. salva a planilha final.
-    """
-    html = baixar_html_pagina(URL_PROFEPT)
-
-    print("Preparando HTML e marcando links...")
-    texto_com_links = preparar_html_com_links_marcados(html)
-
-    print("Separando campos principais...")
-    texto_separado = forcar_quebras_por_rotulos(texto_com_links)
-
-    print("Extraindo registros...")
-    entradas = processar_linhas(texto_separado)
-
-    print(f"{len(entradas)} registros encontrados antes da limpeza.")
-
-    df = criar_dataframe(entradas)
-
-    df = baixar_ou_reaproveitar_pdfs(df)
-
-    salvar_planilha(df, ARQUIVO_SAIDA)
-
-    print(f"\nPlanilha salva com sucesso em: {ARQUIVO_SAIDA}")
-    print(f"Total final de registros: {len(df)}")
-
-    if "Status Download PDF" in df.columns:
-        print("\nResumo dos PDFs:")
-        for status, qtd in df["Status Download PDF"].value_counts().items():
-            print(f"- {status}: {qtd}")
-
-    return df
+    script_ocr = Path(__file__).with_name("2_PdfParaJson.py")
+    comando = [sys.executable, str(script_ocr)]
+    if args.limite:
+        comando.extend(["--limite", str(args.limite)])
+    print("\nColeta concluída. Iniciando o OCR...")
+    return subprocess.run(comando, cwd=script_ocr.parent, check=False).returncode
 
 
 if __name__ == "__main__":
-    extrair_dados_profept()
+    raise SystemExit(main())

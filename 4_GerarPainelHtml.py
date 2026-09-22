@@ -4,13 +4,14 @@ import re
 import unicodedata
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlsplit, urlunsplit
 
 # ============================================================
-# PROJETO LEME/EPT - ETAPA 05
+# PROJETO LEME/EPT - ETAPA 4
 # Geração do painel HTML para colar no Elementor
 #
-# Este script foi adaptado para a planilha:
-# dadosLeme_arrumado.xlsx
+# Este script lê a planilha final produzida pela etapa 3:
+# dados/dados_finais_painel_ept.xlsx
 #
 # Ele:
 # - lê a planilha arrumada;
@@ -20,12 +21,13 @@ from pathlib import Path
 # - gera somente o arquivo HTML final do painel.
 # ============================================================
 
-ARQUIVO_ENTRADA = "dadosLeme_arrumado.xlsx"
-ARQUIVO_HTML_SAIDA = "5_PainelLemeEpt_dadosLeme_v8_responsivo.html"
+ARQUIVO_ENTRADA = "dados/dados_finais_painel_ept.xlsx"
+ARQUIVO_HTML_SAIDA = "painel/painel_leme_ept.html"
 
 # Campos usados pelo JSON do painel e possíveis nomes na planilha.
 # A busca das colunas ignora maiúsculas/minúsculas, acentos e espaços duplicados.
 MAPEAMENTO_COLUNAS = {
+    "ID": ["ID", "Identificador", "ID Permanente"],
     "Ano": ["Ano", "Ano Limpo", "Ano de Defesa", "Ano Defesa"],
     "Autor": ["Autor", "Autora", "Discente", "Mestrando", "Mestranda"],
     "Orientador": ["Orientador", "Orientadora", "Professor Orientador", "Professora Orientadora"],
@@ -45,7 +47,10 @@ MAPEAMENTO_COLUNAS = {
     "Área Temática": ["Área Temática", "Area Temática", "Área Tematica", "Area Tematica", "Área", "Area"],
     "Finalidade do Produto": ["Finalidade do Produto", "Finalidade", "Objetivo do Produto", "Uso do Produto"],
     "Público-alvo": ["Público-alvo", "Publico-alvo", "Publico Alvo", "Público Alvo", "Público", "Publico"],
-    "Instituição/Campus": ["Instituição/Campus", "Instituicao/Campus", "Instituição", "Instituicao", "Campus", "IFC Campus"],
+    "Instituição": ["Instituição", "Instituicao"],
+    "Campus": ["Campus"],
+    "Programa": ["Programa", "Programa de Pós-Graduação"],
+    "Instituição/Campus": ["Instituição/Campus", "Instituicao/Campus", "IFC Campus"],
     "Linha de Pesquisa": ["Linha de Pesquisa", "Linha Pesquisa", "Linha"],
     "Macroprojeto": ["Macroprojeto", "Macro Projeto", "Macro-projeto"],
     "Código do Macroprojeto": ["Código do Macroprojeto", "Codigo do Macroprojeto", "Código Macroprojeto", "Codigo Macroprojeto", "Código", "Codigo"],
@@ -84,6 +89,12 @@ def normalizar_texto(texto):
     texto = "".join(c for c in texto if unicodedata.category(c) != "Mn")
     texto = re.sub(r"\s+", " ", texto).strip()
     return texto
+
+
+def eh_valor_publico(valor):
+    """Indica se um valor pode compor indicadores e visualizações públicas."""
+    texto = limpar_valor(valor, "")
+    return bool(texto and texto != "---" and normalizar_texto(texto) != "a revisar")
 
 
 def montar_indice_colunas(colunas):
@@ -185,6 +196,24 @@ def dividir_tags(texto):
     return tags
 
 
+def dividir_valores_filtro(texto, separador="barra"):
+    """Separa campos multivalorados para que cada conceito possa ser filtrado."""
+    texto = limpar_valor(texto, "")
+    if not texto or texto == "---" or normalizar_texto(texto) == "a revisar":
+        return []
+
+    padrao = r"\s*;\s*" if separador == "ponto_e_virgula" else r"\s+/\s+"
+    valores = []
+    vistos = set()
+    for parte in re.split(padrao, texto):
+        valor = re.sub(r"\s+", " ", parte).strip(" .;,-")
+        chave = normalizar_texto(valor)
+        if valor and chave and chave not in vistos:
+            vistos.add(chave)
+            valores.append(valor)
+    return valores
+
+
 def limitar_texto(texto, limite=280):
     texto = limpar_valor(texto, "")
     if not texto:
@@ -197,6 +226,33 @@ def limitar_texto(texto, limite=280):
 def link_valido(link):
     link = limpar_valor(link, "")
     return link.startswith("http://") or link.startswith("https://")
+
+
+def normalizar_link_publico(link):
+    """Evita conteúdo misto nos links conhecidos do eduCAPES."""
+    link = limpar_valor(link, "")
+    if not link_valido(link):
+        return ""
+    partes = urlsplit(link)
+    if partes.scheme == "http" and partes.netloc.casefold() == "educapes.capes.gov.br":
+        return urlunsplit(("https", partes.netloc, partes.path, partes.query, partes.fragment))
+    return link
+
+
+def preparar_finalidade_publica(valor):
+    """Não incorpora ao HTML trechos de OCR que claramente não são uma finalidade."""
+    texto = limpar_valor(valor, "")
+    if (
+        not texto
+        or len(texto) > 500
+        or re.search(
+            r"(?:n[ºo]\s*do protocolo|documentos comprobat[oó]rios|ficha catalogr[aá]fica)",
+            texto,
+            flags=re.IGNORECASE,
+        )
+    ):
+        return "Informação em revisão."
+    return texto
 
 
 def avisar_colunas_ausentes(df):
@@ -221,7 +277,7 @@ def carregar_planilha(arquivo=ARQUIVO_ENTRADA):
     if not caminho.exists():
         raise FileNotFoundError(
             f"Planilha de entrada não encontrada: {arquivo}\n"
-            "Deixe o arquivo dadosLeme_arrumado.xlsx na mesma pasta deste script."
+            "Execute antes as etapas 1, 2 e 3 do pipeline."
         )
 
     df = pd.read_excel(caminho)
@@ -238,31 +294,45 @@ def preparar_dados_para_html(df):
         ano = valor_campo(row, "Ano")
         orientador = formatar_nome_orientador(valor_campo(row, "Orientador", ""))
         orientador_chave = chave_orientador(orientador)
-        link_pdf = valor_campo(row, "Link do PDF", "")
-        link_produto = valor_campo(row, "Link do Produto", "")
+        link_pdf = normalizar_link_publico(valor_campo(row, "Link do PDF", ""))
+        link_produto = normalizar_link_publico(valor_campo(row, "Link do Produto", ""))
         resumo = valor_campo(row, "Resumo", "---")
+        base = valor_campo(row, "Base Epistemológica")
+        area = valor_campo(row, "Área Temática")
+        publico_alvo = valor_campo(row, "Público-alvo")
 
         registro = {
+            "id": valor_campo(row, "ID"),
             "ano": ano_limpo(ano),
             "autor": valor_campo(row, "Autor"),
             "orientador": orientador,
             "orientadorChave": orientador_chave,
             "titulo": valor_campo(row, "Título da Dissertação"),
             "produto": valor_campo(row, "Produto Educacional"),
-            "linkPdf": link_pdf if link_valido(link_pdf) else "",
-            "linkProduto": link_produto if link_valido(link_produto) else "",
+            "linkPdf": link_pdf,
+            "linkProduto": link_produto,
             "palavrasChave": dividir_tags(valor_campo(row, "Palavras-chave", "")),
             "tipoProdutoOriginal": valor_campo(row, "Tipo de Produto Original"),
             "tipoProduto": valor_campo(row, "Tipo de Produto"),
             "resumo": resumo,
             "resumoCurto": limitar_texto(resumo, 280),
             "nivel": valor_campo(row, "Nível de Aplicação"),
-            "base": valor_campo(row, "Base Epistemológica"),
+            "base": base,
+            "baseItens": dividir_valores_filtro(base),
             "confiancaBase": valor_campo(row, "Confiança da Base"),
             "termosBase": valor_campo(row, "Termos Detectados da Base"),
-            "area": valor_campo(row, "Área Temática"),
-            "finalidade": valor_campo(row, "Finalidade do Produto"),
-            "publicoAlvo": valor_campo(row, "Público-alvo"),
+            "area": area,
+            "areaItens": dividir_valores_filtro(area),
+            "finalidade": preparar_finalidade_publica(
+                valor_campo(row, "Finalidade do Produto")
+            ),
+            "publicoAlvo": publico_alvo,
+            "publicoAlvoItens": dividir_valores_filtro(
+                publico_alvo, separador="ponto_e_virgula"
+            ),
+            "instituicao": valor_campo(row, "Instituição"),
+            "campus": valor_campo(row, "Campus"),
+            "programa": valor_campo(row, "Programa"),
             "instituicaoCampus": valor_campo(row, "Instituição/Campus"),
             "linhaPesquisa": valor_campo(row, "Linha de Pesquisa"),
             "macroprojeto": valor_campo(row, "Macroprojeto"),
@@ -285,46 +355,50 @@ def gerar_html(registros):
     total_orientadores = len({
         r.get("orientadorChave", "")
         for r in registros
-        if r.get("orientadorChave", "")
+        if r.get("orientadorChave", "") and eh_valor_publico(r.get("orientador"))
     })
-    total_bases = len({r["base"] for r in registros if r.get("base") and r["base"] != "---"})
-    total_produtos = sum(1 for r in registros if r.get("linkProduto"))
-
-    anos_validos = sorted([r["ano"] for r in registros if r.get("ano") and r["ano"] != "---"])
+    anos_validos = sorted({r["ano"] for r in registros if eh_valor_publico(r.get("ano"))})
+    total_anos = len(anos_validos)
+    total_macroprojetos = len({
+        r["codigoMacroprojeto"]
+        for r in registros
+        if eh_valor_publico(r.get("codigoMacroprojeto"))
+    })
     periodo = f"{anos_validos[0]}–{anos_validos[-1]}" if anos_validos else "---"
     atualizado_em = datetime.now().strftime("%d/%m/%Y")
 
     html = r'''<!-- =========================================================
-PAINEL LEME EPT V8
+PAINEL LEME EPT V11 — PROPOSTA VISUAL INTEGRADA AO SITE
 Gerado automaticamente por Python
 Cole TODO este bloco no Elementor > Editor de Texto ou HTML
-Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação interna e acessibilidade.
+Melhorias: filtros dinâmicos, gráficos em HTML, composição percentual, modal de detalhes, navegação interna e acessibilidade.
 ========================================================= -->
 
 <section id="leme-painel-ept" class="leme-painel-ept">
   <style>
     #leme-painel-ept {
-      --leme-primary: #3730a3;
-      --leme-primary-2: #4f46e5;
-      --leme-primary-soft: #eef2ff;
-      --leme-cyan: #06b6d4;
-      --leme-green: #16a34a;
-      --leme-green-soft: #dcfce7;
-      --leme-red: #e11d48;
-      --leme-red-soft: #fff1f2;
-      --leme-bg: #f8fafc;
+      --leme-primary: #4d5aff;
+      --leme-primary-2: #4d5aff;
+      --leme-secondary: #833ca3;
+      --leme-primary-soft: #f0f1ff;
+      --leme-cyan: #833ca3;
+      --leme-green: #287a50;
+      --leme-green-soft: #e9f8ef;
+      --leme-red: #cf294b;
+      --leme-red-soft: #fff0f3;
+      --leme-bg: #f7f8ff;
       --leme-card: rgba(255,255,255,.96);
-      --leme-border: #e5e7eb;
-      --leme-border-strong: #cfd4ff;
+      --leme-border: #e4e6f4;
+      --leme-border-strong: #cbd0ff;
       --leme-text: #111827;
       --leme-muted: #64748b;
       --leme-shadow: 0 18px 50px rgba(15, 23, 42, .10);
       --leme-shadow-soft: 0 10px 28px rgba(15, 23, 42, .07);
-      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      font-family: "Open Sans", "Segoe UI", Arial, sans-serif;
       color: var(--leme-text);
       background:
-        radial-gradient(circle at top left, rgba(79,70,229,.16), transparent 34%),
-        radial-gradient(circle at top right, rgba(6,182,212,.12), transparent 30%),
+        radial-gradient(circle at top left, rgba(77,90,255,.13), transparent 34%),
+        radial-gradient(circle at top right, rgba(131,60,163,.11), transparent 30%),
         linear-gradient(180deg, #ffffff, var(--leme-bg));
       border: 1px solid var(--leme-border);
       border-radius: 28px;
@@ -335,7 +409,7 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
     }
 
     #leme-painel-ept * { box-sizing: border-box; }
-    #leme-painel-ept :focus-visible { outline: 4px solid rgba(79,70,229,.23); outline-offset: 3px; border-radius: 12px; }
+    #leme-painel-ept :focus-visible { outline: 4px solid rgba(77,90,255,.23); outline-offset: 3px; border-radius: 12px; }
 
     #leme-painel-ept .leme-skip {
       position: absolute;
@@ -365,6 +439,11 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       gap: 20px;
       align-items: start;
       margin-bottom: 18px;
+      padding: 24px;
+      border-radius: 24px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--leme-primary) 0%, var(--leme-secondary) 100%);
+      box-shadow: 0 18px 42px rgba(77,90,255,.22);
     }
     #leme-painel-ept .leme-eyebrow {
       display: inline-flex;
@@ -372,8 +451,9 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       gap: 8px;
       padding: 7px 12px;
       border-radius: 999px;
-      background: var(--leme-primary-soft);
-      color: var(--leme-primary);
+      background: rgba(255,255,255,.16);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.24);
       font-size: 12px;
       font-weight: 850;
       letter-spacing: .02em;
@@ -381,7 +461,7 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
     }
     #leme-painel-ept h2 {
       margin: 0;
-      color: var(--leme-primary);
+      color: #fff;
       font-size: clamp(25px, 3vw, 38px);
       line-height: 1.08;
       font-weight: 900;
@@ -389,18 +469,18 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
     }
     #leme-painel-ept .leme-subtitle {
       margin: 10px 0 0;
-      color: var(--leme-muted);
+      color: rgba(255,255,255,.9);
       font-size: 15px;
       line-height: 1.6;
       max-width: 940px;
     }
     #leme-painel-ept .leme-update {
-      background: rgba(255,255,255,.86);
-      border: 1px solid var(--leme-border-strong);
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.28);
       border-radius: 18px;
       padding: 13px 15px;
       font-size: 12px;
-      color: var(--leme-muted);
+      color: #fff;
       white-space: nowrap;
       box-shadow: var(--leme-shadow-soft);
       backdrop-filter: blur(10px);
@@ -453,7 +533,7 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
     #leme-painel-ept .leme-modal-close:hover {
       background: var(--leme-primary-soft);
       transform: translateY(-1px);
-      box-shadow: 0 8px 18px rgba(79,70,229,.10);
+      box-shadow: 0 8px 18px rgba(77,90,255,.10);
     }
     #leme-painel-ept .leme-nav button.is-primary,
     #leme-painel-ept .leme-card-detail-btn,
@@ -488,7 +568,7 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       width: 105px;
       height: 105px;
       border-radius: 999px;
-      background: rgba(79,70,229,.09);
+      background: rgba(77,90,255,.09);
       pointer-events: none;
     }
     #leme-painel-ept .leme-stat strong,
@@ -559,6 +639,18 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       gap: 8px;
       flex-wrap: wrap;
     }
+    #leme-painel-ept .leme-mobile-toggle {
+      display: none;
+      border: 1px solid var(--leme-border-strong);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--leme-primary);
+      padding: 9px 12px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 800;
+      min-height: 40px;
+    }
     #leme-painel-ept .leme-mini-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
     #leme-painel-ept .leme-bottom-nav {
       display: flex;
@@ -586,6 +678,7 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
     }
+    #leme-painel-ept .leme-charts-grid > * { min-width: 0; }
     #leme-painel-ept .leme-chart-card {
       border: 1px solid var(--leme-border);
       border-radius: 22px;
@@ -593,6 +686,7 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       background: linear-gradient(180deg, #ffffff, #fbfdff);
       min-height: 220px;
       box-shadow: 0 8px 20px rgba(15, 23, 42, .045);
+      min-width: 0;
     }
     #leme-painel-ept .leme-chart-card.is-wide { grid-column: 1 / -1; }
     #leme-painel-ept .leme-chart-title { margin: 0 0 4px; color: var(--leme-text); font-size: 15px; font-weight: 900; }
@@ -601,13 +695,31 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
     #leme-painel-ept .leme-bar-row { display: grid; grid-template-columns: minmax(160px, 36%) 1fr auto; gap: 10px; align-items: center; }
     #leme-painel-ept .leme-bar-label { color: #334155; font-size: 12px; line-height: 1.25; font-weight: 800; overflow-wrap: anywhere; }
     #leme-painel-ept .leme-bar-track { height: 13px; border-radius: 999px; background: #eef2ff; overflow: hidden; border: 1px solid #e0e7ff; }
-    #leme-painel-ept .leme-bar-fill { height: 100%; width: 0%; border-radius: 999px; background: linear-gradient(90deg, var(--leme-primary-2), var(--leme-cyan)); transition: width .3s ease; }
+    #leme-painel-ept .leme-bar-fill { height: 100%; width: 0%; border-radius: 999px; background: linear-gradient(90deg, var(--leme-primary-2), var(--leme-secondary)); transition: width .3s ease; }
     #leme-painel-ept .leme-bar-value { color: var(--leme-primary); font-size: 12px; font-weight: 900; min-width: 24px; text-align: right; }
     #leme-painel-ept .leme-year-chart { display: flex; align-items: end; gap: 12px; height: var(--chart-height, 220px); padding: 12px 6px 0; border-bottom: 1px solid #e2e8f0; }
     #leme-painel-ept .leme-year-col { flex: 1; min-width: 42px; display: flex; flex-direction: column; align-items: center; justify-content: end; height: 100%; gap: 7px; }
     #leme-painel-ept .leme-year-value { color: var(--leme-primary); font-weight: 900; font-size: 12px; }
-    #leme-painel-ept .leme-year-bar { width: min(52px, 78%); min-height: 6px; border-radius: 12px 12px 4px 4px; background: linear-gradient(180deg, var(--leme-primary-2), var(--leme-cyan)); box-shadow: 0 8px 18px rgba(79,70,229,.14); }
+    #leme-painel-ept .leme-year-bar { width: min(52px, 78%); min-height: 6px; border-radius: 12px 12px 4px 4px; background: linear-gradient(180deg, var(--leme-primary-2), var(--leme-secondary)); box-shadow: 0 8px 18px rgba(77,90,255,.14); }
     #leme-painel-ept .leme-year-label { color: #475569; font-size: 12px; font-weight: 850; }
+    #leme-painel-ept .leme-composition { display: grid; gap: 16px; align-content: center; min-height: 154px; }
+    #leme-painel-ept .leme-composition-track {
+      display: flex;
+      width: 100%;
+      height: 30px;
+      overflow: hidden;
+      border: 1px solid #dbe3ff;
+      border-radius: 999px;
+      background: #eef2ff;
+      box-shadow: inset 0 1px 3px rgba(15, 23, 42, .08);
+    }
+    #leme-painel-ept .leme-composition-segment { min-width: 3px; height: 100%; }
+    #leme-painel-ept .leme-composition-legend { display: grid; gap: 9px; }
+    #leme-painel-ept .leme-composition-item { display: grid; grid-template-columns: 11px minmax(0, 1fr) auto; gap: 8px; align-items: start; }
+    #leme-painel-ept .leme-composition-dot { width: 10px; height: 10px; margin-top: 3px; border-radius: 50%; }
+    #leme-painel-ept .leme-composition-label { color: #334155; font-size: 12px; line-height: 1.3; font-weight: 800; }
+    #leme-painel-ept .leme-composition-value { color: var(--leme-primary); font-size: 12px; font-weight: 900; white-space: nowrap; }
+    #leme-painel-ept .leme-chart-footnote { margin: 11px 0 0; color: var(--leme-muted); font-size: 11px; line-height: 1.4; }
     #leme-painel-ept .leme-single-insight,
     #leme-painel-ept .leme-empty-chart {
       border: 1px dashed var(--leme-border-strong);
@@ -636,13 +748,13 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       width: 100%; border: 1px solid var(--leme-border-strong); border-radius: 18px; padding: 15px 16px;
       font-size: 15px; color: var(--leme-text); outline: none; background: #fff; min-height: 48px;
     }
-    #leme-painel-ept .leme-search:focus { border-color: var(--leme-primary-2); box-shadow: 0 0 0 4px rgba(79,70,229,.12); }
+    #leme-painel-ept .leme-search:focus { border-color: var(--leme-primary-2); box-shadow: 0 0 0 4px rgba(77,90,255,.12); }
     #leme-painel-ept .leme-clear {
       border: none; border-radius: 18px; padding: 0 17px; min-height: 48px;
-      background: linear-gradient(135deg, var(--leme-primary-2), var(--leme-cyan)); color: #fff; font-weight: 850; cursor: pointer;
-      box-shadow: 0 12px 22px rgba(79,70,229,.16);
+      background: linear-gradient(135deg, var(--leme-primary-2), var(--leme-secondary)); color: #fff; font-weight: 850; cursor: pointer;
+      box-shadow: 0 12px 22px rgba(77,90,255,.16);
     }
-    #leme-painel-ept .leme-filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 11px; }
+    #leme-painel-ept .leme-filters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 11px; }
     #leme-painel-ept .leme-field { position: relative; }
     #leme-painel-ept .leme-field label { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size: 11px; font-weight: 850; color: var(--leme-muted); margin: 0 0 6px; text-transform: uppercase; letter-spacing:.045em; }
     #leme-painel-ept .leme-field select { width:100%; border:1px solid var(--leme-border); border-radius:15px; padding: 11px 12px; background:#fff; color: var(--leme-text); font-size:13px; outline:none; min-height:44px; }
@@ -682,7 +794,8 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
     #leme-painel-ept .leme-results { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items:stretch; grid-auto-rows: 1fr; }
     #leme-painel-ept .leme-results.is-table { display:block; overflow-x:auto; background:#fff; border:1px solid var(--leme-border); border-radius:22px; box-shadow:var(--leme-shadow-soft); }
     #leme-painel-ept .leme-card { min-height: 365px; height: 100%; background:var(--leme-card); border:1px solid var(--leme-border); border-radius:24px; padding:20px; box-shadow:var(--leme-shadow-soft); transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease; display:flex; flex-direction:column; }
-    #leme-painel-ept .leme-card:hover { transform:translateY(-3px); box-shadow:0 20px 44px rgba(15,23,42,.12); border-color:rgba(79,70,229,.34); }
+    #leme-painel-ept .leme-card:hover { transform:translateY(-3px); box-shadow:0 20px 44px rgba(15,23,42,.12); border-color:rgba(77,90,255,.34); }
+    #leme-painel-ept .leme-card .leme-eyebrow { background:var(--leme-primary-soft); color:var(--leme-primary); border-color:#daddff; }
     #leme-painel-ept .leme-card-title { margin:0 0 12px; color:var(--leme-primary); font-size:16px; line-height:1.35; font-weight:900; letter-spacing:-.01em; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
     #leme-painel-ept .leme-meta { display:grid; gap:7px; margin:0 0 12px; color:var(--leme-muted); font-size:13px; line-height:1.35; }
     #leme-painel-ept .leme-meta b { color:var(--leme-text); }
@@ -734,11 +847,14 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
     }
     @media (max-width: 720px) {
       #leme-painel-ept { padding:16px; border-radius:20px; }
-      #leme-painel-ept .leme-header { grid-template-columns:1fr; }
+      #leme-painel-ept .leme-header { grid-template-columns:1fr; padding:18px; border-radius:20px; }
       #leme-painel-ept .leme-update { white-space:normal; }
       #leme-painel-ept .leme-stats, #leme-painel-ept .leme-insights { grid-template-columns:1fr; }
       #leme-painel-ept .leme-search-row { grid-template-columns:1fr; }
       #leme-painel-ept .leme-filters { grid-template-columns:1fr; }
+      #leme-painel-ept .leme-filters:not(.is-expanded) .leme-field.is-extra-mobile { display:none; }
+      #leme-painel-ept .leme-mobile-toggle { display:inline-flex; align-items:center; justify-content:center; }
+      #leme-painel-ept .leme-charts-content.is-mobile-collapsed { display:none; }
       #leme-painel-ept .leme-view { display:none; }
       #leme-painel-ept .leme-actions-toolbar { width:100%; }
       #leme-painel-ept .leme-export-btn { flex:1; }
@@ -773,10 +889,10 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
 
   <div class="leme-header">
     <div>
-      <div class="leme-eyebrow" aria-hidden="true">📊 Painel bibliométrico · EPT</div>
-      <h2>Repositório Digital da Produção ProfEPT</h2>
+      <div class="leme-eyebrow" aria-hidden="true">PAINEL BIBLIOMÉTRICO · EPT</div>
+      <h2>Painel Bibliométrico da Produção ProfEPT</h2>
       <p class="leme-subtitle">
-        Consulte trabalhos por tema, autor, orientador, instituição, base epistemológica, nível de aplicação, tipo de produto, linha de pesquisa e macroprojeto.
+        Explore dissertações e produtos educacionais por tema, autor, orientador, ano, linha de pesquisa e macroprojeto.
       </p>
     </div>
     <div class="leme-update">
@@ -785,67 +901,64 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
     </div>
   </div>
 
-  <div class="leme-nav" aria-label="Navegação rápida do painel">
-    <button type="button" data-scroll-to="leme-graficos">Ver gráficos</button>
-    <button type="button" class="is-primary" data-scroll-to="leme-controles">Ir para filtros</button>
-  </div>
-
   <div class="leme-stats" aria-label="Indicadores gerais do painel">
-    <div class="leme-stat"><strong>__TOTAL__</strong><span>trabalhos analisados</span></div>
-    <div class="leme-stat"><strong>__TOTAL_PRODUTOS__</strong><span>produtos com link</span></div>
-    <div class="leme-stat"><strong>__TOTAL_ORIENTADORES__</strong><span>orientadores</span></div>
-    <div class="leme-stat"><strong>__TOTAL_BASES__</strong><span>bases identificadas</span></div>
+    <div class="leme-stat"><strong id="leme-stat-total">__TOTAL__</strong><span>trabalhos catalogados</span></div>
+    <div class="leme-stat"><strong id="leme-stat-anos">__TOTAL_ANOS__</strong><span>anos analisados</span></div>
+    <div class="leme-stat"><strong id="leme-stat-orientadores">__TOTAL_ORIENTADORES__</strong><span>orientadores</span></div>
+    <div class="leme-stat"><strong id="leme-stat-macroprojetos">__TOTAL_MACROPROJETOS__</strong><span>macroprojetos</span></div>
   </div>
 
   <section id="leme-graficos" class="leme-panel" aria-label="Visualizações bibliométricas">
     <div class="leme-panel-head">
       <div>
-        <h3>Gráficos e leitura rápida</h3>
-        <p>Os gráficos mudam junto com a busca e os filtros. Quando há poucos dados, o painel troca gráficos poluídos por resumos mais claros.</p>
+        <h3>Gráficos do conjunto atual</h3>
+        <p>As visualizações são atualizadas automaticamente de acordo com a busca e os filtros selecionados.</p>
       </div>
       <div class="leme-panel-head-actions">
         <div id="leme-graficos-nota" class="leme-note">Todos os trabalhos</div>
-        <button type="button" class="leme-head-btn" data-scroll-to="leme-controles">Ir para filtros</button>
+        <button id="leme-alternar-graficos" class="leme-mobile-toggle" type="button"
+          aria-controls="leme-conteudo-graficos" aria-expanded="true">Ocultar análises</button>
       </div>
     </div>
 
-    <div id="leme-insights" class="leme-insights" aria-label="Resumo dinâmico dos dados filtrados"></div>
+    <div id="leme-conteudo-graficos" class="leme-charts-content">
+      <div id="leme-insights" class="leme-insights" aria-label="Resumo dinâmico dos dados filtrados"></div>
 
-    <div class="leme-charts-grid">
+      <div class="leme-charts-grid">
       <div class="leme-chart-card is-wide">
         <h4 class="leme-chart-title">Trabalhos por ano</h4>
         <p class="leme-chart-subtitle">Evolução temporal do conjunto filtrado.</p>
-        <div id="leme-chart-ano" aria-live="polite"></div>
+        <div id="leme-chart-ano"></div>
+      </div>
+      <div class="leme-chart-card">
+        <h4 class="leme-chart-title">Linha de pesquisa</h4>
+        <p class="leme-chart-subtitle">Participação percentual de cada linha no conjunto atual.</p>
+        <div id="leme-chart-linha"></div>
+      </div>
+      <div class="leme-chart-card">
+        <h4 class="leme-chart-title">Macroprojeto</h4>
+        <p class="leme-chart-subtitle">Comparação por código e tema de cada macroprojeto.</p>
+        <div id="leme-chart-macro"></div>
       </div>
       <div class="leme-chart-card">
         <h4 class="leme-chart-title">Orientadores</h4>
         <p class="leme-chart-subtitle">Ranking dos orientadores mais recorrentes.</p>
-        <div id="leme-chart-orientador" aria-live="polite"></div>
-      </div>
-      <div class="leme-chart-card">
-        <h4 class="leme-chart-title">Base epistemológica</h4>
-        <p class="leme-chart-subtitle">Categorias principais, com agrupamento automático quando necessário.</p>
-        <div id="leme-chart-base" aria-live="polite"></div>
-      </div>
-      <div class="leme-chart-card">
-        <h4 class="leme-chart-title">Nível de aplicação</h4>
-        <p class="leme-chart-subtitle">Onde os produtos e pesquisas se concentram.</p>
-        <div id="leme-chart-nivel" aria-live="polite"></div>
+        <div id="leme-chart-orientador"></div>
       </div>
       <div class="leme-chart-card">
         <h4 class="leme-chart-title">Tipo de produto</h4>
         <p class="leme-chart-subtitle">Formatos de produtos educacionais mais encontrados.</p>
-        <div id="leme-chart-tipo" aria-live="polite"></div>
+        <div id="leme-chart-tipo"></div>
       </div>
       <div class="leme-chart-card">
-        <h4 class="leme-chart-title">Linha de pesquisa</h4>
-        <p class="leme-chart-subtitle">Distribuição pelas linhas acadêmicas.</p>
-        <div id="leme-chart-linha" aria-live="polite"></div>
+        <h4 class="leme-chart-title">Nível de aplicação</h4>
+        <p class="leme-chart-subtitle">Onde os produtos e pesquisas se concentram.</p>
+        <div id="leme-chart-nivel"></div>
       </div>
       <div class="leme-chart-card">
-        <h4 class="leme-chart-title">Macroprojeto</h4>
-        <p class="leme-chart-subtitle">Distribuição pelos macroprojetos.</p>
-        <div id="leme-chart-macro" aria-live="polite"></div>
+        <h4 class="leme-chart-title">Base epistemológica</h4>
+        <p class="leme-chart-subtitle">Bases mais frequentes. Um trabalho pode aparecer em mais de uma base.</p>
+        <div id="leme-chart-base"></div>
       </div>
     </div>
 
@@ -854,10 +967,14 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
   <section id="leme-controles" class="leme-panel" aria-label="Pesquisa e filtros">
     <div class="leme-panel-head">
       <div>
-        <h3>Pesquisa e filtros</h3>
-        <p>Os filtros são dependentes: depois de escolher uma opção, os demais mostram apenas valores que ainda existem dentro do resultado possível.</p>
+        <h3>Pesquise no acervo</h3>
+        <p>Use a busca livre ou combine filtros. Os gráficos e os resultados serão atualizados automaticamente.</p>
       </div>
-      <div class="leme-note">Filtros inteligentes</div>
+      <div class="leme-panel-head-actions">
+        <div class="leme-note">Filtros inteligentes</div>
+        <button id="leme-alternar-filtros" class="leme-mobile-toggle" type="button"
+          aria-controls="leme-filtros" aria-expanded="false">Mais filtros</button>
+      </div>
     </div>
 
     <div class="leme-search-row">
@@ -867,15 +984,16 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       <button id="leme-limpar" class="leme-clear" type="button">Limpar filtros</button>
     </div>
 
-    <div class="leme-filters">
+    <div id="leme-filtros" class="leme-filters">
       <div class="leme-field"><label for="leme-filtro-ano">Ano</label><select id="leme-filtro-ano" data-campo="ano" data-default="Todos"></select></div>
-      <div class="leme-field"><label for="leme-filtro-nivel">Nível</label><select id="leme-filtro-nivel" data-campo="nivel" data-default="Todos"></select></div>
       <div class="leme-field"><label for="leme-filtro-linha">Linha de pesquisa</label><select id="leme-filtro-linha" data-campo="linhaPesquisa" data-default="Todas"></select></div>
       <div class="leme-field"><label for="leme-filtro-macro">Macroprojeto</label><select id="leme-filtro-macro" data-campo="macroprojeto" data-default="Todos"></select></div>
-      <div class="leme-field"><label for="leme-filtro-area">Área temática</label><select id="leme-filtro-area" data-campo="area" data-default="Todas"></select></div>
-      <div class="leme-field"><label for="leme-filtro-tipo">Tipo de produto</label><select id="leme-filtro-tipo" data-campo="tipoProduto" data-default="Todos"></select></div>
-      <div class="leme-field"><label for="leme-filtro-orientador">Orientador</label><select id="leme-filtro-orientador" data-campo="orientador" data-default="Todos"></select></div>
-      <div class="leme-field"><label for="leme-filtro-base">Base epistemológica</label><select id="leme-filtro-base" data-campo="base" data-default="Todas"></select></div>
+      <div class="leme-field is-extra-mobile"><label for="leme-filtro-nivel">Nível</label><select id="leme-filtro-nivel" data-campo="nivel" data-default="Todos"></select></div>
+      <div class="leme-field is-extra-mobile"><label for="leme-filtro-area">Área temática</label><select id="leme-filtro-area" data-campo="area" data-default="Todas"></select></div>
+      <div class="leme-field is-extra-mobile"><label for="leme-filtro-tipo">Tipo de produto</label><select id="leme-filtro-tipo" data-campo="tipoProduto" data-default="Todos"></select></div>
+      <div class="leme-field is-extra-mobile"><label for="leme-filtro-orientador">Orientador</label><select id="leme-filtro-orientador" data-campo="orientador" data-default="Todos"></select></div>
+      <div class="leme-field is-extra-mobile"><label for="leme-filtro-base">Base epistemológica</label><select id="leme-filtro-base" data-campo="base" data-default="Todas"></select></div>
+      <div class="leme-field is-extra-mobile"><label for="leme-filtro-publico">Público-alvo</label><select id="leme-filtro-publico" data-campo="publicoAlvo" data-default="Todos"></select></div>
     </div>
 
     <div id="leme-filtros-ativos" class="leme-active-filters" aria-live="polite"></div>
@@ -885,10 +1003,9 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
   <div id="leme-resultados-area" class="leme-toolbar">
     <div id="leme-contador" class="leme-count" aria-live="polite">Carregando resultados...</div>
     <div class="leme-actions-toolbar">
-      <button id="leme-exportar-csv" class="leme-export-btn" type="button">⬇️ Exportar filtrados</button>
-      <button id="leme-copiar-resultados" class="leme-export-btn" type="button">📋 Copiar resultados</button>
+      <button id="leme-exportar-csv" class="leme-export-btn" type="button">Baixar resultados (.CSV)</button>
       <div class="leme-view" aria-label="Alternar visualização">
-        <button id="leme-view-cards" type="button" class="is-active" aria-pressed="true">Cards</button>
+        <button id="leme-view-cards" type="button" class="is-active" aria-pressed="true">Cartões</button>
         <button id="leme-view-table" type="button" aria-pressed="false">Tabela</button>
       </div>
     </div>
@@ -896,11 +1013,6 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
 
   <div id="leme-resultados" class="leme-results"></div>
   <nav id="leme-paginacao" class="leme-pagination" aria-label="Paginação de resultados"></nav>
-
-  <div class="leme-bottom-nav" aria-label="Navegação final do painel">
-    <button type="button" data-scroll-to="leme-controles">Voltar aos filtros</button>
-    <button type="button" data-scroll-to="leme-graficos">Ver gráficos</button>
-  </div>
 
   <div id="leme-modal-backdrop" class="leme-modal-backdrop" aria-hidden="true">
     <div class="leme-modal" role="dialog" aria-modal="true" aria-labelledby="leme-modal-title">
@@ -919,7 +1031,15 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       const raiz = document.getElementById("leme-painel-ept");
       if (!raiz) return;
 
+      const controlesPainel = raiz.querySelector("#leme-controles");
+      const graficosPainel = raiz.querySelector("#leme-graficos");
+      if (controlesPainel && graficosPainel) raiz.insertBefore(controlesPainel, graficosPainel);
+
       const dados = JSON.parse(raiz.querySelector("#leme-dados-json").textContent || "[]");
+      raiz.querySelector("#leme-stat-total").textContent = dados.length;
+      raiz.querySelector("#leme-stat-anos").textContent = new Set(dados.map(item => item.ano).filter(ehValorPublico)).size;
+      raiz.querySelector("#leme-stat-orientadores").textContent = new Set(dados.map(item => item.orientadorChave || normalizarBusca(item.orientador)).filter(Boolean)).size;
+      raiz.querySelector("#leme-stat-macroprojetos").textContent = new Set(dados.map(item => item.codigoMacroprojeto).filter(ehValorPublico)).size;
       const busca = raiz.querySelector("#leme-busca");
       const limpar = raiz.querySelector("#leme-limpar");
       const resultados = raiz.querySelector("#leme-resultados");
@@ -930,20 +1050,26 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       const graficosNota = raiz.querySelector("#leme-graficos-nota");
       const insights = raiz.querySelector("#leme-insights");
       const exportarCsv = raiz.querySelector("#leme-exportar-csv");
-      const copiarResultados = raiz.querySelector("#leme-copiar-resultados");
       const btnCards = raiz.querySelector("#leme-view-cards");
       const btnTable = raiz.querySelector("#leme-view-table");
       const modalBackdrop = raiz.querySelector("#leme-modal-backdrop");
       const modalContent = raiz.querySelector("#leme-modal-content");
       const modalTitle = raiz.querySelector("#leme-modal-title");
       const modalClose = raiz.querySelector("#leme-modal-close");
+      const filtrosContainer = raiz.querySelector("#leme-filtros");
+      const alternarFiltros = raiz.querySelector("#leme-alternar-filtros");
+      const graficosContent = raiz.querySelector("#leme-conteudo-graficos");
+      const alternarGraficos = raiz.querySelector("#leme-alternar-graficos");
 
       let resultadosAtuais = [];
       let modo = "cards";
       let paginaAtual = 1;
       let debounceTimer = null;
-      const itensPorPagina = 12;
-      const camposBusca = ["ano", "autor", "orientador", "orientadorChave", "titulo", "produto", "resumo", "nivel", "base", "area", "finalidade", "publicoAlvo", "tipoProduto", "instituicaoCampus", "linhaPesquisa", "macroprojeto", "codigoMacroprojeto", "confiancaLinhaMacro", "termosLinhaMacro", "justificativaLinhaMacro", "revisaoManual"];
+      let focoAntesModal = null;
+      const telaPequena = window.matchMedia("(max-width: 720px)");
+      const itensPorPagina = telaPequena.matches ? 6 : 12;
+      const camposBusca = ["ano", "autor", "orientador", "orientadorChave", "titulo", "produto", "resumo", "nivel", "base", "area", "finalidade", "publicoAlvo", "tipoProduto", "instituicao", "campus", "programa", "instituicaoCampus", "linhaPesquisa", "macroprojeto"];
+      const camposMultivalor = { base: "baseItens", area: "areaItens", publicoAlvo: "publicoAlvoItens" };
 
       function normalizarBusca(valor) {
         return String(valor || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
@@ -962,7 +1088,26 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       }
       function limparRotulo(valor) {
         const texto = String(valor || "").replace(/\s+/g, " ").trim();
-        return texto && texto !== "---" ? texto : "Não identificado";
+        return valorPublico(texto);
+      }
+      function ehValorPublico(valor) {
+        const texto = String(valor || "").replace(/\s+/g, " ").trim();
+        return Boolean(texto && texto !== "---" && normalizarBusca(texto) !== "a revisar");
+      }
+      function valorPublico(valor, fallback) {
+        return ehValorPublico(valor) ? String(valor).replace(/\s+/g, " ").trim() : (fallback || "Não classificado");
+      }
+      function valoresFiltro(item, campo) {
+        const chaveLista = camposMultivalor[campo];
+        const valores = chaveLista && Array.isArray(item[chaveLista]) ? item[chaveLista] : [item[campo]];
+        return [...new Set(valores.map(limparRotulo).filter(ehValorPublico))];
+      }
+      function finalidadePublica(valor) {
+        const texto = valorPublico(valor, "");
+        if (!texto || texto.length > 500 || /(?:n[ºo]\s*do protocolo|documentos comprobat[oó]rios|ficha catalogr[aá]fica)/i.test(texto)) {
+          return "Informação em revisão.";
+        }
+        return texto;
       }
       function labelCurto(valor, limite) {
         const texto = limparRotulo(valor);
@@ -1009,7 +1154,7 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
           for (const filtro of filtros) {
             const campo = filtro.dataset.campo;
             if (ignorarCampo && campo === ignorarCampo) continue;
-            if (filtro.value && item[campo] !== filtro.value) return false;
+            if (filtro.value && !valoresFiltro(item, campo).includes(filtro.value)) return false;
           }
           return true;
         });
@@ -1018,9 +1163,9 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       function contarOpcoes(lista, campo) {
         const mapa = new Map();
         lista.forEach(item => {
-          const valor = item[campo];
-          if (!valor || valor === "---") return;
-          mapa.set(valor, (mapa.get(valor) || 0) + 1);
+          valoresFiltro(item, campo).forEach(valor => {
+            mapa.set(valor, (mapa.get(valor) || 0) + 1);
+          });
         });
         return Array.from(mapa.entries()).sort((a, b) => String(a[0]).localeCompare(String(b[0]), "pt-BR"));
       }
@@ -1079,17 +1224,28 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       function contarPorCampo(lista, campo) {
         const mapa = new Map();
         lista.forEach(item => {
+          if (!ehValorPublico(item[campo])) return;
           const valor = limparRotulo(item[campo]);
           mapa.set(valor, (mapa.get(valor) || 0) + 1);
+        });
+        return Array.from(mapa.entries()).map(([label, valor]) => ({ label, valor })).sort((a, b) => b.valor - a.valor || String(a.label).localeCompare(String(b.label), "pt-BR"));
+      }
+      function contarBases(lista) {
+        const mapa = new Map();
+        lista.forEach(item => {
+          valoresFiltro(item, "base").forEach(base => {
+            mapa.set(base, (mapa.get(base) || 0) + 1);
+          });
         });
         return Array.from(mapa.entries()).map(([label, valor]) => ({ label, valor })).sort((a, b) => b.valor - a.valor || String(a.label).localeCompare(String(b.label), "pt-BR"));
       }
       function contarOrientadores(lista, limite) {
         const mapa = new Map();
         lista.forEach(item => {
+          if (!ehValorPublico(item.orientador)) return;
           const chave = item.orientadorChave || normalizarBusca(item.orientador);
           const nome = limparRotulo(item.orientador);
-          if (!chave || nome === "Não identificado") return;
+          if (!chave) return;
           if (!mapa.has(chave)) mapa.set(chave, { label: nome, valor: 0 });
           mapa.get(chave).valor += 1;
         });
@@ -1118,18 +1274,65 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
           renderInsightCard("macroprojeto mais recorrente", primeiroOuTraco(contarPorCampo(lista, "macroprojeto")))
         ].join("");
       }
-      function renderHorizontalChart(el, dadosGrafico, limite) {
-        const lista = agruparTop(dadosGrafico, limite || 8).filter(d => d.valor > 0);
-        if (!lista.length) { el.innerHTML = '<div class="leme-empty-chart">Limpe algum filtro ou faça uma busca mais ampla para voltar a comparar categorias.</div>'; return; }
+      function rotuloMacroCurto(valor) {
+        const texto = limparRotulo(valor);
+        const partes = texto.split(/\s+[–—-]\s+/);
+        if (partes.length < 2) return labelCurto(texto, 46);
+        return partes[0] + " · " + labelCurto(partes.slice(1).join(" – "), 36);
+      }
+      function rotuloLinhaCurto(valor) {
+        const texto = limparRotulo(valor);
+        if (/^Práticas Educativas/i.test(texto)) return "Práticas Educativas em EPT";
+        if (/^Organização e Memórias/i.test(texto)) return "Organização e Memórias de Espaços Pedagógicos";
+        return labelCurto(texto, 48);
+      }
+      function notaCobertura(classificados, totalRegistros) {
+        if (!totalRegistros || classificados >= totalRegistros) return "";
+        return '<p class="leme-chart-footnote">Com classificação: ' + classificados + ' de ' + totalRegistros + ' trabalhos deste recorte.</p>';
+      }
+      function renderHorizontalChart(el, dadosGrafico, limite, opcoes) {
+        const config = opcoes || {};
+        const dadosValidos = dadosGrafico.filter(d => d.valor > 0);
+        const totalClassificados = dadosValidos.reduce((soma, item) => soma + item.valor, 0);
+        const cobertura = config.totalRegistros ? notaCobertura(totalClassificados, config.totalRegistros) : "";
+        const limiteReal = limite || 8;
+        const lista = (config.agruparOutras === false ? dadosValidos.slice(0, limiteReal) : agruparTop(dadosValidos, limiteReal));
+        if (!lista.length) { el.innerHTML = '<div class="leme-empty-chart">Nenhum trabalho deste recorte possui esta classificação.</div>' + cobertura; return; }
         if (lista.length === 1) {
-          el.innerHTML = '<div class="leme-single-insight"><strong>' + escapeHtml(lista[0].label) + '</strong>Todos os ' + lista[0].valor + ' resultado(s) deste recorte estão nesta categoria.</div>';
+          el.innerHTML = '<div class="leme-single-insight"><strong>' + escapeHtml(lista[0].label) + '</strong>Todos os ' + lista[0].valor + ' trabalho(s) classificados deste recorte estão nesta categoria.</div>' + cobertura;
           return;
         }
         const max = Math.max(...lista.map(d => d.valor), 1);
-        el.innerHTML = '<div class="leme-bars">' + lista.map(d => {
+        let html = '<div class="leme-bars">' + lista.map(d => {
           const pct = Math.max(4, Math.round((d.valor / max) * 100));
-          return '<div class="leme-bar-row"><div class="leme-bar-label" title="' + escapeHtml(d.label) + '">' + escapeHtml(labelCurto(d.label, 56)) + '</div><div class="leme-bar-track"><div class="leme-bar-fill" style="width:' + pct + '%"></div></div><div class="leme-bar-value">' + d.valor + '</div></div>';
+          const rotulo = config.formatarRotulo ? config.formatarRotulo(d.label) : labelCurto(d.label, 56);
+          return '<div class="leme-bar-row"><div class="leme-bar-label" title="' + escapeHtml(d.label) + '">' + escapeHtml(rotulo) + '</div><div class="leme-bar-track"><div class="leme-bar-fill" style="width:' + pct + '%"></div></div><div class="leme-bar-value">' + d.valor + '</div></div>';
         }).join("") + '</div>';
+        if (config.agruparOutras === false && dadosValidos.length > limiteReal) {
+          const restantes = dadosValidos.slice(limiteReal);
+          const totalRestante = restantes.reduce((soma, item) => soma + item.valor, 0);
+          html += '<p class="leme-chart-footnote">Mais ' + restantes.length + ' combinações somam ' + totalRestante + ' trabalho(s) e não aparecem neste ranking.</p>';
+        }
+        html += cobertura;
+        el.innerHTML = html;
+      }
+      function renderCompositionChart(el, dadosGrafico, totalRegistros) {
+        const lista = dadosGrafico.filter(d => d.valor > 0);
+        const total = lista.reduce((soma, item) => soma + item.valor, 0);
+        const cobertura = notaCobertura(total, totalRegistros);
+        if (!lista.length) { el.innerHTML = '<div class="leme-empty-chart">Nenhum trabalho deste recorte possui linha de pesquisa classificada.</div>' + cobertura; return; }
+        if (lista.length === 1) {
+          el.innerHTML = '<div class="leme-single-insight"><strong>' + escapeHtml(rotuloLinhaCurto(lista[0].label)) + '</strong>Todos os ' + lista[0].valor + ' trabalho(s) classificados deste recorte estão nesta linha.</div>' + cobertura;
+          return;
+        }
+        const cores = ["#4d5aff", "#833ca3", "#cf294b", "#287a50"];
+        const divisor = total || 1;
+        const segmentos = lista.map((d, i) => '<div class="leme-composition-segment" title="' + escapeHtml(d.label) + ': ' + d.valor + '" style="width:' + ((d.valor / divisor) * 100).toFixed(2) + '%;background:' + cores[i % cores.length] + '"></div>').join("");
+        const legenda = lista.map((d, i) => {
+          const percentual = ((d.valor / divisor) * 100).toFixed(1).replace(".0", "");
+          return '<div class="leme-composition-item"><span class="leme-composition-dot" style="background:' + cores[i % cores.length] + '"></span><span class="leme-composition-label" title="' + escapeHtml(d.label) + '">' + escapeHtml(rotuloLinhaCurto(d.label)) + '</span><span class="leme-composition-value">' + d.valor + ' · ' + percentual + '%</span></div>';
+        }).join("");
+        el.innerHTML = '<div class="leme-composition"><div class="leme-composition-track" aria-hidden="true">' + segmentos + '</div><div class="leme-composition-legend">' + legenda + '</div></div>' + cobertura;
       }
       function renderYearChart(el, lista) {
         const dadosAno = contarPorCampo(lista, "ano").sort((a,b) => String(a.label).localeCompare(String(b.label), "pt-BR"));
@@ -1145,21 +1348,21 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       function atualizarGraficos(lista) {
         renderInsights(lista);
         renderYearChart(raiz.querySelector("#leme-chart-ano"), lista);
+        renderCompositionChart(raiz.querySelector("#leme-chart-linha"), contarPorCampo(lista, "linhaPesquisa"), lista.length);
+        renderHorizontalChart(raiz.querySelector("#leme-chart-macro"), contarPorCampo(lista, "macroprojeto"), 7, { formatarRotulo: rotuloMacroCurto, totalRegistros: lista.length });
         renderHorizontalChart(raiz.querySelector("#leme-chart-orientador"), contarOrientadores(lista, 10), 10);
-        renderHorizontalChart(raiz.querySelector("#leme-chart-base"), contarPorCampo(lista, "base"), 8);
-        renderHorizontalChart(raiz.querySelector("#leme-chart-nivel"), contarPorCampo(lista, "nivel"), 8);
-        renderHorizontalChart(raiz.querySelector("#leme-chart-tipo"), contarPorCampo(lista, "tipoProduto"), 8);
-        renderHorizontalChart(raiz.querySelector("#leme-chart-linha"), contarPorCampo(lista, "linhaPesquisa"), 6);
-        renderHorizontalChart(raiz.querySelector("#leme-chart-macro"), contarPorCampo(lista, "macroprojeto"), 6);
+        renderHorizontalChart(raiz.querySelector("#leme-chart-tipo"), contarPorCampo(lista, "tipoProduto"), 8, { totalRegistros: lista.length });
+        renderHorizontalChart(raiz.querySelector("#leme-chart-nivel"), contarPorCampo(lista, "nivel"), 8, { totalRegistros: lista.length });
+        renderHorizontalChart(raiz.querySelector("#leme-chart-base"), contarBases(lista), 8);
         graficosNota.textContent = lista.length === dados.length ? "Todos os trabalhos" : lista.length + " de " + dados.length + " trabalhos filtrados";
       }
 
       function renderBadges(item) {
         const badges = [];
-        if (item.ano && item.ano !== "---") badges.push('<span class="leme-badge">' + escapeHtml(item.ano) + '</span>');
-        if (item.nivel && item.nivel !== "---") badges.push('<span class="leme-badge green">' + escapeHtml(item.nivel) + '</span>');
-        if (item.linhaPesquisa && item.linhaPesquisa !== "---") badges.push('<span class="leme-badge">' + escapeHtml(labelCurto(item.linhaPesquisa, 42)) + '</span>');
-        if (item.tipoProduto && item.tipoProduto !== "---") badges.push('<span class="leme-badge red">' + escapeHtml(item.tipoProduto) + '</span>');
+        if (ehValorPublico(item.ano)) badges.push('<span class="leme-badge">' + escapeHtml(item.ano) + '</span>');
+        if (ehValorPublico(item.nivel)) badges.push('<span class="leme-badge green">' + escapeHtml(item.nivel) + '</span>');
+        if (ehValorPublico(item.linhaPesquisa)) badges.push('<span class="leme-badge">' + escapeHtml(labelCurto(item.linhaPesquisa, 42)) + '</span>');
+        if (ehValorPublico(item.tipoProduto)) badges.push('<span class="leme-badge red">' + escapeHtml(item.tipoProduto) + '</span>');
         return badges.join("");
       }
       function renderTags(tags) {
@@ -1168,8 +1371,8 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       }
       function renderActions(item) {
         const links = [];
-        if (item.linkPdf) links.push('<a class="leme-link pdf" href="' + escapeHtml(item.linkPdf) + '" target="_blank" rel="noopener" aria-label="Abrir PDF em nova aba">📄 PDF</a>');
-        if (item.linkProduto) links.push('<a class="leme-link produto" href="' + escapeHtml(item.linkProduto) + '" target="_blank" rel="noopener" aria-label="Abrir produto educacional em nova aba">📦 Produto</a>');
+        if (item.linkPdf) links.push('<a class="leme-link pdf" href="' + escapeHtml(item.linkPdf) + '" target="_blank" rel="noopener" aria-label="Abrir dissertação em PDF em nova aba">Dissertação</a>');
+        if (item.linkProduto) links.push('<a class="leme-link produto" href="' + escapeHtml(item.linkProduto) + '" target="_blank" rel="noopener" aria-label="Abrir produto educacional em nova aba">Produto educacional</a>');
         return links.length ? '<div class="leme-actions">' + links.join("") + '</div>' : "";
       }
       function renderCards(lista) {
@@ -1177,6 +1380,7 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
         resultados.innerHTML = lista.map(item => {
           const idx = dados.indexOf(item);
           return '<article class="leme-card">' +
+            '<div class="leme-eyebrow">ProfEPT' + (ehValorPublico(item.ano) ? ' · ' + escapeHtml(item.ano) : '') + '</div>' +
             '<h3 class="leme-card-title">' + highlightText(item.titulo) + '</h3>' +
             '<div class="leme-meta"><div><b>Autor:</b> ' + highlightText(item.autor) + '</div><div><b>Orientador:</b> ' + highlightText(item.orientador) + '</div><div><b>Instituição/Campus:</b> ' + highlightText(item.instituicaoCampus) + '</div></div>' +
             '<div class="leme-badges">' + renderBadges(item) + '</div>' +
@@ -1188,7 +1392,7 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       function renderTable(lista) {
         if (!lista.length) { resultados.innerHTML = '<div class="leme-empty">Nenhum trabalho encontrado com os filtros selecionados.</div>'; return; }
         resultados.innerHTML = '<table class="leme-table"><caption>Resultados filtrados do painel</caption><thead><tr><th scope="col">Título</th><th scope="col">Autor</th><th scope="col">Orientador</th><th scope="col">Ano</th><th scope="col">Nível</th><th scope="col">Base</th><th scope="col">Linha</th><th scope="col">Macroprojeto</th><th scope="col">Área</th><th scope="col">Links</th></tr></thead><tbody>' +
-          lista.map(item => '<tr><td><div class="leme-table-title">' + highlightText(item.titulo) + '</div></td><td>' + highlightText(item.autor) + '</td><td>' + highlightText(item.orientador) + '</td><td>' + escapeHtml(item.ano) + '</td><td>' + escapeHtml(item.nivel) + '</td><td>' + escapeHtml(item.base) + '</td><td>' + escapeHtml(item.linhaPesquisa || "Não classificado") + '</td><td>' + escapeHtml(item.macroprojeto || "Não classificado") + '</td><td>' + escapeHtml(item.area) + '</td><td>' + renderActions(item) + '</td></tr>').join("") +
+          lista.map(item => '<tr><td><div class="leme-table-title">' + highlightText(item.titulo) + '</div></td><td>' + highlightText(item.autor) + '</td><td>' + highlightText(item.orientador) + '</td><td>' + escapeHtml(valorPublico(item.ano)) + '</td><td>' + escapeHtml(valorPublico(item.nivel)) + '</td><td>' + escapeHtml(valorPublico(item.base)) + '</td><td>' + escapeHtml(valorPublico(item.linhaPesquisa)) + '</td><td>' + escapeHtml(valorPublico(item.macroprojeto)) + '</td><td>' + escapeHtml(valorPublico(item.area)) + '</td><td>' + renderActions(item) + '</td></tr>').join("") +
           '</tbody></table>';
       }
       function paginaLista(lista) {
@@ -1248,24 +1452,23 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       }
       function abrirModal(item) {
         if (!item) return;
+        focoAntesModal = document.activeElement;
         modalTitle.innerHTML = highlightText(item.titulo || "Detalhes do trabalho");
         modalContent.innerHTML = '<div class="leme-detail-grid">' +
           '<div class="leme-detail-item"><b>Autor:</b><br>' + highlightText(item.autor) + '</div>' +
           '<div class="leme-detail-item"><b>Orientador:</b><br>' + highlightText(item.orientador) + '</div>' +
-          '<div class="leme-detail-item"><b>Ano:</b><br>' + escapeHtml(item.ano) + '</div>' +
-          '<div class="leme-detail-item"><b>Instituição/Campus:</b><br>' + highlightText(item.instituicaoCampus) + '</div>' +
-          '<div class="leme-detail-item is-wide"><b>Produto educacional:</b><br>' + highlightText(item.produto) + '</div>' +
-          '<div class="leme-detail-item"><b>Área temática:</b><br>' + highlightText(item.area) + '</div>' +
-          '<div class="leme-detail-item"><b>Tipo de produto:</b><br>' + highlightText(item.tipoProduto) + '</div>' +
-          '<div class="leme-detail-item"><b>Nível de aplicação:</b><br>' + highlightText(item.nivel) + '</div>' +
-          '<div class="leme-detail-item"><b>Base epistemológica:</b><br>' + highlightText(item.base) + '</div>' +
-          '<div class="leme-detail-item is-wide"><b>Linha de pesquisa:</b><br>' + highlightText(item.linhaPesquisa || "Não classificado") + '</div>' +
-          '<div class="leme-detail-item is-wide"><b>Macroprojeto:</b><br>' + highlightText(item.macroprojeto || "Não classificado") + '</div>' +
-          '<div class="leme-detail-item"><b>Código do macroprojeto:</b><br>' + highlightText(item.codigoMacroprojeto || "Não classificado") + '</div>' +
-          '<div class="leme-detail-item"><b>Confiança Linha/Macro:</b><br>' + highlightText(item.confiancaLinhaMacro || "Baixa") + ' · <b>Revisão manual:</b> ' + highlightText(item.revisaoManual || "Sim") + '</div>' +
-          '<div class="leme-detail-item is-wide"><b>Finalidade:</b><br>' + highlightText(item.finalidade) + '</div>' +
-          '<div class="leme-detail-item is-wide"><b>Público-alvo:</b><br>' + highlightText(item.publicoAlvo) + '</div>' +
-          '<div class="leme-detail-item is-wide"><b>Justificativa Linha/Macro:</b><br>' + highlightText(item.justificativaLinhaMacro || "") + '</div>' +
+          '<div class="leme-detail-item"><b>Ano:</b><br>' + escapeHtml(valorPublico(item.ano)) + '</div>' +
+          '<div class="leme-detail-item"><b>Instituição/Campus:</b><br>' + highlightText(valorPublico(item.instituicaoCampus)) + '</div>' +
+          '<div class="leme-detail-item"><b>Programa:</b><br>' + highlightText(valorPublico(item.programa)) + '</div>' +
+          '<div class="leme-detail-item is-wide"><b>Produto educacional:</b><br>' + highlightText(valorPublico(item.produto)) + '</div>' +
+          '<div class="leme-detail-item"><b>Área temática:</b><br>' + highlightText(valorPublico(item.area)) + '</div>' +
+          '<div class="leme-detail-item"><b>Tipo de produto:</b><br>' + highlightText(valorPublico(item.tipoProduto)) + '</div>' +
+          '<div class="leme-detail-item"><b>Nível de aplicação:</b><br>' + highlightText(valorPublico(item.nivel)) + '</div>' +
+          '<div class="leme-detail-item"><b>Base epistemológica:</b><br>' + highlightText(valorPublico(item.base)) + '</div>' +
+          '<div class="leme-detail-item is-wide"><b>Linha de pesquisa:</b><br>' + highlightText(valorPublico(item.linhaPesquisa)) + '</div>' +
+          '<div class="leme-detail-item is-wide"><b>Macroprojeto:</b><br>' + highlightText(valorPublico(item.macroprojeto)) + '</div>' +
+          '<div class="leme-detail-item is-wide"><b>Finalidade:</b><br>' + highlightText(finalidadePublica(item.finalidade)) + '</div>' +
+          '<div class="leme-detail-item is-wide"><b>Público-alvo:</b><br>' + highlightText(valorPublico(item.publicoAlvo)) + '</div>' +
           '<div class="leme-detail-item is-wide"><b>Resumo:</b><br>' + highlightText(item.resumo || "Resumo não disponível.") + renderTags(item.palavrasChave) + renderActions(item) + '</div>' +
         '</div>';
         modalBackdrop.classList.add("is-open");
@@ -1275,11 +1478,23 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       function fecharModal() {
         modalBackdrop.classList.remove("is-open");
         modalBackdrop.setAttribute("aria-hidden", "true");
+        if (focoAntesModal && typeof focoAntesModal.focus === "function") focoAntesModal.focus();
+        focoAntesModal = null;
+      }
+      function manterFocoNoModal(e) {
+        if (e.key !== "Tab" || !modalBackdrop.classList.contains("is-open")) return;
+        const focaveis = Array.from(modalBackdrop.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+        if (!focaveis.length) return;
+        const primeiro = focaveis[0];
+        const ultimo = focaveis[focaveis.length - 1];
+        if (e.shiftKey && document.activeElement === primeiro) { e.preventDefault(); ultimo.focus(); }
+        else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); primeiro.focus(); }
       }
       function csvEscape(valor) { return '"' + String(valor || "").replace(/"/g, '""') + '"'; }
       function baixarCsv() {
         const cols = [["ano","Ano"],["titulo","Título"],["autor","Autor"],["orientador","Orientador"],["nivel","Nível"],["base","Base"],["linhaPesquisa","Linha de Pesquisa"],["macroprojeto","Macroprojeto"],["area","Área"],["tipoProduto","Tipo de Produto"],["linkPdf","PDF"],["linkProduto","Produto"]];
-        const linhas = [cols.map(c => csvEscape(c[1])).join(";")].concat(resultadosAtuais.map(item => cols.map(c => csvEscape(item[c[0]])).join(";")));
+        const camposPublicos = new Set(["ano", "nivel", "base", "linhaPesquisa", "macroprojeto", "area", "tipoProduto"]);
+        const linhas = [cols.map(c => csvEscape(c[1])).join(";")].concat(resultadosAtuais.map(item => cols.map(c => csvEscape(camposPublicos.has(c[0]) ? valorPublico(item[c[0]]) : item[c[0]])).join(";")));
         const blob = new Blob(["\ufeff" + linhas.join("\n")], { type: "text/csv;charset=utf-8;" });
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
@@ -1290,11 +1505,6 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
       }
-      function copiarTexto() {
-        const texto = resultadosAtuais.map((item, i) => (i + 1) + ". " + item.titulo + " — " + item.autor + " (" + item.ano + ")").join("\n");
-        navigator.clipboard.writeText(texto).then(() => { copiarResultados.textContent = "Copiado!"; setTimeout(() => copiarResultados.textContent = "📋 Copiar resultados", 1200); });
-      }
-
       raiz.addEventListener("click", function(e) {
         const scrollBtn = e.target.closest("[data-scroll-to]");
         if (scrollBtn) {
@@ -1314,24 +1524,43 @@ Melhorias: filtros dinâmicos, gráficos em HTML, modal de detalhes, navegação
       busca.addEventListener("input", () => { clearTimeout(debounceTimer); debounceTimer = setTimeout(() => aplicarFiltros(true), 160); });
       busca.addEventListener("keydown", e => { if (e.key === "Escape") { busca.value = ""; aplicarFiltros(true); } });
       limpar.addEventListener("click", () => { busca.value = ""; filtros.forEach(f => f.value = ""); aplicarFiltros(true); });
+      alternarFiltros.addEventListener("click", () => {
+        const expandido = filtrosContainer.classList.toggle("is-expanded");
+        alternarFiltros.setAttribute("aria-expanded", expandido ? "true" : "false");
+        alternarFiltros.textContent = expandido ? "Menos filtros" : "Mais filtros";
+      });
+      alternarGraficos.addEventListener("click", () => {
+        const recolhido = graficosContent.classList.toggle("is-mobile-collapsed");
+        alternarGraficos.setAttribute("aria-expanded", recolhido ? "false" : "true");
+        alternarGraficos.textContent = recolhido ? "Mostrar análises" : "Ocultar análises";
+      });
       btnCards.addEventListener("click", () => { modo = "cards"; atualizarVisualizacao(); });
       btnTable.addEventListener("click", () => { modo = "table"; atualizarVisualizacao(); });
       exportarCsv.addEventListener("click", baixarCsv);
-      copiarResultados.addEventListener("click", copiarTexto);
       modalClose.addEventListener("click", fecharModal);
       modalBackdrop.addEventListener("click", e => { if (e.target === modalBackdrop) fecharModal(); });
-      document.addEventListener("keydown", e => { if (e.key === "Escape" && modalBackdrop.classList.contains("is-open")) fecharModal(); });
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && modalBackdrop.classList.contains("is-open")) fecharModal();
+        else manterFocoNoModal(e);
+      });
+
+      if (telaPequena.matches) {
+        graficosContent.classList.add("is-mobile-collapsed");
+        alternarGraficos.setAttribute("aria-expanded", "false");
+        alternarGraficos.textContent = "Mostrar análises";
+      }
 
       aplicarFiltros(true);
     })();
   </script>
-</section>'''
+</section>
+'''
 
     html = html.replace("__DADOS_JSON__", dados_json)
     html = html.replace("__TOTAL__", str(total))
-    html = html.replace("__TOTAL_PRODUTOS__", str(total_produtos))
+    html = html.replace("__TOTAL_ANOS__", str(total_anos))
     html = html.replace("__TOTAL_ORIENTADORES__", str(total_orientadores))
-    html = html.replace("__TOTAL_BASES__", str(total_bases))
+    html = html.replace("__TOTAL_MACROPROJETOS__", str(total_macroprojetos))
     html = html.replace("__PERIODO__", periodo)
     html = html.replace("__ATUALIZADO_EM__", atualizado_em)
     return html
@@ -1350,7 +1579,14 @@ def salvar_arquivo_html(html, arquivo_saida=ARQUIVO_HTML_SAIDA):
         print("Aviso: o arquivo de saída não termina com .html nem .txt.")
         print("O conteúdo será salvo mesmo assim, mas recomendo usar .html ou .txt.")
 
-    caminho.write_text(html, encoding="utf-8")
+    caminho.parent.mkdir(parents=True, exist_ok=True)
+    caminho_temporario = caminho.with_name(caminho.name + ".tmp")
+
+    try:
+        caminho_temporario.write_text(html, encoding="utf-8")
+        caminho_temporario.replace(caminho)
+    finally:
+        caminho_temporario.unlink(missing_ok=True)
 
 
 def main():
@@ -1358,10 +1594,10 @@ def main():
     Executa a geração do painel para Elementor.
 
     Entrada:
-    - dados_finais_painel_ept_linhas_macroprojetos.xlsx
+    - dados/dados_finais_painel_ept.xlsx
 
     Saída:
-    - painel_leme_ept.html ou painel_leme_ept.txt
+    - painel/painel_leme_ept.html
 
     Importante:
     Este script NÃO salva planilha.
@@ -1384,19 +1620,23 @@ def main():
         print(f"Arquivo gerado: {ARQUIVO_HTML_SAIDA}")
         print(f"Total de trabalhos no painel: {len(registros)}")
         print("\nAgora abra o arquivo gerado, copie todo o conteúdo e cole no Elementor.")
+        return 0
 
     except FileNotFoundError as erro:
         print("\nErro: planilha de entrada não encontrada.")
         print(erro)
+        return 1
 
     except PermissionError:
         print("\nErro: não foi possível salvar o arquivo HTML/TXT.")
         print("Feche o arquivo se ele estiver aberto e rode o script novamente.")
+        return 1
 
     except Exception as erro:
         print("\nOcorreu um erro ao gerar o painel.")
         print(f"Detalhes do erro: {erro}")
+        return 1
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

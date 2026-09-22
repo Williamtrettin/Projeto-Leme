@@ -1,8 +1,25 @@
 .venv/
+.env
+.env.*
+!.env.example
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 *.tmp
+*.tmp.xlsx
+*.pdf
+*.xlsx
 teste_json/
+
+# Tudo abaixo é gerado durante a execução.
+/pdf/
+/painel/
+/archive/
+/backups/
+/logs/
+/dados/*
+!/dados/referencia/
+/dados/referencia/*
+!/dados/referencia/*.json
